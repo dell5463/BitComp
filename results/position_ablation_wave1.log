@@ -1,0 +1,2 @@
+﻿[ablate] start train:bit_plane: -m bitlaya --threads 1 train --config results\position_ablation\bit_plane\experiment.json --output results\position_ablation\bit_plane\train
+[ablate] start train:bit_plane_rowcol: -m bitlaya --threads 1 train --config results\position_ablation\bit_plane_rowcol\experiment.json --output results\position_ablation\bit_plane_rowcol\train

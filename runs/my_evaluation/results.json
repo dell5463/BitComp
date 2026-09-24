@@ -1,0 +1,387 @@
+{
+  "format": "bitlaya-evaluation-v1",
+  "model_sha256": "294d307db5c5fa216439ad32ea2d2ec2ec27f89d868c12c5daa0272d0c272aca",
+  "runtime": {
+    "torch": "2.14.0+cpu",
+    "machine": "AMD64",
+    "system": "Windows",
+    "backend": "cpu-float32-threads1-no-mkldnn-v1"
+  },
+  "checkpoint_bytes": 651650,
+  "image_sha256": "f8e8de5cd136403f4b955f7eb1b92d39716afe855a5d19b666a7b5d1e9f556ce",
+  "provenance": {
+    "split": "val",
+    "split_seed": 42,
+    "validation_size": 5000,
+    "checkpoint": "runs\\cifar_smoke\\best.pt",
+    "checkpoint_metadata": {
+      "run": {
+        "model": {
+          "embedding_dim": 32,
+          "hidden_size": 128,
+          "num_layers": 2
+        },
+        "training": {
+          "epochs": 2,
+          "batch_size": 8,
+          "chunk_length": 256,
+          "learning_rate": 0.001,
+          "grad_clip": 1.0,
+          "seed": 42,
+          "device": "cpu",
+          "workers": 0
+        },
+        "parameters": 161505,
+        "device": "cpu",
+        "torch": "2.14.0+cpu",
+        "numpy": "2.4.6",
+        "train_images": 32,
+        "validation_images": 8,
+        "train_sha256": "3fe9f70d6c778d6225597af6e4b4acae083bad67fecf512939bcaf4240ad87bf",
+        "validation_sha256": "508c86031305ddfc59b206c20f70e8e775eda8521ab83dec83c8b716fd740648",
+        "provenance": {
+          "dataset": "CIFAR-10 grayscale",
+          "data": "data\\cifar10",
+          "validation_size": 5000,
+          "split_seed": 42,
+          "preprocessing": {
+            "dataset": "CIFAR-10",
+            "shape": [
+              32,
+              32
+            ],
+            "dtype": "uint8",
+            "grayscale": "Pillow RGB.convert('L')",
+            "pillow": "12.3.0",
+            "torchvision": "0.29.0+cpu",
+            "bit_order": "raster-msb-first",
+            "train": {
+              "images": 50000,
+              "sha256": "1505ba165d4a4ce4307c2b8b599141bf8893be47942b5906750a6b23f537f4b6"
+            },
+            "test": {
+              "images": 10000,
+              "sha256": "e11116a81011718aef7db29b1f7a9854daa057ced8ccb69f5cabc40f3e8ede38"
+            }
+          }
+        }
+      },
+      "epoch": 2,
+      "validation": {
+        "bce_nats": 0.654427682980895,
+        "cross_entropy_bits": 0.944139572856992,
+        "bit_accuracy": 0.60882568359375,
+        "ece": 0.020019808421238856,
+        "calibration": [
+          {
+            "lower": 0.5,
+            "count": 15330,
+            "accuracy": 0.506327462491846,
+            "confidence": 0.5250787927368771
+          },
+          {
+            "lower": 0.55,
+            "count": 16983,
+            "accuracy": 0.5966554790084202,
+            "confidence": 0.5760322776860247
+          },
+          {
+            "lower": 0.6,
+            "count": 12980,
+            "accuracy": 0.586055469953775,
+            "confidence": 0.6238200898714168
+          },
+          {
+            "lower": 0.65,
+            "count": 9126,
+            "accuracy": 0.6609686609686609,
+            "confidence": 0.672958674998809
+          },
+          {
+            "lower": 0.7,
+            "count": 5682,
+            "accuracy": 0.7138331573389651,
+            "confidence": 0.723296789552745
+          },
+          {
+            "lower": 0.75,
+            "count": 3494,
+            "accuracy": 0.771322266742988,
+            "confidence": 0.7723533034699948
+          },
+          {
+            "lower": 0.8,
+            "count": 1750,
+            "accuracy": 0.8302857142857143,
+            "confidence": 0.8214689408370427
+          },
+          {
+            "lower": 0.8500000000000001,
+            "count": 191,
+            "accuracy": 0.8481675392670157,
+            "confidence": 0.8581500278093428
+          },
+          {
+            "lower": 0.9,
+            "count": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lower": 0.95,
+            "count": 0,
+            "accuracy": null,
+            "confidence": null
+          }
+        ]
+      }
+    }
+  },
+  "psnr_note": "null means positive infinity (zero MSE); aggregate PSNR uses pooled MSE",
+  "baselines": {
+    "raw_bytes": 1024.0,
+    "zlib_bytes": 1014.5,
+    "png_bytes": 867.5
+  },
+  "summary": [
+    {
+      "threshold": 0.6,
+      "images": 2,
+      "payload_bpp": 1.01220703125,
+      "file_bpp": 4.28125,
+      "file_plus_amortized_checkpoint_bpp": 2549.7890625,
+      "raw_to_file_ratio": 1.8686131386861313,
+      "mse": 13346.189453125,
+      "psnr_db": 6.877230753701832,
+      "lossless_images": 0,
+      "bit_error_rate": 0.434814453125,
+      "omitted_fraction": 0.87347412109375,
+      "encode_seconds": 4.890471399994567,
+      "decode_seconds": 3.601803999998083
+    },
+    {
+      "threshold": 0.75,
+      "images": 2,
+      "payload_bpp": 7.1533203125,
+      "file_bpp": 10.4296875,
+      "file_plus_amortized_checkpoint_bpp": 2555.9375,
+      "raw_to_file_ratio": 0.7670411985018727,
+      "mse": 493.01904296875,
+      "psnr_db": 21.202166665470195,
+      "lossless_images": 0,
+      "bit_error_rate": 0.0303955078125,
+      "omitted_fraction": 0.1058349609375,
+      "encode_seconds": 3.982275900001696,
+      "decode_seconds": 3.649086299999908
+    },
+    {
+      "threshold": 1.0,
+      "images": 2,
+      "payload_bpp": 8.0,
+      "file_bpp": 11.265625,
+      "file_plus_amortized_checkpoint_bpp": 2556.7734375,
+      "raw_to_file_ratio": 0.710124826629681,
+      "mse": 0.0,
+      "psnr_db": null,
+      "lossless_images": 2,
+      "bit_error_rate": 0.0,
+      "omitted_fraction": 0.0,
+      "encode_seconds": 3.617503699999361,
+      "decode_seconds": 3.781018200003018
+    }
+  ],
+  "images": [
+    {
+      "threshold": 0.6,
+      "image_index": 0,
+      "raw_bytes": 1024,
+      "zlib_bytes": 994,
+      "png_bytes": 845,
+      "explicit_bits": 1041,
+      "omitted_fraction": 0.8729248046875,
+      "payload_bytes": 131,
+      "file_bytes": 549,
+      "header_and_checksum_bytes": 418,
+      "payload_bpp": 1.0166015625,
+      "file_bpp": 4.2890625,
+      "raw_to_file_ratio": 1.8652094717668488,
+      "encode_seconds": 2.723886299994774,
+      "decode_seconds": 1.8180681000012555,
+      "mse": 2001.705078125,
+      "mae": 34.736328125,
+      "psnr_db": 15.116802699314103,
+      "lossless": false,
+      "bit_error_rate": 0.4168701171875,
+      "bitplane_error_rate_msb_first": [
+        0.0,
+        0.328125,
+        0.419921875,
+        0.55078125,
+        0.53515625,
+        0.5244140625,
+        0.474609375,
+        0.501953125
+      ]
+    },
+    {
+      "threshold": 0.6,
+      "image_index": 1,
+      "raw_bytes": 1024,
+      "zlib_bytes": 1035,
+      "png_bytes": 890,
+      "explicit_bits": 1032,
+      "omitted_fraction": 0.8740234375,
+      "payload_bytes": 129,
+      "file_bytes": 547,
+      "header_and_checksum_bytes": 418,
+      "payload_bpp": 1.0078125,
+      "file_bpp": 4.2734375,
+      "raw_to_file_ratio": 1.8720292504570384,
+      "encode_seconds": 2.166585099999793,
+      "decode_seconds": 1.7837358999968274,
+      "mse": 24690.673828125,
+      "mae": 147.453125,
+      "psnr_db": 4.205474185324457,
+      "lossless": false,
+      "bit_error_rate": 0.4527587890625,
+      "bitplane_error_rate_msb_first": [
+        0.7119140625,
+        0.4892578125,
+        0.4619140625,
+        0.4873046875,
+        0.48828125,
+        0.0,
+        0.4853515625,
+        0.498046875
+      ]
+    },
+    {
+      "threshold": 0.75,
+      "image_index": 0,
+      "raw_bytes": 1024,
+      "zlib_bytes": 994,
+      "png_bytes": 845,
+      "explicit_bits": 7344,
+      "omitted_fraction": 0.103515625,
+      "payload_bytes": 918,
+      "file_bytes": 1337,
+      "header_and_checksum_bytes": 419,
+      "payload_bpp": 7.171875,
+      "file_bpp": 10.4453125,
+      "raw_to_file_ratio": 0.7658937920718025,
+      "encode_seconds": 2.0896080000020447,
+      "decode_seconds": 1.9557071000017459,
+      "mse": 393.3349609375,
+      "mae": 5.2294921875,
+      "psnr_db": 22.183178111847205,
+      "lossless": false,
+      "bit_error_rate": 0.0301513671875,
+      "bitplane_error_rate_msb_first": [
+        0.017578125,
+        0.0244140625,
+        0.0234375,
+        0.0361328125,
+        0.0361328125,
+        0.0361328125,
+        0.037109375,
+        0.0302734375
+      ]
+    },
+    {
+      "threshold": 0.75,
+      "image_index": 1,
+      "raw_bytes": 1024,
+      "zlib_bytes": 1035,
+      "png_bytes": 890,
+      "explicit_bits": 7306,
+      "omitted_fraction": 0.108154296875,
+      "payload_bytes": 914,
+      "file_bytes": 1333,
+      "header_and_checksum_bytes": 419,
+      "payload_bpp": 7.134765625,
+      "file_bpp": 10.4140625,
+      "raw_to_file_ratio": 0.768192048012003,
+      "encode_seconds": 1.8926678999996511,
+      "decode_seconds": 1.6933791999981622,
+      "mse": 592.703125,
+      "mae": 7.568359375,
+      "psnr_db": 20.402431438251497,
+      "lossless": false,
+      "bit_error_rate": 0.0306396484375,
+      "bitplane_error_rate_msb_first": [
+        0.0283203125,
+        0.03515625,
+        0.048828125,
+        0.0322265625,
+        0.029296875,
+        0.013671875,
+        0.0224609375,
+        0.03515625
+      ]
+    },
+    {
+      "threshold": 1.0,
+      "image_index": 0,
+      "raw_bytes": 1024,
+      "zlib_bytes": 994,
+      "png_bytes": 845,
+      "explicit_bits": 8192,
+      "omitted_fraction": 0.0,
+      "payload_bytes": 1024,
+      "file_bytes": 1442,
+      "header_and_checksum_bytes": 418,
+      "payload_bpp": 8.0,
+      "file_bpp": 11.265625,
+      "raw_to_file_ratio": 0.710124826629681,
+      "encode_seconds": 1.6295539999991888,
+      "decode_seconds": 1.8621977000002516,
+      "mse": 0.0,
+      "mae": 0.0,
+      "psnr_db": null,
+      "lossless": true,
+      "bit_error_rate": 0.0,
+      "bitplane_error_rate_msb_first": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "threshold": 1.0,
+      "image_index": 1,
+      "raw_bytes": 1024,
+      "zlib_bytes": 1035,
+      "png_bytes": 890,
+      "explicit_bits": 8192,
+      "omitted_fraction": 0.0,
+      "payload_bytes": 1024,
+      "file_bytes": 1442,
+      "header_and_checksum_bytes": 418,
+      "payload_bpp": 8.0,
+      "file_bpp": 11.265625,
+      "raw_to_file_ratio": 0.710124826629681,
+      "encode_seconds": 1.987949700000172,
+      "decode_seconds": 1.9188205000027665,
+      "mse": 0.0,
+      "mae": 0.0,
+      "psnr_db": null,
+      "lossless": true,
+      "bit_error_rate": 0.0,
+      "bitplane_error_rate_msb_first": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

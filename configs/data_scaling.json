@@ -1,0 +1,18 @@
+{
+  "name": "data_scaling",
+  "output": "results/data_scaling",
+  "description": "Stage 2: training-set size only. Legacy bit-only architecture, teacher forcing, BCE, constant LR, fixed budget of 6400 optimizer steps (batch 32 x 256-bit chunks) so every size gets identical compute.",
+  "data": {"val_size": 256, "validation_size": 5000},
+  "model": {"embedding_dim": 32, "hidden_size": 128, "num_layers": 2},
+  "training": {"epochs": 100000, "max_steps": 6400, "val_every": 800, "batch_size": 32, "chunk_length": 256,
+               "learning_rate": 0.001, "mode": "teacher_forcing", "objective": "bce", "lr_schedule": "constant",
+               "device": "auto", "seed": 42},
+  "sweep": {"split": "val", "size": 200, "engine": "qgru-v2"},
+  "variants": [
+    {"name": "n00032", "data": {"train_size": 32}},
+    {"name": "n00256", "data": {"train_size": 256}},
+    {"name": "n01024", "data": {"train_size": 1024}},
+    {"name": "n05000", "data": {"train_size": 5000}},
+    {"name": "n45000", "data": {"train_size": 45000}}
+  ]
+}

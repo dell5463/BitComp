@@ -1,0 +1,6 @@
+﻿[ablate] start train:n00032: -m bitlaya --threads 1 train --config results\data_scaling\n00032\experiment.json --output results\data_scaling\n00032\train
+[ablate] start train:n00256: -m bitlaya --threads 1 train --config results\data_scaling\n00256\experiment.json --output results\data_scaling\n00256\train
+[ablate] done train:n00032: ok
+[ablate] start train:n01024: -m bitlaya --threads 1 train --config results\data_scaling\n01024\experiment.json --output results\data_scaling\n01024\train
+[ablate] done train:n00256: ok
+[ablate] start train:n05000: -m bitlaya --threads 1 train --config results\data_scaling\n05000\experiment.json --output results\data_scaling\n05000\train

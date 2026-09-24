@@ -1,0 +1,7 @@
+{
+  "checkpoint_load_including_validation_seconds": 0.009301300000515766,
+  "deepcopy_seconds": 0.0006782999989809468,
+  "cpu_float_eval_seconds": 0.0002651000031619333,
+  "finite_verification_seconds": 0.0009892999951262027,
+  "fingerprint_seconds": 0.0006529999955091625
+}

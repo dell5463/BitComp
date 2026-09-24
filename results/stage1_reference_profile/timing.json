@@ -1,0 +1,291 @@
+{
+  "config": {
+    "checkpoint": "runs\\cifar_10epochs\\best.pt",
+    "checkpoint_metadata": {
+      "run": {
+        "model": {
+          "embedding_dim": 32,
+          "hidden_size": 128,
+          "num_layers": 2
+        },
+        "training": {
+          "epochs": 10,
+          "batch_size": 8,
+          "chunk_length": 256,
+          "learning_rate": 0.001,
+          "grad_clip": 1.0,
+          "seed": 42,
+          "device": "cpu",
+          "workers": 0
+        },
+        "parameters": 161505,
+        "device": "cpu",
+        "torch": "2.14.0+cpu",
+        "numpy": "2.4.6",
+        "train_images": 32,
+        "validation_images": 8,
+        "train_sha256": "3fe9f70d6c778d6225597af6e4b4acae083bad67fecf512939bcaf4240ad87bf",
+        "validation_sha256": "508c86031305ddfc59b206c20f70e8e775eda8521ab83dec83c8b716fd740648",
+        "provenance": {
+          "dataset": "CIFAR-10 grayscale",
+          "data": "data\\cifar10",
+          "validation_size": 5000,
+          "split_seed": 42,
+          "preprocessing": {
+            "dataset": "CIFAR-10",
+            "shape": [
+              32,
+              32
+            ],
+            "dtype": "uint8",
+            "grayscale": "Pillow RGB.convert('L')",
+            "pillow": "12.3.0",
+            "torchvision": "0.29.0+cpu",
+            "bit_order": "raster-msb-first",
+            "train": {
+              "images": 50000,
+              "sha256": "1505ba165d4a4ce4307c2b8b599141bf8893be47942b5906750a6b23f537f4b6"
+            },
+            "test": {
+              "images": 10000,
+              "sha256": "e11116a81011718aef7db29b1f7a9854daa057ced8ccb69f5cabc40f3e8ede38"
+            }
+          }
+        }
+      },
+      "epoch": 7,
+      "validation": {
+        "bce_nats": 0.5861888509243727,
+        "cross_entropy_bits": 0.8456917482529923,
+        "bit_accuracy": 0.668487548828125,
+        "ece": 0.012293459290958693,
+        "calibration": [
+          {
+            "lower": 0.5,
+            "count": 15580,
+            "accuracy": 0.5282413350449294,
+            "confidence": 0.5244120044602663
+          },
+          {
+            "lower": 0.55,
+            "count": 12614,
+            "accuracy": 0.5654827968923418,
+            "confidence": 0.5738930163338877
+          },
+          {
+            "lower": 0.6,
+            "count": 8998,
+            "accuracy": 0.62458324072016,
+            "confidence": 0.6234158920854906
+          },
+          {
+            "lower": 0.65,
+            "count": 6356,
+            "accuracy": 0.6718061674008811,
+            "confidence": 0.6739278402697597
+          },
+          {
+            "lower": 0.7,
+            "count": 5178,
+            "accuracy": 0.742564696794129,
+            "confidence": 0.7246603938132559
+          },
+          {
+            "lower": 0.75,
+            "count": 4738,
+            "accuracy": 0.7912621359223301,
+            "confidence": 0.7743800926706669
+          },
+          {
+            "lower": 0.8,
+            "count": 4347,
+            "accuracy": 0.8617437313089487,
+            "confidence": 0.8254361404395252
+          },
+          {
+            "lower": 0.8500000000000001,
+            "count": 4392,
+            "accuracy": 0.9164389799635702,
+            "confidence": 0.8746389276424392
+          },
+          {
+            "lower": 0.9,
+            "count": 2813,
+            "accuracy": 0.9548524706718805,
+            "confidence": 0.9211121381621661
+          },
+          {
+            "lower": 0.95,
+            "count": 520,
+            "accuracy": 0.9730769230769231,
+            "confidence": 0.9597972512245179
+          }
+        ]
+      }
+    },
+    "model": {
+      "embedding_dim": 32,
+      "hidden_size": 128,
+      "num_layers": 2
+    },
+    "dataset": {
+      "split": "test",
+      "size": 100,
+      "seed": 42,
+      "validation_pool_size": 5000,
+      "indices": [
+        8132,
+        8268,
+        719,
+        8237,
+        4555,
+        6651,
+        5650,
+        9034,
+        1260,
+        644,
+        9098,
+        3760,
+        34,
+        8086,
+        4873,
+        1538,
+        3355,
+        888,
+        8564,
+        529,
+        7081,
+        9305,
+        5772,
+        9488,
+        3362,
+        7042,
+        1490,
+        1734,
+        9267,
+        4362,
+        2048,
+        5967,
+        2832,
+        5481,
+        6553,
+        5269,
+        828,
+        6464,
+        3801,
+        7233,
+        4980,
+        320,
+        9816,
+        5299,
+        1783,
+        5316,
+        8417,
+        3483,
+        7988,
+        1054,
+        4577,
+        7526,
+        1627,
+        2750,
+        3336,
+        2899,
+        6667,
+        2367,
+        4589,
+        2647,
+        7515,
+        1736,
+        9143,
+        3192,
+        9587,
+        6537,
+        3346,
+        3448,
+        3570,
+        2310,
+        4790,
+        9672,
+        5761,
+        5453,
+        6302,
+        6864,
+        7592,
+        5354,
+        2210,
+        8755,
+        6981,
+        5899,
+        3762,
+        9117,
+        5398,
+        1918,
+        4552,
+        5850,
+        5441,
+        1466,
+        5242,
+        486,
+        5762,
+        8609,
+        9780,
+        4657,
+        9830,
+        9119,
+        7637,
+        963
+      ],
+      "image_sha256": "3394b549432f258d015508a0840e9fedd93045b513a955002172efa531c63319",
+      "selection": "numpy-default_rng-permutation-v1"
+    },
+    "engine": "reference",
+    "threshold": 0.9,
+    "warmup": 5,
+    "repeats": 3,
+    "torch_profile_steps": 128,
+    "environment": {
+      "python": "3.11.9",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "cpu": "11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz",
+      "torch": "2.14.0+cpu",
+      "numpy": "2.4.6",
+      "cuda_available": false,
+      "cuda_build": null,
+      "gpu": null,
+      "threads": 1,
+      "runtime": {
+        "torch": "2.14.0+cpu",
+        "machine": "AMD64",
+        "system": "Windows",
+        "backend": "cpu-float32-threads1-no-mkldnn-v1"
+      }
+    },
+    "controlled_protocol": true
+  },
+  "setup": {
+    "checkpoint_load_including_validation_seconds": 0.011793099998612888,
+    "deepcopy_seconds": 0.000847399998747278,
+    "cpu_float_eval_seconds": 0.00037029999657534063,
+    "finite_verification_seconds": 0.0010392999975010753,
+    "fingerprint_seconds": 0.0005845000050612725,
+    "cold_first_encode_decode_seconds": 4.397774999997637
+  },
+  "independent_decodes_verified": 300,
+  "encode": {
+    "count": 300,
+    "mean_seconds": 8.7613190853335,
+    "median_seconds": 2.754418450003868,
+    "p95_seconds": 4.8656724000022225,
+    "std_seconds": 78.82263082843767,
+    "images_per_second": 0.11413806417278032
+  },
+  "decode": {
+    "count": 300,
+    "mean_seconds": 9.947607007000212,
+    "median_seconds": 2.7572079499987012,
+    "p95_seconds": 4.853411004996452,
+    "std_seconds": 107.67116450603724,
+    "images_per_second": 0.1005266894134732
+  },
+  "notes": "Warmups and profiler runs excluded; includes per-call framing and checks; no disk I/O in timed calls."
+}

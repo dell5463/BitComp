@@ -1,0 +1,132 @@
+[
+  {
+    "epoch": 1,
+    "step": 64,
+    "images_seen": 64.0,
+    "train": {
+      "objective": 0.6833401266485453,
+      "bce_nats": 0.6833401266485453,
+      "replaced_input_fraction": 0.0
+    },
+    "validation": {
+      "bce_nats": 0.668261582031846,
+      "cross_entropy_bits": 0.9640976704139576,
+      "objective": 0.668261582031846,
+      "bit_accuracy": 0.5907402038574219,
+      "plane_bce_nats_msb_first": [
+        0.6334686234476976,
+        0.6094776483951136,
+        0.6426921325619332,
+        0.6666774217155762,
+        0.6902737519121729,
+        0.6993711135582998,
+        0.7017536146449856,
+        0.7023784276098013
+      ],
+      "plane_accuracy_msb_first": [
+        0.660491943359375,
+        0.7037353515625,
+        0.651153564453125,
+        0.62713623046875,
+        0.55535888671875,
+        0.515228271484375,
+        0.511810302734375,
+        0.501007080078125
+      ],
+      "ece": 0.024310824030862974,
+      "calibration": [
+        {
+          "lower": 0.5,
+          "count": 120815,
+          "accuracy": 0.536150312461201,
+          "confidence": 0.5239394700951969
+        },
+        {
+          "lower": 0.55,
+          "count": 79502,
+          "accuracy": 0.595934693466831,
+          "confidence": 0.5725245124785238
+        },
+        {
+          "lower": 0.6,
+          "count": 40764,
+          "accuracy": 0.6542537533117456,
+          "confidence": 0.6219722685765008
+        },
+        {
+          "lower": 0.65,
+          "count": 17142,
+          "accuracy": 0.7358534593396336,
+          "confidence": 0.6706460588642631
+        },
+        {
+          "lower": 0.7,
+          "count": 3711,
+          "accuracy": 0.8674211802748585,
+          "confidence": 0.716739862217668
+        },
+        {
+          "lower": 0.75,
+          "count": 210,
+          "accuracy": 0.9666666666666667,
+          "confidence": 0.7588502316247849
+        },
+        {
+          "lower": 0.8,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.8500000000000001,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.9,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.95,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        }
+      ],
+      "high_confidence": [
+        {
+          "range": [
+            0.9,
+            0.95
+          ],
+          "count": 0,
+          "accuracy": null,
+          "errors": 0
+        },
+        {
+          "range": [
+            0.95,
+            0.99
+          ],
+          "count": 0,
+          "accuracy": null,
+          "errors": 0
+        },
+        {
+          "range": [
+            0.99,
+            1.0
+          ],
+          "count": 0,
+          "accuracy": null,
+          "errors": 0
+        }
+      ]
+    },
+    "learning_rate": 0.001,
+    "seconds": 21.99171589999969
+  }
+]

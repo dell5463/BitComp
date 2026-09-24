@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bitlaya"
+version = "0.1.0"
+description = "A causal next-bit omission codec for grayscale image research"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "torch>=2.2,<3",
+  "torchvision>=0.17,<1",
+  "numpy>=1.26,<3",
+  "Pillow>=10,<13",
+  "matplotlib>=3.8,<4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+bitlaya = "bitlaya.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"

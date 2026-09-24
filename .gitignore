@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+*.tmp
+
+# CIFAR-10 cache (~400 MB); regenerate with `bitlaya prepare --data data/cifar10`.
+data/
+
+# runs/ (checkpoints) and results/ (measurements) ARE tracked; skip bulky profiler traces.
+results/**/torch_trace.json

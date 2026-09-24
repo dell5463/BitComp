@@ -1,0 +1,53 @@
+         2821394 function calls (2702490 primitive calls) in 5.709 seconds
+
+   Ordered by: cumulative time
+   List reduced from 4898 to 45 due to restriction <45>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    3.867    3.867 C:\Users\delvi\Projects\Bittransformer\src\bitlaya\profiling.py:42(compress)
+        1    0.041    0.041    3.867    3.867 C:\Users\delvi\Projects\Bittransformer\src\bitlaya\codec.py:138(encode)
+65536/16384    0.069    0.000    3.551    0.000 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\nn\modules\module.py:1779(_wrapped_call_impl)
+65536/16384    0.105    0.000    3.534    0.000 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\nn\modules\module.py:1787(_call_impl)
+    16384    0.125    0.000    3.493    0.000 C:\Users\delvi\Projects\Bittransformer\src\bitlaya\model.py:41(forward)
+    16384    0.145    0.000    2.534    0.000 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\nn\modules\rnn.py:1378(forward)
+    185/4    0.001    0.000    1.969    0.492 {built-in method builtins.next}
+        4    0.000    0.000    1.969    0.492 C:\Users\delvi\Projects\Bittransformer\src\bitlaya\codec.py:43(reference_runtime)
+        2    0.000    0.000    1.969    0.985 C:\Users\delvi\AppData\Local\Programs\Python\Python311\Lib\contextlib.py:132(__enter__)
+        4    0.000    0.000    1.969    0.492 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\__init__.py:1756(use_deterministic_algorithms)
+   3658/1    0.049    0.000    1.969    1.969 <frozen importlib._bootstrap>:1165(_find_and_load)
+    838/1    0.006    0.000    1.969    1.969 <frozen importlib._bootstrap>:1120(_find_and_load_unlocked)
+   1788/1    0.001    0.000    1.969    1.969 <frozen importlib._bootstrap>:233(_call_with_frames_removed)
+    148/1    0.000    0.000    1.969    1.969 {built-in method builtins.__import__}
+    807/1    0.004    0.000    1.969    1.969 <frozen importlib._bootstrap>:666(_load_unlocked)
+    802/1    0.003    0.000    1.969    1.969 <frozen importlib._bootstrap_external>:934(exec_module)
+   2405/1    0.250    0.000    1.968    1.968 {built-in method builtins.exec}
+        1    0.000    0.000    1.968    1.968 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\_inductor\__init__.py:1(<module>)
+        1    0.000    0.000    1.967    1.967 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\_inductor\standalone_compile.py:1(<module>)
+   911/16    0.002    0.000    1.931    0.121 <frozen importlib._bootstrap>:1207(_handle_fromlist)
+        1    0.000    0.000    1.874    1.874 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\_dynamo\__init__.py:1(<module>)
+        1    0.000    0.000    1.850    1.850 C:\Users\delvi\Projects\Bittransformer\src\bitlaya\profiling.py:45(decompress)
+        1    0.041    0.041    1.850    1.850 C:\Users\delvi\Projects\Bittransformer\src\bitlaya\codec.py:171(decode)
+    16384    1.817    0.000    1.817    0.000 {built-in method torch.gru}
+        1    0.000    0.000    1.728    1.728 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\_dynamo\aot_compile.py:1(<module>)
+        1    0.000    0.000    1.713    1.713 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\_dynamo\convert_frame.py:1(<module>)
+        1    0.000    0.000    1.642    1.642 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\_dynamo\symbolic_convert.py:1(<module>)
+        1    0.000    0.000    0.975    0.975 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\_dynamo\trace_rules.py:1(<module>)
+        1    0.000    0.000    0.890    0.890 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\_dynamo\variables\__init__.py:1(<module>)
+        1    0.000    0.000    0.887    0.887 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\_dynamo\variables\base.py:1(<module>)
+        1    0.000    0.000    0.822    0.822 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\_dynamo\variables\builder.py:1(<module>)
+        1    0.000    0.000    0.757    0.757 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\_dynamo\side_effects.py:1(<module>)
+        1    0.000    0.000    0.630    0.630 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\_dynamo\exc.py:1(<module>)
+        1    0.000    0.000    0.628    0.628 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\_dynamo\utils.py:1(<module>)
+        1    0.000    0.000    0.590    0.590 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\fx\experimental\symbolic_shapes.py:1(<module>)
+        1    0.000    0.000    0.584    0.584 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\_dynamo\variables\misc.py:1(<module>)
+        1    0.000    0.000    0.581    0.581 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\_dynamo\variables\lists.py:1(<module>)
+        1    0.000    0.000    0.575    0.575 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\_dynamo\variables\functions.py:1(<module>)
+        1    0.000    0.000    0.558    0.558 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\distributed\fsdp\__init__.py:1(<module>)
+        1    0.000    0.000    0.545    0.545 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\sympy\__init__.py:1(<module>)
+        1    0.000    0.000    0.509    0.509 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\distributed\fsdp\_flat_param.py:1(<module>)
+        1    0.000    0.000    0.499    0.499 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\distributed\fsdp\_fsdp_extensions.py:1(<module>)
+        1    0.000    0.000    0.475    0.475 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\distributed\fsdp\_shard_utils.py:1(<module>)
+        1    0.000    0.000    0.474    0.474 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\distributed\tensor\__init__.py:1(<module>)
+        1    0.000    0.000    0.472    0.472 C:\Users\delvi\Projects\Bittransformer\.venv\Lib\site-packages\torch\distributed\tensor\_ops\__init__.py:1(<module>)
+
+

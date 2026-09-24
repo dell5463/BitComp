@@ -1,0 +1,51 @@
+{
+  "model": {
+    "embedding_dim": 32,
+    "hidden_size": 128,
+    "num_layers": 2
+  },
+  "training": {
+    "epochs": 10,
+    "batch_size": 8,
+    "chunk_length": 256,
+    "learning_rate": 0.001,
+    "grad_clip": 1.0,
+    "seed": 42,
+    "device": "cpu",
+    "workers": 0
+  },
+  "parameters": 161505,
+  "device": "cpu",
+  "torch": "2.14.0+cpu",
+  "numpy": "2.4.6",
+  "train_images": 32,
+  "validation_images": 8,
+  "train_sha256": "3fe9f70d6c778d6225597af6e4b4acae083bad67fecf512939bcaf4240ad87bf",
+  "validation_sha256": "508c86031305ddfc59b206c20f70e8e775eda8521ab83dec83c8b716fd740648",
+  "provenance": {
+    "dataset": "CIFAR-10 grayscale",
+    "data": "data\\cifar10",
+    "validation_size": 5000,
+    "split_seed": 42,
+    "preprocessing": {
+      "dataset": "CIFAR-10",
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "uint8",
+      "grayscale": "Pillow RGB.convert('L')",
+      "pillow": "12.3.0",
+      "torchvision": "0.29.0+cpu",
+      "bit_order": "raster-msb-first",
+      "train": {
+        "images": 50000,
+        "sha256": "1505ba165d4a4ce4307c2b8b599141bf8893be47942b5906750a6b23f537f4b6"
+      },
+      "test": {
+        "images": 10000,
+        "sha256": "e11116a81011718aef7db29b1f7a9854daa057ced8ccb69f5cabc40f3e8ede38"
+      }
+    }
+  }
+}

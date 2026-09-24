@@ -1,0 +1,353 @@
+{
+  "format": "bitlaya-research-evaluation-v2",
+  "evaluation": {
+    "checkpoint": "runs\\smoke_v2\\best.pt",
+    "output": "results\\smoke_v2_sweep",
+    "data": "data\\cifar10",
+    "split": "val",
+    "size": 20,
+    "seed": 42,
+    "validation_pool_size": 5000,
+    "thresholds": [
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      1.0
+    ],
+    "bootstrap": 200,
+    "examples": 4,
+    "warmup": 5,
+    "lossy_qualities": [
+      1,
+      5,
+      10,
+      20,
+      35,
+      50,
+      75,
+      90,
+      95
+    ],
+    "engine": "qgru-v2",
+    "batch_rows": 128
+  },
+  "dataset": {
+    "split": "val",
+    "size": 20,
+    "seed": 42,
+    "validation_pool_size": 5000,
+    "indices": [
+      712,
+      24774,
+      45142,
+      27119,
+      21139,
+      19129,
+      6433,
+      38854,
+      22489,
+      31104,
+      21349,
+      29116,
+      10772,
+      18332,
+      1003,
+      22156,
+      26453,
+      17039,
+      7166,
+      48310
+    ],
+    "image_sha256": "1759fd0745f2ea8b2db2df0d3b727a22a80f6a516c89f18e63f48bf7504bc13a",
+    "selection": "numpy-default_rng-permutation-v1"
+  },
+  "model": {
+    "embedding_dim": 32,
+    "hidden_size": 128,
+    "num_layers": 2,
+    "plane_dim": 8,
+    "row_dim": 8,
+    "col_dim": 8
+  },
+  "parameters": 171297,
+  "checkpoint_sha256": "5832e80a501d61687cf64f4344b4275a28d97aa5269089db1f1974a2ec4e2e1d",
+  "model_sha256": "8932252b3a2b23923335c7daa5bbe1123600551fc965edb5e67444cf3f6662ca",
+  "checkpoint_bytes": 692729,
+  "checkpoint_metadata": {
+    "run": {
+      "model": {
+        "embedding_dim": 32,
+        "hidden_size": 128,
+        "num_layers": 2,
+        "plane_dim": 8,
+        "row_dim": 8,
+        "col_dim": 8
+      },
+      "training": {
+        "epochs": 10,
+        "batch_size": 32,
+        "chunk_length": 256,
+        "learning_rate": 0.001,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "device": "cpu",
+        "workers": 0,
+        "mode": "teacher_forcing",
+        "schedule": [
+          [
+            1,
+            0.0
+          ],
+          [
+            3,
+            0.1
+          ],
+          [
+            5,
+            0.25
+          ],
+          [
+            7,
+            0.5
+          ]
+        ],
+        "rollout_thresholds": [
+          0.6,
+          0.95
+        ],
+        "objective": "bce",
+        "weights": "sqrt",
+        "lr_schedule": "constant",
+        "max_steps": 64,
+        "val_every": null,
+        "accumulate": 1,
+        "width": 32
+      },
+      "loss_weights_msb_first": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "parameters": 171297,
+      "device": "cpu",
+      "torch": "2.14.0+cpu",
+      "numpy": "2.4.6",
+      "threads": 1,
+      "train_images": 64,
+      "validation_images": 32,
+      "train_sha256": "e66eb0fbb3ad5b41e8db669fe867d6f92c7f52aa2b1c54d26ea91d3a86f23ee6",
+      "validation_sha256": "7e64cfc542d86828e8ac45faeeecbba062e9240b1968dee07bf1f049f8f3c4f1",
+      "planned_optimizer_steps": 64,
+      "provenance": {
+        "dataset": "CIFAR-10 grayscale",
+        "data": "data\\cifar10",
+        "validation_size": 5000,
+        "split_seed": 42,
+        "train_limit": 64,
+        "val_limit": 32,
+        "config_file": null,
+        "preprocessing": {
+          "dataset": "CIFAR-10",
+          "shape": [
+            32,
+            32
+          ],
+          "dtype": "uint8",
+          "grayscale": "Pillow RGB.convert('L')",
+          "pillow": "12.3.0",
+          "torchvision": "0.29.0+cpu",
+          "bit_order": "raster-msb-first",
+          "train": {
+            "images": 50000,
+            "sha256": "1505ba165d4a4ce4307c2b8b599141bf8893be47942b5906750a6b23f537f4b6"
+          },
+          "test": {
+            "images": 10000,
+            "sha256": "e11116a81011718aef7db29b1f7a9854daa057ced8ccb69f5cabc40f3e8ede38"
+          }
+        }
+      }
+    },
+    "epoch": 1,
+    "step": 64,
+    "validation": {
+      "bce_nats": 0.668261582031846,
+      "cross_entropy_bits": 0.9640976704139576,
+      "objective": 0.668261582031846,
+      "bit_accuracy": 0.5907402038574219,
+      "plane_bce_nats_msb_first": [
+        0.6334686234476976,
+        0.6094776483951136,
+        0.6426921325619332,
+        0.6666774217155762,
+        0.6902737519121729,
+        0.6993711135582998,
+        0.7017536146449856,
+        0.7023784276098013
+      ],
+      "plane_accuracy_msb_first": [
+        0.660491943359375,
+        0.7037353515625,
+        0.651153564453125,
+        0.62713623046875,
+        0.55535888671875,
+        0.515228271484375,
+        0.511810302734375,
+        0.501007080078125
+      ],
+      "ece": 0.024310824030862974,
+      "calibration": [
+        {
+          "lower": 0.5,
+          "count": 120815,
+          "accuracy": 0.536150312461201,
+          "confidence": 0.5239394700951969
+        },
+        {
+          "lower": 0.55,
+          "count": 79502,
+          "accuracy": 0.595934693466831,
+          "confidence": 0.5725245124785238
+        },
+        {
+          "lower": 0.6,
+          "count": 40764,
+          "accuracy": 0.6542537533117456,
+          "confidence": 0.6219722685765008
+        },
+        {
+          "lower": 0.65,
+          "count": 17142,
+          "accuracy": 0.7358534593396336,
+          "confidence": 0.6706460588642631
+        },
+        {
+          "lower": 0.7,
+          "count": 3711,
+          "accuracy": 0.8674211802748585,
+          "confidence": 0.716739862217668
+        },
+        {
+          "lower": 0.75,
+          "count": 210,
+          "accuracy": 0.9666666666666667,
+          "confidence": 0.7588502316247849
+        },
+        {
+          "lower": 0.8,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.8500000000000001,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.9,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.95,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        }
+      ],
+      "high_confidence": [
+        {
+          "range": [
+            0.9,
+            0.95
+          ],
+          "count": 0,
+          "accuracy": null,
+          "errors": 0
+        },
+        {
+          "range": [
+            0.95,
+            0.99
+          ],
+          "count": 0,
+          "accuracy": null,
+          "errors": 0
+        },
+        {
+          "range": [
+            0.99,
+            1.0
+          ],
+          "count": 0,
+          "accuracy": null,
+          "errors": 0
+        }
+      ]
+    }
+  },
+  "environment": {
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "cpu": "11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz",
+    "logical_cpus": 8,
+    "torch": "2.14.0+cpu",
+    "numpy": "2.4.6",
+    "cuda_available": false,
+    "cuda_build": null,
+    "gpu": null,
+    "threads": 1,
+    "blas_thread_env": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "runtime": {
+      "torch": "2.14.0+cpu",
+      "machine": "AMD64",
+      "system": "Windows",
+      "backend": "cpu-float32-threads1-no-mkldnn-v1"
+    }
+  },
+  "source": {
+    "git_commit": null,
+    "git_dirty": null,
+    "source_sha256": {
+      "__init__.py": "cf19f1c951858f03adff6c32f906c67941ca85c2880c83331a2fa56adbbc00c7",
+      "__main__.py": "e3c017a9451ec76a6fcae6816b7927ab3b6461f662f16d7a88d08152514286fb",
+      "ablation.py": "fde04ce19d101cfcd4fed937d723e87a1924f7cc8e75e96686a764bfbd209f77",
+      "analysis.py": "4a56dd8140f55ae27e2cfc0e92cb38fcc08f65105a5d99ca078b5cc25c398a27",
+      "bits.py": "f2a502e2c5a8ee753866acdac07bea7f27766292d2776f6b3130d45635d64601",
+      "blaya.py": "f319efde9beecbdcda00816c2dff469c0578768f7789e7e1104deec78361fd38",
+      "cli.py": "41b7e144a834fe894c563dc38e78725938bf39b35e1a5ea8859740bd8c74d643",
+      "codec.py": "be00a73122319032220ec3415a58efa1697a7cfccc977a893f5438f8d68b457f",
+      "data.py": "3329fe7cbdaf5ffb16e8e2f068e37dc6f190a3be93418cf8a2b696b414a29464",
+      "engine.py": "8bb7acf8d76d610499525be873f8a21c532da45522bfa2de66bb1fe912315d09",
+      "evaluation.py": "fd823099e42f6a75fd18b277d8452f807a19930da2141c59246fb0b9dc2b4eff",
+      "metrics.py": "1a621aba0e935dd6510dccc29831aa7f5d7c3ceae01102f96d919e45d6826faa",
+      "model.py": "b06d8fa81afdb81d405d8dee0b05ff8105d73cc11559ad555967a40754be1ca0",
+      "profiling.py": "c9b489b3eb444f143958c7c83435db9c4db9734a6f7eda358b858ca4c9611f09",
+      "protocol.py": "7c303aa361943584be9c6daf84b070be022152d1b3bafcfef3bee9c408186fc2",
+      "research.py": "499c1423fee290d9c9b6b0626168ac29b242cd4bd56d79add565a8c93fd668d9",
+      "research_plots.py": "a679a421d6a99de8b2842ee0f5e3117a87876d58f3f05c322fe0773e2e2e7fde",
+      "statistics.py": "6333cd056a0c1d885d61cfae55a52c2fe8e0ade63361b73fffafe3396a6649fc",
+      "training.py": "a2018a6f730c972a62fe9b09d64c2e63d7b53ec3afaafa6e6725a59a584eff42"
+    }
+  },
+  "codec": "qgru-v2",
+  "codec_model_id": "6f4f808fd6789d54",
+  "codec_fingerprint": "6f4f808fd6789d54614d87354d1509316a65ac72d46ea41cc022feba30b12073",
+  "webp_available": true,
+  "timing_protocol": "qgru-v2: batched rows; per-image time = batch wall time / rows (throughput, not single-image latency; see `bitlaya profile`)"
+}

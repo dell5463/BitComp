@@ -1,0 +1,1898 @@
+[
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method torch.gru>",
+    "calls": 16384,
+    "self_seconds": 1.8948440000000002,
+    "cumulative_seconds": 1.8948440000000002
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method torch.embedding>",
+    "calls": 16384,
+    "self_seconds": 0.3013578,
+    "cumulative_seconds": 0.3013578
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method torch._C._nn.linear>",
+    "calls": 16384,
+    "self_seconds": 0.21750370000000002,
+    "cumulative_seconds": 0.21750370000000002
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 1959,
+    "function": "__getattr__",
+    "calls": 360552,
+    "self_seconds": 0.1604545,
+    "cumulative_seconds": 0.1604545
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\rnn.py",
+    "line": 1378,
+    "function": "forward",
+    "calls": 16384,
+    "self_seconds": 0.15260420000000002,
+    "cumulative_seconds": 2.6424397
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\model.py",
+    "line": 41,
+    "function": "forward",
+    "calls": 16384,
+    "self_seconds": 0.13118190000000002,
+    "cumulative_seconds": 3.6916527
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\rnn.py",
+    "line": 364,
+    "function": "_weights_have_changed",
+    "calls": 16386,
+    "self_seconds": 0.11655670000000001,
+    "cumulative_seconds": 0.4162672
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 1787,
+    "function": "_call_impl",
+    "calls": 65536,
+    "self_seconds": 0.114696,
+    "cumulative_seconds": 3.7350132
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method builtins.hasattr>",
+    "calls": 131304,
+    "self_seconds": 0.10831790000000001,
+    "cumulative_seconds": 0.15858750000000002
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 1779,
+    "function": "_wrapped_call_impl",
+    "calls": 65536,
+    "self_seconds": 0.10538,
+    "cumulative_seconds": 3.7528394
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method builtins.getattr>",
+    "calls": 147756,
+    "self_seconds": 0.10099330000000001,
+    "cumulative_seconds": 0.1443075
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method torch._C._get_tracing_state>",
+    "calls": 65536,
+    "self_seconds": 0.046293600000000004,
+    "cumulative_seconds": 0.046293600000000004
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\codec.py",
+    "line": 171,
+    "function": "decode",
+    "calls": 1,
+    "self_seconds": 0.045302600000000005,
+    "cumulative_seconds": 2.0903024
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\codec.py",
+    "line": 138,
+    "function": "encode",
+    "calls": 1,
+    "self_seconds": 0.040195600000000005,
+    "cumulative_seconds": 1.8683649000000002
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'squeeze' of 'torch._C.TensorBase' objects>",
+    "calls": 16384,
+    "self_seconds": 0.038138500000000006,
+    "cumulative_seconds": 0.038138500000000006
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\codec.py",
+    "line": 69,
+    "function": "_decision",
+    "calls": 16384,
+    "self_seconds": 0.0364236,
+    "cumulative_seconds": 0.0488899
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'fill_' of 'torch._C.TensorBase' objects>",
+    "calls": 16384,
+    "self_seconds": 0.036085200000000005,
+    "cumulative_seconds": 0.036085200000000005
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\linear.py",
+    "line": 130,
+    "function": "forward",
+    "calls": 16384,
+    "self_seconds": 0.035308,
+    "cumulative_seconds": 0.26469600000000004
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'size' of 'torch._C.TensorBase' objects>",
+    "calls": 65536,
+    "self_seconds": 0.0341377,
+    "cumulative_seconds": 0.0341377
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\rnn.py",
+    "line": 313,
+    "function": "check_input",
+    "calls": 16384,
+    "self_seconds": 0.032362100000000005,
+    "cumulative_seconds": 0.043121900000000005
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\sparse.py",
+    "line": 188,
+    "function": "forward",
+    "calls": 16384,
+    "self_seconds": 0.030489400000000003,
+    "cumulative_seconds": 0.36139200000000005
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'item' of 'torch._C.TensorBase' objects>",
+    "calls": 16384,
+    "self_seconds": 0.0241104,
+    "cumulative_seconds": 0.0241104
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\rnn.py",
+    "line": 377,
+    "function": "check_forward_args",
+    "calls": 16384,
+    "self_seconds": 0.024052300000000002,
+    "cumulative_seconds": 0.10854960000000001
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\functional.py",
+    "line": 2509,
+    "function": "embedding",
+    "calls": 16384,
+    "self_seconds": 0.0190711,
+    "cumulative_seconds": 0.32453790000000005
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\rnn.py",
+    "line": 333,
+    "function": "get_expected_hidden_size",
+    "calls": 16384,
+    "self_seconds": 0.018361000000000002,
+    "cumulative_seconds": 0.023581400000000002
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\rnn.py",
+    "line": 406,
+    "function": "_update_flat_weights",
+    "calls": 16386,
+    "self_seconds": 0.0182573,
+    "cumulative_seconds": 0.4368148
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'dim' of 'torch._C.TensorBase' objects>",
+    "calls": 65534,
+    "self_seconds": 0.012286,
+    "cumulative_seconds": 0.012286
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\rnn.py",
+    "line": 355,
+    "function": "check_hidden_size",
+    "calls": 16384,
+    "self_seconds": 0.009400500000000001,
+    "cumulative_seconds": 0.017794
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\_VF.py",
+    "line": 27,
+    "function": "__getattr__",
+    "calls": 16384,
+    "self_seconds": 0.0082699,
+    "cumulative_seconds": 0.011236600000000001
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method builtins.isinstance>",
+    "calls": 33197,
+    "self_seconds": 0.0073473,
+    "cumulative_seconds": 0.0073958
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\rnn.py",
+    "line": 385,
+    "function": "permute_hidden",
+    "calls": 32766,
+    "self_seconds": 0.007136600000000001,
+    "cumulative_seconds": 0.007136600000000001
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method math.exp>",
+    "calls": 16384,
+    "self_seconds": 0.0053151000000000006,
+    "cumulative_seconds": 0.0053151000000000006
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\_jit_internal.py",
+    "line": 104,
+    "function": "is_scripting",
+    "calls": 32816,
+    "self_seconds": 0.0042727,
+    "cumulative_seconds": 0.0042727
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method torch._C._has_torch_function_variadic>",
+    "calls": 16384,
+    "self_seconds": 0.004109000000000001,
+    "cumulative_seconds": 0.004109000000000001
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method math.isfinite>",
+    "calls": 16386,
+    "self_seconds": 0.0040866,
+    "cumulative_seconds": 0.0040866
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method builtins.abs>",
+    "calls": 16384,
+    "self_seconds": 0.0030652,
+    "cumulative_seconds": 0.0030652
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method torch.isfinite>",
+    "calls": 22,
+    "self_seconds": 0.0022132000000000002,
+    "cumulative_seconds": 0.0022132000000000002
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'append' of 'list' objects>",
+    "calls": 7889,
+    "self_seconds": 0.0015172,
+    "cumulative_seconds": 0.0015172
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\copy.py",
+    "line": 128,
+    "function": "deepcopy",
+    "calls": 516,
+    "self_seconds": 0.0008486,
+    "cumulative_seconds": 0.0026586
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'update' of '_hashlib.HASH' objects>",
+    "calls": 44,
+    "self_seconds": 0.0006925000000000001,
+    "cumulative_seconds": 0.0006925000000000001
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'all' of 'torch._C.TensorBase' objects>",
+    "calls": 22,
+    "self_seconds": 0.0005332000000000001,
+    "cumulative_seconds": 0.0005332000000000001
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'clone' of 'torch._C.TensorBase' objects>",
+    "calls": 22,
+    "self_seconds": 0.00030450000000000003,
+    "cumulative_seconds": 0.00030450000000000003
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\lib\\_arraysetops_impl.py",
+    "line": 806,
+    "function": "_isin",
+    "calls": 3,
+    "self_seconds": 0.00030230000000000003,
+    "cumulative_seconds": 0.0005244000000000001
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 930,
+    "function": "_apply",
+    "calls": 16,
+    "self_seconds": 0.00027790000000000003,
+    "cumulative_seconds": 0.0011219000000000001
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method numpy.array>",
+    "calls": 4,
+    "self_seconds": 0.00024900000000000004,
+    "cumulative_seconds": 0.00024900000000000004
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\copy.py",
+    "line": 227,
+    "function": "_deepcopy_dict",
+    "calls": 34,
+    "self_seconds": 0.0001828,
+    "cumulative_seconds": 0.0025352
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\copy.py",
+    "line": 259,
+    "function": "_reconstruct",
+    "calls": 106,
+    "self_seconds": 0.0001497,
+    "cumulative_seconds": 0.0025745
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\copyreg.py",
+    "line": 113,
+    "function": "_slotnames",
+    "calls": 96,
+    "self_seconds": 0.0001339,
+    "cumulative_seconds": 0.00019
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'get' of 'dict' objects>",
+    "calls": 1188,
+    "self_seconds": 0.00011750000000000001,
+    "cumulative_seconds": 0.00011750000000000001
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method '__reduce_ex__' of 'object' objects>",
+    "calls": 106,
+    "self_seconds": 0.00011630000000000001,
+    "cumulative_seconds": 0.00038250000000000003
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\model.py",
+    "line": 55,
+    "function": "model_fingerprint",
+    "calls": 2,
+    "self_seconds": 0.0001138,
+    "cumulative_seconds": 0.0012999
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\copy.py",
+    "line": 243,
+    "function": "_keep_alive",
+    "calls": 180,
+    "self_seconds": 0.0001022,
+    "cumulative_seconds": 0.00014460000000000002
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\parameter.py",
+    "line": 74,
+    "function": "__deepcopy__",
+    "calls": 22,
+    "self_seconds": 0.00010070000000000001,
+    "cumulative_seconds": 0.0004938000000000001
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method builtins.id>",
+    "calls": 944,
+    "self_seconds": 8.87e-05,
+    "cumulative_seconds": 8.87e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\profiling.py",
+    "line": 45,
+    "function": "decompress",
+    "calls": 1,
+    "self_seconds": 8.790000000000001e-05,
+    "cumulative_seconds": 2.0903903
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'astype' of 'numpy.ndarray' objects>",
+    "calls": 25,
+    "self_seconds": 7.900000000000001e-05,
+    "cumulative_seconds": 7.900000000000001e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'reduce' of 'numpy.ufunc' objects>",
+    "calls": 10,
+    "self_seconds": 7.8e-05,
+    "cumulative_seconds": 7.8e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 2650,
+    "function": "_named_members",
+    "calls": 24,
+    "self_seconds": 7.66e-05,
+    "cumulative_seconds": 0.00014780000000000001
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\codec.py",
+    "line": 82,
+    "function": "<genexpr>",
+    "calls": 24,
+    "self_seconds": 7.390000000000001e-05,
+    "cumulative_seconds": 0.0030021
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method builtins.all>",
+    "calls": 5,
+    "self_seconds": 6.86e-05,
+    "cumulative_seconds": 0.0030789000000000003
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\profiling.py",
+    "line": 42,
+    "function": "compress",
+    "calls": 1,
+    "self_seconds": 6.85e-05,
+    "cumulative_seconds": 1.8684334
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method _make_subclass>",
+    "calls": 22,
+    "self_seconds": 6.47e-05,
+    "cumulative_seconds": 6.47e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\autograd\\grad_mode.py",
+    "line": 185,
+    "function": "__init__",
+    "calls": 88,
+    "self_seconds": 6.170000000000001e-05,
+    "cumulative_seconds": 9.460000000000001e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 1976,
+    "function": "__setattr__",
+    "calls": 22,
+    "self_seconds": 6.03e-05,
+    "cumulative_seconds": 0.0001551
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\codec.py",
+    "line": 43,
+    "function": "reference_runtime",
+    "calls": 4,
+    "self_seconds": 5.97e-05,
+    "cumulative_seconds": 0.000268
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 939,
+    "function": "compute_should_use_set_data",
+    "calls": 44,
+    "self_seconds": 5.27e-05,
+    "cumulative_seconds": 0.0001017
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'detach' of 'torch._C.TensorBase' objects>",
+    "calls": 44,
+    "self_seconds": 5.05e-05,
+    "cumulative_seconds": 5.05e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'tobytes' of 'numpy.ndarray' objects>",
+    "calls": 25,
+    "self_seconds": 4.77e-05,
+    "cumulative_seconds": 4.77e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\autograd\\grad_mode.py",
+    "line": 81,
+    "function": "__enter__",
+    "calls": 44,
+    "self_seconds": 4.71e-05,
+    "cumulative_seconds": 0.0001055
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'numpy' of 'torch._C.TensorBase' objects>",
+    "calls": 22,
+    "self_seconds": 4.32e-05,
+    "cumulative_seconds": 4.32e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'cpu' of 'torch._C.TensorBase' objects>",
+    "calls": 44,
+    "self_seconds": 4.22e-05,
+    "cumulative_seconds": 4.22e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 2199,
+    "function": "state_dict",
+    "calls": 8,
+    "self_seconds": 4.13e-05,
+    "cumulative_seconds": 0.00010510000000000001
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\autograd\\grad_mode.py",
+    "line": 76,
+    "function": "__init__",
+    "calls": 44,
+    "self_seconds": 4.11e-05,
+    "cumulative_seconds": 4.6200000000000005e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method torch.tensor>",
+    "calls": 2,
+    "self_seconds": 3.85e-05,
+    "cumulative_seconds": 3.85e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\utils\\_python_dispatch.py",
+    "line": 547,
+    "function": "is_traceable_wrapper_subclass",
+    "calls": 44,
+    "self_seconds": 3.79e-05,
+    "cumulative_seconds": 6.890000000000001e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\__init__.py",
+    "line": 1756,
+    "function": "use_deterministic_algorithms",
+    "calls": 4,
+    "self_seconds": 3.69e-05,
+    "cumulative_seconds": 0.0001061
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method _hashlib.openssl_sha256>",
+    "calls": 6,
+    "self_seconds": 3.68e-05,
+    "cumulative_seconds": 3.68e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'to' of 'torch._C.TensorBase' objects>",
+    "calls": 22,
+    "self_seconds": 3.65e-05,
+    "cumulative_seconds": 3.65e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\utils\\_config_module.py",
+    "line": 421,
+    "function": "__setattr__",
+    "calls": 4,
+    "self_seconds": 3.5600000000000005e-05,
+    "cumulative_seconds": 6.21e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 2794,
+    "function": "named_children",
+    "calls": 42,
+    "self_seconds": 3.3900000000000004e-05,
+    "cumulative_seconds": 4.0300000000000004e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\rnn.py",
+    "line": 230,
+    "function": "__setattr__",
+    "calls": 16,
+    "self_seconds": 3.3900000000000004e-05,
+    "cumulative_seconds": 0.0001553
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\copy.py",
+    "line": 201,
+    "function": "_deepcopy_list",
+    "calls": 18,
+    "self_seconds": 3.29e-05,
+    "cumulative_seconds": 9.850000000000001e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\json\\encoder.py",
+    "line": 205,
+    "function": "iterencode",
+    "calls": 3,
+    "self_seconds": 3.18e-05,
+    "cumulative_seconds": 3.18e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\_core\\numeric.py",
+    "line": 97,
+    "function": "zeros_like",
+    "calls": 3,
+    "self_seconds": 3.18e-05,
+    "cumulative_seconds": 3.82e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\bits.py",
+    "line": 31,
+    "function": "bits_to_image",
+    "calls": 2,
+    "self_seconds": 3.18e-05,
+    "cumulative_seconds": 0.0005396
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method torch._has_compatible_shallow_copy_type>",
+    "calls": 44,
+    "self_seconds": 3.0500000000000003e-05,
+    "cumulative_seconds": 3.0500000000000003e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\copy.py",
+    "line": 182,
+    "function": "_deepcopy_atomic",
+    "calls": 320,
+    "self_seconds": 3.04e-05,
+    "cumulative_seconds": 3.04e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\bits.py",
+    "line": 19,
+    "function": "validate_bits",
+    "calls": 3,
+    "self_seconds": 2.86e-05,
+    "cumulative_seconds": 0.0006213000000000001
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 2148,
+    "function": "_save_to_state_dict",
+    "calls": 8,
+    "self_seconds": 2.82e-05,
+    "cumulative_seconds": 5.9900000000000006e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\autograd\\grad_mode.py",
+    "line": 85,
+    "function": "__exit__",
+    "calls": 44,
+    "self_seconds": 2.7400000000000002e-05,
+    "cumulative_seconds": 7.120000000000001e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 2845,
+    "function": "named_modules",
+    "calls": 22,
+    "self_seconds": 2.7300000000000003e-05,
+    "cumulative_seconds": 3.0500000000000003e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\lib\\_arraysetops_impl.py",
+    "line": 958,
+    "function": "isin",
+    "calls": 3,
+    "self_seconds": 2.6900000000000003e-05,
+    "cumulative_seconds": 0.0005574
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\utils\\_contextlib.py",
+    "line": 167,
+    "function": "__new__",
+    "calls": 44,
+    "self_seconds": 2.6900000000000003e-05,
+    "cumulative_seconds": 3.79e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 2785,
+    "function": "children",
+    "calls": 42,
+    "self_seconds": 2.6200000000000003e-05,
+    "cumulative_seconds": 6.65e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 66,
+    "function": "_wrapreduction",
+    "calls": 6,
+    "self_seconds": 2.5500000000000003e-05,
+    "cumulative_seconds": 9.010000000000001e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\codec.py",
+    "line": 79,
+    "function": "_reference_model",
+    "calls": 2,
+    "self_seconds": 2.5200000000000003e-05,
+    "cumulative_seconds": 0.006964700000000001
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\codec.py",
+    "line": 96,
+    "function": "inspect_stream",
+    "calls": 1,
+    "self_seconds": 2.4500000000000003e-05,
+    "cumulative_seconds": 0.0001269
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\parameter.py",
+    "line": 21,
+    "function": "__instancecheck__",
+    "calls": 22,
+    "self_seconds": 2.4200000000000002e-05,
+    "cumulative_seconds": 3.2500000000000004e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\rnn.py",
+    "line": 220,
+    "function": "_init_flat_weights",
+    "calls": 4,
+    "self_seconds": 2.3800000000000003e-05,
+    "cumulative_seconds": 0.00021630000000000003
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\dataclasses.py",
+    "line": 1289,
+    "function": "_asdict_inner",
+    "calls": 8,
+    "self_seconds": 2.29e-05,
+    "cumulative_seconds": 6.2e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method torch._C._set_grad_enabled>",
+    "calls": 88,
+    "self_seconds": 2.1400000000000002e-05,
+    "cumulative_seconds": 2.1400000000000002e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method torch.zeros>",
+    "calls": 2,
+    "self_seconds": 2.1300000000000003e-05,
+    "cumulative_seconds": 2.1300000000000003e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\_core\\getlimits.py",
+    "line": 412,
+    "function": "__init__",
+    "calls": 3,
+    "self_seconds": 2.04e-05,
+    "cumulative_seconds": 2.04e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 1191,
+    "function": "<lambda>",
+    "calls": 22,
+    "self_seconds": 1.97e-05,
+    "cumulative_seconds": 4.49e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\autograd\\grad_mode.py",
+    "line": 290,
+    "function": "__enter__",
+    "calls": 2,
+    "self_seconds": 1.97e-05,
+    "cumulative_seconds": 2.23e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\parameter.py",
+    "line": 51,
+    "function": "__new__",
+    "calls": 22,
+    "self_seconds": 1.93e-05,
+    "cumulative_seconds": 8.400000000000001e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method torch.is_grad_enabled>",
+    "calls": 132,
+    "self_seconds": 1.91e-05,
+    "cumulative_seconds": 1.91e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\rnn.py",
+    "line": 237,
+    "function": "flatten_parameters",
+    "calls": 4,
+    "self_seconds": 1.88e-05,
+    "cumulative_seconds": 2.4800000000000003e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method numpy.asarray>",
+    "calls": 13,
+    "self_seconds": 1.88e-05,
+    "cumulative_seconds": 1.88e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'float' of 'torch._C.TensorBase' objects>",
+    "calls": 22,
+    "self_seconds": 1.81e-05,
+    "cumulative_seconds": 1.81e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method torch.set_num_threads>",
+    "calls": 4,
+    "self_seconds": 1.8e-05,
+    "cumulative_seconds": 1.8e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\_tensor.py",
+    "line": 1227,
+    "function": "__hash__",
+    "calls": 44,
+    "self_seconds": 1.7800000000000002e-05,
+    "cumulative_seconds": 2.4500000000000003e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\parameter.py",
+    "line": 240,
+    "function": "__instancecheck__",
+    "calls": 22,
+    "self_seconds": 1.7800000000000002e-05,
+    "cumulative_seconds": 2.5e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 2699,
+    "function": "named_parameters",
+    "calls": 24,
+    "self_seconds": 1.74e-05,
+    "cumulative_seconds": 0.0001652
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\rnn.py",
+    "line": 221,
+    "function": "<listcomp>",
+    "calls": 4,
+    "self_seconds": 1.73e-05,
+    "cumulative_seconds": 9.730000000000001e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'items' of 'dict' objects>",
+    "calls": 137,
+    "self_seconds": 1.7100000000000002e-05,
+    "cumulative_seconds": 1.7100000000000002e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method builtins.issubclass>",
+    "calls": 128,
+    "self_seconds": 1.7100000000000002e-05,
+    "cumulative_seconds": 1.7100000000000002e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\rnn.py",
+    "line": 297,
+    "function": "_apply",
+    "calls": 4,
+    "self_seconds": 1.7e-05,
+    "cumulative_seconds": 0.0007494
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 2670,
+    "function": "parameters",
+    "calls": 24,
+    "self_seconds": 1.66e-05,
+    "cumulative_seconds": 0.0001818
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method builtins.any>",
+    "calls": 5,
+    "self_seconds": 1.66e-05,
+    "cumulative_seconds": 3.61e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\utils\\_python_dispatch.py",
+    "line": 543,
+    "function": "_has_traceable_wrapper_subclass_protocol",
+    "calls": 44,
+    "self_seconds": 1.65e-05,
+    "cumulative_seconds": 2.3100000000000002e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 2894,
+    "function": "train",
+    "calls": 8,
+    "self_seconds": 1.63e-05,
+    "cumulative_seconds": 8.77e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'add' of 'set' objects>",
+    "calls": 48,
+    "self_seconds": 1.6100000000000002e-05,
+    "cumulative_seconds": 2.4500000000000003e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'get' of 'mappingproxy' objects>",
+    "calls": 96,
+    "self_seconds": 1.6000000000000003e-05,
+    "cumulative_seconds": 1.6000000000000003e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\json\\__init__.py",
+    "line": 183,
+    "function": "dumps",
+    "calls": 3,
+    "self_seconds": 1.5700000000000002e-05,
+    "cumulative_seconds": 6.48e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method __new__ of type object at 0x00007FF81A0A0FD0>",
+    "calls": 56,
+    "self_seconds": 1.5700000000000002e-05,
+    "cumulative_seconds": 1.5700000000000002e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 1157,
+    "function": "cpu",
+    "calls": 2,
+    "self_seconds": 1.46e-05,
+    "cumulative_seconds": 0.0006338
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\utils\\_config_module.py",
+    "line": 522,
+    "function": "_mark_get_dict_dirty",
+    "calls": 4,
+    "self_seconds": 1.4400000000000001e-05,
+    "cumulative_seconds": 1.6100000000000002e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\codec.py",
+    "line": 131,
+    "function": "<genexpr>",
+    "calls": 130,
+    "self_seconds": 1.43e-05,
+    "cumulative_seconds": 1.43e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 3149,
+    "function": "min",
+    "calls": 3,
+    "self_seconds": 1.41e-05,
+    "cumulative_seconds": 8.560000000000001e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\bits.py",
+    "line": 45,
+    "function": "unpack_bits",
+    "calls": 1,
+    "self_seconds": 1.4000000000000001e-05,
+    "cumulative_seconds": 3.0600000000000005e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 1929,
+    "function": "__setstate__",
+    "calls": 8,
+    "self_seconds": 1.3700000000000001e-05,
+    "cumulative_seconds": 1.76e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\copyreg.py",
+    "line": 104,
+    "function": "__newobj__",
+    "calls": 10,
+    "self_seconds": 1.34e-05,
+    "cumulative_seconds": 1.7e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\bits.py",
+    "line": 26,
+    "function": "image_to_bits",
+    "calls": 1,
+    "self_seconds": 1.3100000000000002e-05,
+    "cumulative_seconds": 1.79e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'ravel' of 'numpy.ndarray' objects>",
+    "calls": 7,
+    "self_seconds": 1.29e-05,
+    "cumulative_seconds": 1.29e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'hexdigest' of '_hashlib.HASH' objects>",
+    "calls": 4,
+    "self_seconds": 1.27e-05,
+    "cumulative_seconds": 1.27e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\json\\encoder.py",
+    "line": 183,
+    "function": "encode",
+    "calls": 3,
+    "self_seconds": 1.2400000000000002e-05,
+    "cumulative_seconds": 4.5400000000000006e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 1924,
+    "function": "__getstate__",
+    "calls": 6,
+    "self_seconds": 1.1900000000000001e-05,
+    "cumulative_seconds": 1.7e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\copy.py",
+    "line": 264,
+    "function": "<genexpr>",
+    "calls": 36,
+    "self_seconds": 1.18e-05,
+    "cumulative_seconds": 6.26e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\rnn.py",
+    "line": 419,
+    "function": "__setstate__",
+    "calls": 2,
+    "self_seconds": 1.13e-05,
+    "cumulative_seconds": 6.440000000000001e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 1166,
+    "function": "<lambda>",
+    "calls": 22,
+    "self_seconds": 1.1000000000000001e-05,
+    "cumulative_seconds": 3.46e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\backends\\__init__.py",
+    "line": 44,
+    "function": "__set__",
+    "calls": 4,
+    "self_seconds": 1.06e-05,
+    "cumulative_seconds": 1.54e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\autograd\\grad_mode.py",
+    "line": 294,
+    "function": "__exit__",
+    "calls": 2,
+    "self_seconds": 9.9e-06,
+    "cumulative_seconds": 1.7e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\json\\decoder.py",
+    "line": 343,
+    "function": "raw_decode",
+    "calls": 1,
+    "self_seconds": 9.3e-06,
+    "cumulative_seconds": 9.3e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\backends\\__init__.py",
+    "line": 41,
+    "function": "__get__",
+    "calls": 2,
+    "self_seconds": 9.3e-06,
+    "cumulative_seconds": 1.02e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\codec.py",
+    "line": 34,
+    "function": "runtime_signature",
+    "calls": 2,
+    "self_seconds": 9.2e-06,
+    "cumulative_seconds": 2.05e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\platform.py",
+    "line": 951,
+    "function": "machine",
+    "calls": 2,
+    "self_seconds": 9.100000000000001e-06,
+    "cumulative_seconds": 9.800000000000001e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method builtins.next>",
+    "calls": 4,
+    "self_seconds": 8.8e-06,
+    "cumulative_seconds": 0.0002768
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\dataclasses.py",
+    "line": 1235,
+    "function": "fields",
+    "calls": 2,
+    "self_seconds": 8.7e-06,
+    "cumulative_seconds": 1.4200000000000001e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\contextlib.py",
+    "line": 141,
+    "function": "__exit__",
+    "calls": 2,
+    "self_seconds": 8.6e-06,
+    "cumulative_seconds": 0.00013900000000000002
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\dataclasses.py",
+    "line": 1265,
+    "function": "asdict",
+    "calls": 2,
+    "self_seconds": 8.5e-06,
+    "cumulative_seconds": 7.390000000000001e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\json\\decoder.py",
+    "line": 332,
+    "function": "decode",
+    "calls": 1,
+    "self_seconds": 8.5e-06,
+    "cumulative_seconds": 2.0600000000000003e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\rnn.py",
+    "line": 225,
+    "function": "<listcomp>",
+    "calls": 4,
+    "self_seconds": 8.5e-06,
+    "cumulative_seconds": 8.5e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\json\\__init__.py",
+    "line": 299,
+    "function": "loads",
+    "calls": 1,
+    "self_seconds": 8.400000000000001e-06,
+    "cumulative_seconds": 3.6e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\lib\\_arraysetops_impl.py",
+    "line": 820,
+    "function": "<genexpr>",
+    "calls": 9,
+    "self_seconds": 8.200000000000001e-06,
+    "cumulative_seconds": 8.200000000000001e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\__future__.py",
+    "line": 25,
+    "function": "get_overwrite_module_params_on_conversion",
+    "calls": 44,
+    "self_seconds": 8.1e-06,
+    "cumulative_seconds": 8.1e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\codec.py",
+    "line": 87,
+    "function": "_serialize",
+    "calls": 1,
+    "self_seconds": 7.9e-06,
+    "cumulative_seconds": 3.66e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\contextlib.py",
+    "line": 299,
+    "function": "helper",
+    "calls": 2,
+    "self_seconds": 7.5e-06,
+    "cumulative_seconds": 1.3800000000000002e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'reshape' of 'numpy.ndarray' objects>",
+    "calls": 5,
+    "self_seconds": 7.3e-06,
+    "cumulative_seconds": 7.3e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method torch._C._set_deterministic_algorithms>",
+    "calls": 4,
+    "self_seconds": 7.100000000000001e-06,
+    "cumulative_seconds": 7.100000000000001e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'is_floating_point' of 'torch._C.TensorBase' objects>",
+    "calls": 22,
+    "self_seconds": 7.100000000000001e-06,
+    "cumulative_seconds": 7.100000000000001e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method torch._C.__exit__>",
+    "calls": 2,
+    "self_seconds": 7.100000000000001e-06,
+    "cumulative_seconds": 7.100000000000001e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 67,
+    "function": "<dictcomp>",
+    "calls": 6,
+    "self_seconds": 6.8e-06,
+    "cumulative_seconds": 6.8e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'set' of '_contextvars.ContextVar' objects>",
+    "calls": 8,
+    "self_seconds": 6.8e-06,
+    "cumulative_seconds": 6.8e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method numpy.zeros>",
+    "calls": 6,
+    "self_seconds": 6.6e-06,
+    "cumulative_seconds": 6.6e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<function _ParameterMeta.__instancecheck__ at 0x000001FEACED5120>",
+    "calls": 44,
+    "self_seconds": 6.5000000000000004e-06,
+    "cumulative_seconds": 6.5000000000000004e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\bits.py",
+    "line": 40,
+    "function": "pack_bits",
+    "calls": 1,
+    "self_seconds": 6.200000000000001e-06,
+    "cumulative_seconds": 0.00013130000000000002
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\rnn.py",
+    "line": 466,
+    "function": "<listcomp>",
+    "calls": 2,
+    "self_seconds": 6e-06,
+    "cumulative_seconds": 6e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\autograd\\grad_mode.py",
+    "line": 280,
+    "function": "__init__",
+    "calls": 2,
+    "self_seconds": 5.8e-06,
+    "cumulative_seconds": 6e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\codec.py",
+    "line": 62,
+    "function": "validate_threshold",
+    "calls": 2,
+    "self_seconds": 5.600000000000001e-06,
+    "cumulative_seconds": 6.200000000000001e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'contiguous' of 'torch._C.TensorBase' objects>",
+    "calls": 22,
+    "self_seconds": 5.500000000000001e-06,
+    "cumulative_seconds": 5.500000000000001e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method builtins.len>",
+    "calls": 34,
+    "self_seconds": 5.4e-06,
+    "cumulative_seconds": 5.4e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\contextlib.py",
+    "line": 104,
+    "function": "__init__",
+    "calls": 2,
+    "self_seconds": 5.2e-06,
+    "cumulative_seconds": 6.300000000000001e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'all' of 'numpy.ndarray' objects>",
+    "calls": 3,
+    "self_seconds": 5.2e-06,
+    "cumulative_seconds": 2.5200000000000003e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method builtins.sorted>",
+    "calls": 2,
+    "self_seconds": 5.2e-06,
+    "cumulative_seconds": 5.2e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\_core\\getlimits.py",
+    "line": 436,
+    "function": "max",
+    "calls": 3,
+    "self_seconds": 4.800000000000001e-06,
+    "cumulative_seconds": 4.800000000000001e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'copy' of 'dict' objects>",
+    "calls": 8,
+    "self_seconds": 4.7e-06,
+    "cumulative_seconds": 4.7e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\json\\__init__.py",
+    "line": 244,
+    "function": "detect_encoding",
+    "calls": 1,
+    "self_seconds": 4.6e-06,
+    "cumulative_seconds": 6.200000000000001e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'encode' of 'str' objects>",
+    "calls": 25,
+    "self_seconds": 4.6e-06,
+    "cumulative_seconds": 4.6e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\autograd\\grad_mode.py",
+    "line": 285,
+    "function": "__new__",
+    "calls": 2,
+    "self_seconds": 4.5e-06,
+    "cumulative_seconds": 5.9e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'update' of 'dict' objects>",
+    "calls": 10,
+    "self_seconds": 4.4e-06,
+    "cumulative_seconds": 4.4e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\dataclasses.py",
+    "line": 1253,
+    "function": "_is_dataclass_instance",
+    "calls": 10,
+    "self_seconds": 4.3e-06,
+    "cumulative_seconds": 9.800000000000001e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\_core\\_methods.py",
+    "line": 64,
+    "function": "_all",
+    "calls": 3,
+    "self_seconds": 4.3e-06,
+    "cumulative_seconds": 2e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\contextlib.py",
+    "line": 132,
+    "function": "__enter__",
+    "calls": 2,
+    "self_seconds": 4.2000000000000004e-06,
+    "cumulative_seconds": 0.0001506
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\rnn.py",
+    "line": 411,
+    "function": "__getstate__",
+    "calls": 2,
+    "self_seconds": 4.1000000000000006e-06,
+    "cumulative_seconds": 5.92e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\dataclasses.py",
+    "line": 1250,
+    "function": "<genexpr>",
+    "calls": 8,
+    "self_seconds": 4.000000000000001e-06,
+    "cumulative_seconds": 4.000000000000001e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 3011,
+    "function": "max",
+    "calls": 3,
+    "self_seconds": 3.9e-06,
+    "cumulative_seconds": 2.25e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\json\\encoder.py",
+    "line": 105,
+    "function": "__init__",
+    "calls": 3,
+    "self_seconds": 3.7e-06,
+    "cumulative_seconds": 3.7e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 86,
+    "function": "_wrapreduction_any_all",
+    "calls": 1,
+    "self_seconds": 3.6000000000000003e-06,
+    "cumulative_seconds": 1.01e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\bits.py",
+    "line": 7,
+    "function": "validate_image",
+    "calls": 1,
+    "self_seconds": 3.6000000000000003e-06,
+    "cumulative_seconds": 3.9e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\bits.py",
+    "line": 33,
+    "function": "<genexpr>",
+    "calls": 6,
+    "self_seconds": 3.6000000000000003e-06,
+    "cumulative_seconds": 3.6000000000000003e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\utils\\_config_module.py",
+    "line": 409,
+    "function": "_warn_if_deprecated",
+    "calls": 4,
+    "self_seconds": 3.6000000000000003e-06,
+    "cumulative_seconds": 3.6000000000000003e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 2724,
+    "function": "<lambda>",
+    "calls": 8,
+    "self_seconds": 3.6000000000000003e-06,
+    "cumulative_seconds": 4.7e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\__future__.py",
+    "line": 68,
+    "function": "get_swap_module_params_on_conversion",
+    "calls": 16,
+    "self_seconds": 3.4e-06,
+    "cumulative_seconds": 3.4e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 2916,
+    "function": "eval",
+    "calls": 2,
+    "self_seconds": 3.3e-06,
+    "cumulative_seconds": 9.1e-05
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 2436,
+    "function": "any",
+    "calls": 1,
+    "self_seconds": 3.1000000000000004e-06,
+    "cumulative_seconds": 1.32e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method torch._C._set_mkldnn_enabled>",
+    "calls": 4,
+    "self_seconds": 3e-06,
+    "cumulative_seconds": 3e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method torch._C.__enter__>",
+    "calls": 2,
+    "self_seconds": 2.6e-06,
+    "cumulative_seconds": 2.6e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\__init__.py",
+    "line": 1906,
+    "function": "are_deterministic_algorithms_enabled",
+    "calls": 2,
+    "self_seconds": 2.4000000000000003e-06,
+    "cumulative_seconds": 3.4e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+    "line": 1182,
+    "function": "float",
+    "calls": 2,
+    "self_seconds": 2.4000000000000003e-06,
+    "cumulative_seconds": 0.0005051000000000001
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'match' of 're.Pattern' objects>",
+    "calls": 2,
+    "self_seconds": 2.4000000000000003e-06,
+    "cumulative_seconds": 2.4000000000000003e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method _struct.pack>",
+    "calls": 1,
+    "self_seconds": 2.2e-06,
+    "cumulative_seconds": 2.2e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\__init__.py",
+    "line": 1913,
+    "function": "is_deterministic_algorithms_warn_only_enabled",
+    "calls": 2,
+    "self_seconds": 2.1000000000000002e-06,
+    "cumulative_seconds": 2.4000000000000003e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method numpy.empty>",
+    "calls": 1,
+    "self_seconds": 2.1000000000000002e-06,
+    "cumulative_seconds": 2.1000000000000002e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'pop' of 'dict' objects>",
+    "calls": 6,
+    "self_seconds": 2.1000000000000002e-06,
+    "cumulative_seconds": 2.1000000000000002e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'digest' of '_hashlib.HASH' objects>",
+    "calls": 2,
+    "self_seconds": 2.1000000000000002e-06,
+    "cumulative_seconds": 2.1000000000000002e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\torch\\backends\\__init__.py",
+    "line": 21,
+    "function": "flags_frozen",
+    "calls": 4,
+    "self_seconds": 1.8000000000000001e-06,
+    "cumulative_seconds": 1.8000000000000001e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method numpy.frombuffer>",
+    "calls": 1,
+    "self_seconds": 1.7e-06,
+    "cumulative_seconds": 1.7e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'get' of '_contextvars.ContextVar' objects>",
+    "calls": 4,
+    "self_seconds": 1.7e-06,
+    "cumulative_seconds": 1.7e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\_core\\multiarray.py",
+    "line": 115,
+    "function": "empty_like",
+    "calls": 7,
+    "self_seconds": 1.6000000000000001e-06,
+    "cumulative_seconds": 1.6000000000000001e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\src\\bitlaya\\codec.py",
+    "line": 117,
+    "function": "<genexpr>",
+    "calls": 3,
+    "self_seconds": 1.6000000000000001e-06,
+    "cumulative_seconds": 1.6000000000000001e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method torch.get_num_threads>",
+    "calls": 2,
+    "self_seconds": 1.6000000000000001e-06,
+    "cumulative_seconds": 1.6000000000000001e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'startswith' of 'bytes' objects>",
+    "calls": 3,
+    "self_seconds": 1.5e-06,
+    "cumulative_seconds": 1.5e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'copy' of 'numpy.ndarray' objects>",
+    "calls": 1,
+    "self_seconds": 1.4000000000000001e-06,
+    "cumulative_seconds": 1.4000000000000001e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'values' of 'collections.OrderedDict' objects>",
+    "calls": 16,
+    "self_seconds": 1.4000000000000001e-06,
+    "cumulative_seconds": 1.4000000000000001e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\platform.py",
+    "line": 914,
+    "function": "system",
+    "calls": 2,
+    "self_seconds": 1.3e-06,
+    "cumulative_seconds": 1.5e-06
+  },
+  {
+    "file": "<string>",
+    "line": 2,
+    "function": "__init__",
+    "calls": 1,
+    "self_seconds": 1.2000000000000002e-06,
+    "cumulative_seconds": 1.2000000000000002e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'disable' of '_lsprof.Profiler' objects>",
+    "calls": 1,
+    "self_seconds": 1.2000000000000002e-06,
+    "cumulative_seconds": 1.2000000000000002e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method torch._C._get_deterministic_algorithms>",
+    "calls": 2,
+    "self_seconds": 1.0000000000000002e-06,
+    "cumulative_seconds": 1.0000000000000002e-06
+  },
+  {
+    "file": "C:\\Users\\delvi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\platform.py",
+    "line": 825,
+    "function": "uname",
+    "calls": 4,
+    "self_seconds": 9.000000000000001e-07,
+    "cumulative_seconds": 9.000000000000001e-07
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\_core\\numeric.py",
+    "line": 91,
+    "function": "_zeros_like_dispatcher",
+    "calls": 3,
+    "self_seconds": 9.000000000000001e-07,
+    "cumulative_seconds": 9.000000000000001e-07
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method torch._C._get_mkldnn_enabled>",
+    "calls": 2,
+    "self_seconds": 9.000000000000001e-07,
+    "cumulative_seconds": 9.000000000000001e-07
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 3144,
+    "function": "_min_dispatcher",
+    "calls": 3,
+    "self_seconds": 8.000000000000001e-07,
+    "cumulative_seconds": 8.000000000000001e-07
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 88,
+    "function": "<dictcomp>",
+    "calls": 1,
+    "self_seconds": 7.000000000000001e-07,
+    "cumulative_seconds": 7.000000000000001e-07
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\_core\\multiarray.py",
+    "line": 1085,
+    "function": "copyto",
+    "calls": 3,
+    "self_seconds": 7.000000000000001e-07,
+    "cumulative_seconds": 7.000000000000001e-07
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\lib\\_arraysetops_impl.py",
+    "line": 953,
+    "function": "_isin_dispatcher",
+    "calls": 3,
+    "self_seconds": 7.000000000000001e-07,
+    "cumulative_seconds": 7.000000000000001e-07
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\_core\\multiarray.py",
+    "line": 1181,
+    "function": "packbits",
+    "calls": 3,
+    "self_seconds": 6.000000000000001e-07,
+    "cumulative_seconds": 6.000000000000001e-07
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 3006,
+    "function": "_max_dispatcher",
+    "calls": 3,
+    "self_seconds": 6.000000000000001e-07,
+    "cumulative_seconds": 6.000000000000001e-07
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method _struct.unpack>",
+    "calls": 1,
+    "self_seconds": 6.000000000000001e-07,
+    "cumulative_seconds": 6.000000000000001e-07
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'decode' of 'bytes' objects>",
+    "calls": 1,
+    "self_seconds": 5.000000000000001e-07,
+    "cumulative_seconds": 5.000000000000001e-07
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'values' of 'dict' objects>",
+    "calls": 2,
+    "self_seconds": 5.000000000000001e-07,
+    "cumulative_seconds": 5.000000000000001e-07
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'join' of 'str' objects>",
+    "calls": 3,
+    "self_seconds": 5.000000000000001e-07,
+    "cumulative_seconds": 5.000000000000001e-07
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\_core\\multiarray.py",
+    "line": 1238,
+    "function": "unpackbits",
+    "calls": 2,
+    "self_seconds": 3.0000000000000004e-07,
+    "cumulative_seconds": 3.0000000000000004e-07
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method torch._C._get_deterministic_algorithms_warn_only>",
+    "calls": 2,
+    "self_seconds": 3.0000000000000004e-07,
+    "cumulative_seconds": 3.0000000000000004e-07
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'end' of 're.Match' objects>",
+    "calls": 2,
+    "self_seconds": 3.0000000000000004e-07,
+    "cumulative_seconds": 3.0000000000000004e-07
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'items' of 'collections.OrderedDict' objects>",
+    "calls": 2,
+    "self_seconds": 2.0000000000000002e-07,
+    "cumulative_seconds": 2.0000000000000002e-07
+  },
+  {
+    "file": "C:\\Users\\delvi\\Projects\\Bittransformer\\.venv\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 2431,
+    "function": "_any_dispatcher",
+    "calls": 1,
+    "self_seconds": 1.0000000000000001e-07,
+    "cumulative_seconds": 1.0000000000000001e-07
+  }
+]

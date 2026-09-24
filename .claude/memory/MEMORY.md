@@ -1,0 +1,2 @@
+- [PowerShell UTF-8 edits](powershell-utf8-edits.md) — PS 5.1 Get/Set-Content corrupts non-ASCII; use Edit/Write tools
+- [BitLaya compute environment](bitlaya-compute.md) — original dev laptop was CPU-only; concurrency limits; GPU PC is new

@@ -1,0 +1,772 @@
+[
+  {
+    "epoch": 1,
+    "train": {
+      "bce_nats": 0.683065281715244,
+      "cross_entropy_bits": 0.9854548945340054,
+      "bit_accuracy": 0.5654716491699219
+    },
+    "validation": {
+      "bce_nats": 0.6826455257833004,
+      "cross_entropy_bits": 0.9848493147326065,
+      "bit_accuracy": 0.5499114990234375,
+      "ece": 0.0275598176449421,
+      "calibration": [
+        {
+          "lower": 0.5,
+          "count": 30175,
+          "accuracy": 0.49130074565037285,
+          "confidence": 0.523098940055234
+        },
+        {
+          "lower": 0.55,
+          "count": 20528,
+          "accuracy": 0.5949434918160561,
+          "confidence": 0.5730959401434739
+        },
+        {
+          "lower": 0.6,
+          "count": 11199,
+          "accuracy": 0.6076435396017501,
+          "confidence": 0.6213268645480974
+        },
+        {
+          "lower": 0.65,
+          "count": 3346,
+          "accuracy": 0.606694560669456,
+          "confidence": 0.6681381921282231
+        },
+        {
+          "lower": 0.7,
+          "count": 288,
+          "accuracy": 0.5763888888888888,
+          "confidence": 0.7129625185496278
+        },
+        {
+          "lower": 0.75,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.8,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.8500000000000001,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.9,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.95,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        }
+      ]
+    },
+    "seconds": 21.847649899995304
+  },
+  {
+    "epoch": 2,
+    "train": {
+      "bce_nats": 0.6643349966034293,
+      "cross_entropy_bits": 0.9584328050887538,
+      "bit_accuracy": 0.6011085510253906
+    },
+    "validation": {
+      "bce_nats": 0.654427682980895,
+      "cross_entropy_bits": 0.944139572856992,
+      "bit_accuracy": 0.60882568359375,
+      "ece": 0.020019808421238856,
+      "calibration": [
+        {
+          "lower": 0.5,
+          "count": 15330,
+          "accuracy": 0.506327462491846,
+          "confidence": 0.5250787927368771
+        },
+        {
+          "lower": 0.55,
+          "count": 16983,
+          "accuracy": 0.5966554790084202,
+          "confidence": 0.5760322776860247
+        },
+        {
+          "lower": 0.6,
+          "count": 12980,
+          "accuracy": 0.586055469953775,
+          "confidence": 0.6238200898714168
+        },
+        {
+          "lower": 0.65,
+          "count": 9126,
+          "accuracy": 0.6609686609686609,
+          "confidence": 0.672958674998809
+        },
+        {
+          "lower": 0.7,
+          "count": 5682,
+          "accuracy": 0.7138331573389651,
+          "confidence": 0.723296789552745
+        },
+        {
+          "lower": 0.75,
+          "count": 3494,
+          "accuracy": 0.771322266742988,
+          "confidence": 0.7723533034699948
+        },
+        {
+          "lower": 0.8,
+          "count": 1750,
+          "accuracy": 0.8302857142857143,
+          "confidence": 0.8214689408370427
+        },
+        {
+          "lower": 0.8500000000000001,
+          "count": 191,
+          "accuracy": 0.8481675392670157,
+          "confidence": 0.8581500278093428
+        },
+        {
+          "lower": 0.9,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.95,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        }
+      ]
+    },
+    "seconds": 22.9511319000012
+  },
+  {
+    "epoch": 3,
+    "train": {
+      "bce_nats": 0.6345334718935192,
+      "cross_entropy_bits": 0.9154382931788366,
+      "bit_accuracy": 0.6251640319824219
+    },
+    "validation": {
+      "bce_nats": 0.6219876334071159,
+      "cross_entropy_bits": 0.8973384742107088,
+      "bit_accuracy": 0.6415252685546875,
+      "ece": 0.017976581862058087,
+      "calibration": [
+        {
+          "lower": 0.5,
+          "count": 15348,
+          "accuracy": 0.5129658587438103,
+          "confidence": 0.5245707111259845
+        },
+        {
+          "lower": 0.55,
+          "count": 13022,
+          "accuracy": 0.562356012901244,
+          "confidence": 0.574316103508571
+        },
+        {
+          "lower": 0.6,
+          "count": 10909,
+          "accuracy": 0.6501054175451462,
+          "confidence": 0.6244906594821235
+        },
+        {
+          "lower": 0.65,
+          "count": 6622,
+          "accuracy": 0.6496526729084868,
+          "confidence": 0.6730958932351936
+        },
+        {
+          "lower": 0.7,
+          "count": 4986,
+          "accuracy": 0.6827115924588849,
+          "confidence": 0.7239640235207524
+        },
+        {
+          "lower": 0.75,
+          "count": 4230,
+          "accuracy": 0.7515366430260048,
+          "confidence": 0.7748288133183834
+        },
+        {
+          "lower": 0.8,
+          "count": 4306,
+          "accuracy": 0.8165350673478867,
+          "confidence": 0.8251860562696381
+        },
+        {
+          "lower": 0.8500000000000001,
+          "count": 4259,
+          "accuracy": 0.8656961728105189,
+          "confidence": 0.873750424197538
+        },
+        {
+          "lower": 0.9,
+          "count": 1851,
+          "accuracy": 0.899513776337115,
+          "confidence": 0.9173230773239507
+        },
+        {
+          "lower": 0.95,
+          "count": 3,
+          "accuracy": 0.6666666666666666,
+          "confidence": 0.9518537521362305
+        }
+      ]
+    },
+    "seconds": 23.339972599998873
+  },
+  {
+    "epoch": 4,
+    "train": {
+      "bce_nats": 0.6242450312711298,
+      "cross_entropy_bits": 0.900595210914435,
+      "bit_accuracy": 0.6346931457519531
+    },
+    "validation": {
+      "bce_nats": 0.6694061327725649,
+      "cross_entropy_bits": 0.9657489080916384,
+      "bit_accuracy": 0.589874267578125,
+      "ece": 0.012951977195370999,
+      "calibration": [
+        {
+          "lower": 0.5,
+          "count": 25993,
+          "accuracy": 0.5307582810756742,
+          "confidence": 0.5245527184968528
+        },
+        {
+          "lower": 0.55,
+          "count": 18645,
+          "accuracy": 0.5872351836953607,
+          "confidence": 0.57270293758778
+        },
+        {
+          "lower": 0.6,
+          "count": 11541,
+          "accuracy": 0.6372064812407937,
+          "confidence": 0.6232773378903278
+        },
+        {
+          "lower": 0.65,
+          "count": 7540,
+          "accuracy": 0.7018567639257295,
+          "confidence": 0.6727650524608653
+        },
+        {
+          "lower": 0.7,
+          "count": 1766,
+          "accuracy": 0.70158550396376,
+          "confidence": 0.7159160465373323
+        },
+        {
+          "lower": 0.75,
+          "count": 46,
+          "accuracy": 0.5217391304347826,
+          "confidence": 0.7624026912709941
+        },
+        {
+          "lower": 0.8,
+          "count": 5,
+          "accuracy": 0.8,
+          "confidence": 0.8159701704978943
+        },
+        {
+          "lower": 0.8500000000000001,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.9,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.95,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        }
+      ]
+    },
+    "seconds": 23.2050756000026
+  },
+  {
+    "epoch": 5,
+    "train": {
+      "bce_nats": 0.6279844911769032,
+      "cross_entropy_bits": 0.9059901111760973,
+      "bit_accuracy": 0.6326828002929688
+    },
+    "validation": {
+      "bce_nats": 0.6283058412373066,
+      "cross_entropy_bits": 0.9064537213146306,
+      "bit_accuracy": 0.6289825439453125,
+      "ece": 0.01958985215696883,
+      "calibration": [
+        {
+          "lower": 0.5,
+          "count": 21528,
+          "accuracy": 0.5203920475659606,
+          "confidence": 0.5241197185256542
+        },
+        {
+          "lower": 0.55,
+          "count": 14443,
+          "accuracy": 0.5633178702485633,
+          "confidence": 0.573013333083107
+        },
+        {
+          "lower": 0.6,
+          "count": 8845,
+          "accuracy": 0.623063877897117,
+          "confidence": 0.6232942336491099
+        },
+        {
+          "lower": 0.65,
+          "count": 6461,
+          "accuracy": 0.7046896765206624,
+          "confidence": 0.6738165476395608
+        },
+        {
+          "lower": 0.7,
+          "count": 6420,
+          "accuracy": 0.7968847352024923,
+          "confidence": 0.725995627203463
+        },
+        {
+          "lower": 0.75,
+          "count": 3967,
+          "accuracy": 0.8245525586085203,
+          "confidence": 0.7722496595736081
+        },
+        {
+          "lower": 0.8,
+          "count": 2829,
+          "accuracy": 0.8738069989395546,
+          "confidence": 0.8226575535192385
+        },
+        {
+          "lower": 0.8500000000000001,
+          "count": 1038,
+          "accuracy": 0.9190751445086706,
+          "confidence": 0.8667945629254931
+        },
+        {
+          "lower": 0.9,
+          "count": 5,
+          "accuracy": 1.0,
+          "confidence": 0.9023600220680237
+        },
+        {
+          "lower": 0.95,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        }
+      ]
+    },
+    "seconds": 22.57650139999896
+  },
+  {
+    "epoch": 6,
+    "train": {
+      "bce_nats": 0.6125018415041268,
+      "cross_entropy_bits": 0.8836533692733616,
+      "bit_accuracy": 0.6456222534179688
+    },
+    "validation": {
+      "bce_nats": 0.5998673811554909,
+      "cross_entropy_bits": 0.8654256959840764,
+      "bit_accuracy": 0.6579742431640625,
+      "ece": 0.01154877835779188,
+      "calibration": [
+        {
+          "lower": 0.5,
+          "count": 15382,
+          "accuracy": 0.526264464959043,
+          "confidence": 0.5248069226191546
+        },
+        {
+          "lower": 0.55,
+          "count": 12724,
+          "accuracy": 0.5618516189877397,
+          "confidence": 0.573950612589047
+        },
+        {
+          "lower": 0.6,
+          "count": 9093,
+          "accuracy": 0.6171780490487188,
+          "confidence": 0.6236748882584429
+        },
+        {
+          "lower": 0.65,
+          "count": 6217,
+          "accuracy": 0.6614122567154577,
+          "confidence": 0.6737465885304094
+        },
+        {
+          "lower": 0.7,
+          "count": 4749,
+          "accuracy": 0.7039376710886502,
+          "confidence": 0.7245908984010359
+        },
+        {
+          "lower": 0.75,
+          "count": 4938,
+          "accuracy": 0.7699473471040907,
+          "confidence": 0.7756337755698818
+        },
+        {
+          "lower": 0.8,
+          "count": 5536,
+          "accuracy": 0.8511560693641619,
+          "confidence": 0.8255629663414865
+        },
+        {
+          "lower": 0.8500000000000001,
+          "count": 4707,
+          "accuracy": 0.8988740174208626,
+          "confidence": 0.8740483829745676
+        },
+        {
+          "lower": 0.9,
+          "count": 2189,
+          "accuracy": 0.9428962996802193,
+          "confidence": 0.9154919324916702
+        },
+        {
+          "lower": 0.95,
+          "count": 1,
+          "accuracy": 1.0,
+          "confidence": 0.9526719450950623
+        }
+      ]
+    },
+    "seconds": 24.5067121999964
+  },
+  {
+    "epoch": 7,
+    "train": {
+      "bce_nats": 0.6000179033726454,
+      "cross_entropy_bits": 0.8656428536403088,
+      "bit_accuracy": 0.6608390808105469
+    },
+    "validation": {
+      "bce_nats": 0.5861888509243727,
+      "cross_entropy_bits": 0.8456917482529923,
+      "bit_accuracy": 0.668487548828125,
+      "ece": 0.012293459290958693,
+      "calibration": [
+        {
+          "lower": 0.5,
+          "count": 15580,
+          "accuracy": 0.5282413350449294,
+          "confidence": 0.5244120044602663
+        },
+        {
+          "lower": 0.55,
+          "count": 12614,
+          "accuracy": 0.5654827968923418,
+          "confidence": 0.5738930163338877
+        },
+        {
+          "lower": 0.6,
+          "count": 8998,
+          "accuracy": 0.62458324072016,
+          "confidence": 0.6234158920854906
+        },
+        {
+          "lower": 0.65,
+          "count": 6356,
+          "accuracy": 0.6718061674008811,
+          "confidence": 0.6739278402697597
+        },
+        {
+          "lower": 0.7,
+          "count": 5178,
+          "accuracy": 0.742564696794129,
+          "confidence": 0.7246603938132559
+        },
+        {
+          "lower": 0.75,
+          "count": 4738,
+          "accuracy": 0.7912621359223301,
+          "confidence": 0.7743800926706669
+        },
+        {
+          "lower": 0.8,
+          "count": 4347,
+          "accuracy": 0.8617437313089487,
+          "confidence": 0.8254361404395252
+        },
+        {
+          "lower": 0.8500000000000001,
+          "count": 4392,
+          "accuracy": 0.9164389799635702,
+          "confidence": 0.8746389276424392
+        },
+        {
+          "lower": 0.9,
+          "count": 2813,
+          "accuracy": 0.9548524706718805,
+          "confidence": 0.9211121381621661
+        },
+        {
+          "lower": 0.95,
+          "count": 520,
+          "accuracy": 0.9730769230769231,
+          "confidence": 0.9597972512245179
+        }
+      ]
+    },
+    "seconds": 25.477360299999418
+  },
+  {
+    "epoch": 8,
+    "train": {
+      "bce_nats": 0.6423455979675055,
+      "cross_entropy_bits": 0.926708808724576,
+      "bit_accuracy": 0.6170234680175781
+    },
+    "validation": {
+      "bce_nats": 0.6461184024810791,
+      "cross_entropy_bits": 0.9321518150865522,
+      "bit_accuracy": 0.606842041015625,
+      "ece": 0.01687879781820813,
+      "calibration": [
+        {
+          "lower": 0.5,
+          "count": 20982,
+          "accuracy": 0.5199218377657039,
+          "confidence": 0.5243585816035109
+        },
+        {
+          "lower": 0.55,
+          "count": 15155,
+          "accuracy": 0.5599472121412076,
+          "confidence": 0.5733508221075032
+        },
+        {
+          "lower": 0.6,
+          "count": 10474,
+          "accuracy": 0.6021577238877219,
+          "confidence": 0.6235372354072857
+        },
+        {
+          "lower": 0.65,
+          "count": 7440,
+          "accuracy": 0.6505376344086021,
+          "confidence": 0.6732275453946923
+        },
+        {
+          "lower": 0.7,
+          "count": 5097,
+          "accuracy": 0.736511673533451,
+          "confidence": 0.7234897931720875
+        },
+        {
+          "lower": 0.75,
+          "count": 3450,
+          "accuracy": 0.811304347826087,
+          "confidence": 0.7734222336610158
+        },
+        {
+          "lower": 0.8,
+          "count": 2066,
+          "accuracy": 0.8852855759922555,
+          "confidence": 0.8215308435196337
+        },
+        {
+          "lower": 0.8500000000000001,
+          "count": 860,
+          "accuracy": 0.9709302325581395,
+          "confidence": 0.8683131528455158
+        },
+        {
+          "lower": 0.9,
+          "count": 12,
+          "accuracy": 0.9166666666666666,
+          "confidence": 0.9025249779224396
+        },
+        {
+          "lower": 0.95,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        }
+      ]
+    },
+    "seconds": 24.63598159999674
+  },
+  {
+    "epoch": 9,
+    "train": {
+      "bce_nats": 0.6272202893160284,
+      "cross_entropy_bits": 0.904887600941175,
+      "bit_accuracy": 0.6350555419921875
+    },
+    "validation": {
+      "bce_nats": 0.6235357392579317,
+      "cross_entropy_bits": 0.8995719188444519,
+      "bit_accuracy": 0.6348876953125,
+      "ece": 0.014745479913472075,
+      "calibration": [
+        {
+          "lower": 0.5,
+          "count": 15232,
+          "accuracy": 0.516938025210084,
+          "confidence": 0.5248696733884388
+        },
+        {
+          "lower": 0.55,
+          "count": 13873,
+          "accuracy": 0.565342752108412,
+          "confidence": 0.5744317475955264
+        },
+        {
+          "lower": 0.6,
+          "count": 11050,
+          "accuracy": 0.6017194570135747,
+          "confidence": 0.6240389483978306
+        },
+        {
+          "lower": 0.65,
+          "count": 8145,
+          "accuracy": 0.656353591160221,
+          "confidence": 0.6738764487723765
+        },
+        {
+          "lower": 0.7,
+          "count": 5892,
+          "accuracy": 0.7223353699932111,
+          "confidence": 0.7237568417335155
+        },
+        {
+          "lower": 0.75,
+          "count": 4542,
+          "accuracy": 0.7820343461030383,
+          "confidence": 0.7732784794795255
+        },
+        {
+          "lower": 0.8,
+          "count": 3401,
+          "accuracy": 0.8535724786827403,
+          "confidence": 0.8246552040562213
+        },
+        {
+          "lower": 0.8500000000000001,
+          "count": 2649,
+          "accuracy": 0.928652321630804,
+          "confidence": 0.8727806649958696
+        },
+        {
+          "lower": 0.9,
+          "count": 745,
+          "accuracy": 0.963758389261745,
+          "confidence": 0.9163852339622959
+        },
+        {
+          "lower": 0.95,
+          "count": 7,
+          "accuracy": 1.0,
+          "confidence": 0.9557015299797058
+        }
+      ]
+    },
+    "seconds": 25.838760500002536
+  },
+  {
+    "epoch": 10,
+    "train": {
+      "bce_nats": 0.611256705597043,
+      "cross_entropy_bits": 0.881857017874979,
+      "bit_accuracy": 0.6436424255371094
+    },
+    "validation": {
+      "bce_nats": 0.6096357014030218,
+      "cross_entropy_bits": 0.8795184031630044,
+      "bit_accuracy": 0.6514434814453125,
+      "ece": 0.015235789775942938,
+      "calibration": [
+        {
+          "lower": 0.5,
+          "count": 12850,
+          "accuracy": 0.517976653696498,
+          "confidence": 0.5249975771245325
+        },
+        {
+          "lower": 0.55,
+          "count": 12361,
+          "accuracy": 0.5574791683520751,
+          "confidence": 0.5745685873713638
+        },
+        {
+          "lower": 0.6,
+          "count": 10738,
+          "accuracy": 0.5988079716893276,
+          "confidence": 0.624168268177491
+        },
+        {
+          "lower": 0.65,
+          "count": 8115,
+          "accuracy": 0.6555760936537277,
+          "confidence": 0.6736004989674557
+        },
+        {
+          "lower": 0.7,
+          "count": 6334,
+          "accuracy": 0.7284496368803284,
+          "confidence": 0.7235825977134975
+        },
+        {
+          "lower": 0.75,
+          "count": 5098,
+          "accuracy": 0.7836406433895645,
+          "confidence": 0.7747610529505444
+        },
+        {
+          "lower": 0.8,
+          "count": 4858,
+          "accuracy": 0.8460271716755866,
+          "confidence": 0.8243410748530435
+        },
+        {
+          "lower": 0.8500000000000001,
+          "count": 3887,
+          "accuracy": 0.8937483920761513,
+          "confidence": 0.8738377420123881
+        },
+        {
+          "lower": 0.9,
+          "count": 1292,
+          "accuracy": 0.9287925696594427,
+          "confidence": 0.9137318333143789
+        },
+        {
+          "lower": 0.95,
+          "count": 3,
+          "accuracy": 1.0,
+          "confidence": 0.9511910875638326
+        }
+      ]
+    },
+    "seconds": 24.447792099999788
+  }
+]

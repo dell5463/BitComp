@@ -1,0 +1,318 @@
+{
+  "format": "bitlaya-research-evaluation-v1",
+  "evaluation": {
+    "checkpoint": "runs/cifar_10epochs/best.pt",
+    "output": "results/baseline_reference_v1_test100",
+    "data": "data/cifar10",
+    "split": "test",
+    "size": 100,
+    "seed": 42,
+    "validation_pool_size": 5000,
+    "thresholds": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.925,
+      0.95,
+      0.975,
+      0.99,
+      1.0
+    ],
+    "bootstrap": 1000,
+    "examples": 4,
+    "warmup": 5,
+    "lossy_qualities": [
+      25,
+      50,
+      75,
+      95
+    ]
+  },
+  "dataset": {
+    "split": "test",
+    "size": 100,
+    "seed": 42,
+    "validation_pool_size": 5000,
+    "indices": [
+      8132,
+      8268,
+      719,
+      8237,
+      4555,
+      6651,
+      5650,
+      9034,
+      1260,
+      644,
+      9098,
+      3760,
+      34,
+      8086,
+      4873,
+      1538,
+      3355,
+      888,
+      8564,
+      529,
+      7081,
+      9305,
+      5772,
+      9488,
+      3362,
+      7042,
+      1490,
+      1734,
+      9267,
+      4362,
+      2048,
+      5967,
+      2832,
+      5481,
+      6553,
+      5269,
+      828,
+      6464,
+      3801,
+      7233,
+      4980,
+      320,
+      9816,
+      5299,
+      1783,
+      5316,
+      8417,
+      3483,
+      7988,
+      1054,
+      4577,
+      7526,
+      1627,
+      2750,
+      3336,
+      2899,
+      6667,
+      2367,
+      4589,
+      2647,
+      7515,
+      1736,
+      9143,
+      3192,
+      9587,
+      6537,
+      3346,
+      3448,
+      3570,
+      2310,
+      4790,
+      9672,
+      5761,
+      5453,
+      6302,
+      6864,
+      7592,
+      5354,
+      2210,
+      8755,
+      6981,
+      5899,
+      3762,
+      9117,
+      5398,
+      1918,
+      4552,
+      5850,
+      5441,
+      1466,
+      5242,
+      486,
+      5762,
+      8609,
+      9780,
+      4657,
+      9830,
+      9119,
+      7637,
+      963
+    ],
+    "image_sha256": "3394b549432f258d015508a0840e9fedd93045b513a955002172efa531c63319",
+    "selection": "numpy-default_rng-permutation-v1"
+  },
+  "model": {
+    "embedding_dim": 32,
+    "hidden_size": 128,
+    "num_layers": 2
+  },
+  "parameters": 161505,
+  "checkpoint_sha256": "f135e978b39281cc36ca988f04a5f89cfcf3300148221c0d30c6834d49f5078a",
+  "model_sha256": "7e37b9a650819f5a7dff9f6a0e0069cdcd39f87fe74903ee76095e5a1430c89e",
+  "checkpoint_bytes": 651714,
+  "checkpoint_metadata": {
+    "run": {
+      "model": {
+        "embedding_dim": 32,
+        "hidden_size": 128,
+        "num_layers": 2
+      },
+      "training": {
+        "epochs": 10,
+        "batch_size": 8,
+        "chunk_length": 256,
+        "learning_rate": 0.001,
+        "grad_clip": 1.0,
+        "seed": 42,
+        "device": "cpu",
+        "workers": 0
+      },
+      "parameters": 161505,
+      "device": "cpu",
+      "torch": "2.14.0+cpu",
+      "numpy": "2.4.6",
+      "train_images": 32,
+      "validation_images": 8,
+      "train_sha256": "3fe9f70d6c778d6225597af6e4b4acae083bad67fecf512939bcaf4240ad87bf",
+      "validation_sha256": "508c86031305ddfc59b206c20f70e8e775eda8521ab83dec83c8b716fd740648",
+      "provenance": {
+        "dataset": "CIFAR-10 grayscale",
+        "data": "data\\cifar10",
+        "validation_size": 5000,
+        "split_seed": 42,
+        "preprocessing": {
+          "dataset": "CIFAR-10",
+          "shape": [
+            32,
+            32
+          ],
+          "dtype": "uint8",
+          "grayscale": "Pillow RGB.convert('L')",
+          "pillow": "12.3.0",
+          "torchvision": "0.29.0+cpu",
+          "bit_order": "raster-msb-first",
+          "train": {
+            "images": 50000,
+            "sha256": "1505ba165d4a4ce4307c2b8b599141bf8893be47942b5906750a6b23f537f4b6"
+          },
+          "test": {
+            "images": 10000,
+            "sha256": "e11116a81011718aef7db29b1f7a9854daa057ced8ccb69f5cabc40f3e8ede38"
+          }
+        }
+      }
+    },
+    "epoch": 7,
+    "validation": {
+      "bce_nats": 0.5861888509243727,
+      "cross_entropy_bits": 0.8456917482529923,
+      "bit_accuracy": 0.668487548828125,
+      "ece": 0.012293459290958693,
+      "calibration": [
+        {
+          "lower": 0.5,
+          "count": 15580,
+          "accuracy": 0.5282413350449294,
+          "confidence": 0.5244120044602663
+        },
+        {
+          "lower": 0.55,
+          "count": 12614,
+          "accuracy": 0.5654827968923418,
+          "confidence": 0.5738930163338877
+        },
+        {
+          "lower": 0.6,
+          "count": 8998,
+          "accuracy": 0.62458324072016,
+          "confidence": 0.6234158920854906
+        },
+        {
+          "lower": 0.65,
+          "count": 6356,
+          "accuracy": 0.6718061674008811,
+          "confidence": 0.6739278402697597
+        },
+        {
+          "lower": 0.7,
+          "count": 5178,
+          "accuracy": 0.742564696794129,
+          "confidence": 0.7246603938132559
+        },
+        {
+          "lower": 0.75,
+          "count": 4738,
+          "accuracy": 0.7912621359223301,
+          "confidence": 0.7743800926706669
+        },
+        {
+          "lower": 0.8,
+          "count": 4347,
+          "accuracy": 0.8617437313089487,
+          "confidence": 0.8254361404395252
+        },
+        {
+          "lower": 0.8500000000000001,
+          "count": 4392,
+          "accuracy": 0.9164389799635702,
+          "confidence": 0.8746389276424392
+        },
+        {
+          "lower": 0.9,
+          "count": 2813,
+          "accuracy": 0.9548524706718805,
+          "confidence": 0.9211121381621661
+        },
+        {
+          "lower": 0.95,
+          "count": 520,
+          "accuracy": 0.9730769230769231,
+          "confidence": 0.9597972512245179
+        }
+      ]
+    }
+  },
+  "environment": {
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "cpu": "11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz",
+    "torch": "2.14.0+cpu",
+    "numpy": "2.4.6",
+    "cuda_available": false,
+    "cuda_build": null,
+    "gpu": null,
+    "threads": 1,
+    "runtime": {
+      "torch": "2.14.0+cpu",
+      "machine": "AMD64",
+      "system": "Windows",
+      "backend": "cpu-float32-threads1-no-mkldnn-v1"
+    }
+  },
+  "source": {
+    "git_commit": null,
+    "git_dirty": null,
+    "source_sha256": {
+      "__init__.py": "cf19f1c951858f03adff6c32f906c67941ca85c2880c83331a2fa56adbbc00c7",
+      "__main__.py": "3129adff95e0f38b87ab34cddfc27082c7892bcaec267ff5d40f160fdf55b44a",
+      "bits.py": "f2a502e2c5a8ee753866acdac07bea7f27766292d2776f6b3130d45635d64601",
+      "cli.py": "f869462c804540194cb2cdfe98450548cd0a4891f808cdea387ef6a5230242ae",
+      "codec.py": "be00a73122319032220ec3415a58efa1697a7cfccc977a893f5438f8d68b457f",
+      "data.py": "3329fe7cbdaf5ffb16e8e2f068e37dc6f190a3be93418cf8a2b696b414a29464",
+      "evaluation.py": "fd823099e42f6a75fd18b277d8452f807a19930da2141c59246fb0b9dc2b4eff",
+      "metrics.py": "1a621aba0e935dd6510dccc29831aa7f5d7c3ceae01102f96d919e45d6826faa",
+      "model.py": "763b42fc92b340e962e473b0f90b984ce1e40bf8494ce1f0286b08a1e4b09eeb",
+      "profiling.py": "634a05b8d4977e4169eea00bf9ca0db4a09eb52d2256d700f097ac0c46e79fb7",
+      "research.py": "1d221e1309bcc51c1e844b80905f34c85ae89414672248ea2ca96bdaed091623",
+      "research_plots.py": "a679a421d6a99de8b2842ee0f5e3117a87876d58f3f05c322fe0773e2e2e7fde",
+      "statistics.py": "6333cd056a0c1d885d61cfae55a52c2fe8e0ade63361b73fffafe3396a6649fc",
+      "training.py": "8b27a918c8da4a38dd2e3cadf510475195f7bd0036d7a4b66efada55deb261eb"
+    }
+  },
+  "codec": "reference-json-v1",
+  "webp_available": true,
+  "timing_protocol": "warmups then one timed encode/decode per image/threshold"
+}
