@@ -37,6 +37,23 @@ Read first: `README.md` (commands), `docs/FORMAT.md` (v1/v2/container formats),
 | `profiling.py`, `overhead.py` | Controlled latency + cProfile; measured framing overhead. |
 | `scripts/summarize.py` | Renders Markdown tables from result artifacts (use it; don't hand-copy numbers). |
 
+## Status on the GPU PC (2026-09-24)
+
+Machine: i9-10900K (10C/20T), 32 GB, RTX 2080 SUPER 8 GB (sm_75), Windows 11. Use the
+`.venv` (Python 3.11, PyTorch 2.14.0+cu130, torchvision 0.29.0+cu130), not the Anaconda
+`python` on PATH. `data/cifar10` prepared; content hashes equal the laptop's
+(train `1505ba16...`, test `e11116a8...`). `pytest -q`: 105 passed, 0 failed, 0 skipped.
+CUDA training verified run-to-run deterministic (same checkpoint fingerprint twice).
+
+Step 2 throughput measured (`results/throughput_gpupc/SUMMARY.md`, made by
+`scripts/bench_gpupc.sh` + `python scripts/summarize.py throughput results/throughput_gpupc`):
+teacher forcing batch 32 = 6.8 ms/step CUDA vs 257.5 ms/step CPU (1 thread; 4 threads barely
+helps); rollout/scheduled ~190-260 ms/step on CUDA regardless of batch (sequential per-bit
+launches). One teacher-forcing job saturates the GPU (8 concurrent -> 1.27x aggregate);
+rollout plateaus at ~1.4x aggregate from 2 jobs. RD sweep (CPU, exact engine) of 200 val
+images = 957 s single job; 8 concurrent sweeps -> 3.3x aggregate. **Awaiting the user's
+budget/parallelism decision before Step 3 long runs.** Laptop results not yet moved aside.
+
 ## Status at handoff (2026-09-24, from the CPU-only laptop)
 
 First milestone **implemented and unit-tested** (see "Tests" below): 1,000-image

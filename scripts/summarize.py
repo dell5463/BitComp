@@ -5,6 +5,7 @@
     python scripts/summarize.py lossless results/lossless_x
     python scripts/summarize.py errors results/errors_x
     python scripts/summarize.py profile results/profile_x
+    python scripts/summarize.py throughput results/throughput_gpupc
 """
 import json
 from pathlib import Path
@@ -171,6 +172,67 @@ def profile(directory):
         print(f"| `{f['function']}` | {f['calls']} | {f['self_seconds']:.3f} | {f['self_fraction']:.1%} |")
 
 
+def _jsonl(path):
+    path = Path(path)
+    return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()] \
+        if path.exists() else []
+
+
+def throughput(directory):
+    """Tables from scripts/bench_gpupc.sh output (single.jsonl, concurrency.jsonl, sweep_timing.jsonl)."""
+    rows = _jsonl(Path(directory) / "single.jsonl")
+    if rows:
+        r = rows[0]
+        print(f"GPU {r['gpu']}, torch {r['torch']} (CUDA {r['cuda']}), chunk {r['chunk_length']} bits; "
+              "one optimizer step = batch x one chunk; 32 steps = one pass over a batch of images.\n")
+        print("| model | mode | device | threads | batch | timed steps | ms/step | steps/s | kbit/s | image passes/s |")
+        print("|---|---|---|---:|---:|---:|---:|---:|---:|---:|")
+        for r in rows:
+            model = "bit+plane+row/col" if r["model"].get("row_dim") else "bit only (default)"
+            print(f"| {model} | {r['mode']} | {r['device']} | {r['threads'] if r['device'] == 'cpu' else '-'} | "
+                  f"{r['batch_size']} | {r['timed_steps']} | {r['seconds_per_step'] * 1e3:.1f} | "
+                  f"{r['steps_per_second']:.2f} | {r['kbit_per_second']:.0f} | {r['image_passes_per_second']:.2f} |")
+    rows = _jsonl(Path(directory) / "concurrency.jsonl")
+    if rows:
+        groups = {}
+        for r in rows:
+            name, n = r["label"].rsplit("_n", 1)
+            groups.setdefault((name, int(n)), []).append(r)
+        print("\nConcurrency: N identical jobs started together. Per-job and aggregate throughput "
+              "(aggregate = sum over jobs; windows overlap but are not perfectly aligned).\n")
+        print("| job | N | per-job ms/step (mean) | slowest job ms/step | per-job slowdown vs N=1 | "
+              "aggregate steps/s | aggregate vs N=1 |")
+        print("|---|---:|---:|---:|---:|---:|---:|")
+        for (name, n), jobs in sorted(groups.items()):
+            per_job = sum(j["seconds_per_step"] for j in jobs) / len(jobs)
+            aggregate = sum(j["steps_per_second"] for j in jobs)
+            single = groups.get((name, 1))
+            base = sum(j["seconds_per_step"] for j in single) / len(single) if single else None
+            base_rate = sum(j["steps_per_second"] for j in single) if single else None
+            print(f"| {name} | {n} | {per_job * 1e3:.1f} | {max(j['seconds_per_step'] for j in jobs) * 1e3:.1f} | "
+                  f"{fmt(per_job / base if base else None, 2)}x | {aggregate:.2f} | "
+                  f"{fmt(aggregate / base_rate if base_rate else None, 2)}x |")
+    rows = _jsonl(Path(directory) / "sweep_timing.jsonl")
+    if rows:
+        print("\nRD sweep cost (CPU, NumPy exact engine, 1 thread per job; all thresholds per image). "
+              "Aggregate = jobs x (single-job s/image / per-job s/image).\n")
+        print("| images/job | concurrent jobs | codec s/image (mean over jobs) | per-job slowdown | aggregate speedup | "
+              "wall s/job (mean) | decodes verified | mismatches |")
+        print("|---:|---:|---:|---:|---:|---:|---:|---:|")
+        groups = {}
+        for r in rows:
+            groups.setdefault((r["images"], r["concurrent_jobs"]), []).append(r)
+        for (images, n), jobs in sorted(groups.items()):
+            per = sum(j["codec_seconds_per_image_all_thresholds"] for j in jobs) / len(jobs)
+            single = groups.get((images, 1))
+            base = single[0]["codec_seconds_per_image_all_thresholds"] if single else None
+            wall = sum(j["wall_seconds_config_to_summary"] for j in jobs) / len(jobs)
+            print(f"| {images} | {n} | {per:.2f} | {fmt(per / base if base else None, 2)}x | "
+                  f"{fmt(n * base / per if base else None, 2)}x | {wall:.0f} | "
+                  f"{sum(j['independent_decodes_verified'] for j in jobs)} | "
+                  f"{sum(j['encoder_decoder_mismatches'] for j in jobs)} |")
+
+
 if __name__ == "__main__":
-    {"sweep": sweep, "compare": compare, "lossless": lossless, "errors": errors, "profile": profile}[sys.argv[1]](
-        sys.argv[2])
+    {"sweep": sweep, "compare": compare, "lossless": lossless, "errors": errors, "profile": profile,
+     "throughput": throughput}[sys.argv[1]](sys.argv[2])

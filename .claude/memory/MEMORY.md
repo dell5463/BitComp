@@ -1,2 +1,2 @@
 - [PowerShell UTF-8 edits](powershell-utf8-edits.md) — PS 5.1 Get/Set-Content corrupts non-ASCII; use Edit/Write tools
-- [BitLaya compute environment](bitlaya-compute.md) — original dev laptop was CPU-only; concurrency limits; GPU PC is new
+- [BitLaya compute environment](bitlaya-compute.md) — laptop was CPU-only; GPU PC is i9-10900K + RTX 2080 SUPER, use .venv (py3.11, torch 2.14.0+cu130)
