@@ -1,8 +1,8 @@
 {
   "name": "objectives",
   "output": "results/objectives",
-  "description": "Stage 4: training objective only (uniform BCE vs bit-plane-weighted BCE, sqrt significance, mean-normalized). Base = the training-mode winner; everything else fixed.",
-  "data": {"train_size": 45000, "val_size": 256, "validation_size": 5000},
+  "description": "Stage 4: training objective only (uniform BCE vs bit-plane-weighted BCE, sqrt significance, mean-normalized). Base = the training-mode winner (teacher_forcing on bit_plane_rowcol, train_size 1024; see results/training_modes/DECISION.md); everything else fixed. bce is config-identical to training_modes/teacher_forcing.",
+  "data": {"train_size": 1024, "val_size": 256, "validation_size": 5000},
   "model": {"embedding_dim": 32, "hidden_size": 128, "num_layers": 2, "plane_dim": 8, "row_dim": 8, "col_dim": 8},
   "training": {"epochs": 100000, "max_steps": 64000, "val_every": 8000, "batch_size": 32, "chunk_length": 256,
                "learning_rate": 0.001, "mode": "teacher_forcing", "objective": "bce", "lr_schedule": "constant",

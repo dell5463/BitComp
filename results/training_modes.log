@@ -1,0 +1,34 @@
+[ablate] start train:teacher_forcing: -m bitlaya --threads 1 train --config results\training_modes\teacher_forcing\experiment.json --output results\training_modes\teacher_forcing\train
+[ablate] start train:scheduled: -m bitlaya --threads 1 train --config results\training_modes\scheduled\experiment.json --output results\training_modes\scheduled\train
+[ablate] start train:rollout: -m bitlaya --threads 1 train --config results\training_modes\rollout\experiment.json --output results\training_modes\rollout\train
+[ablate] done train:teacher_forcing: ok
+[ablate] done train:scheduled: ok
+[ablate] done train:rollout: ok
+[ablate] start sweep:scheduled: -m bitlaya --threads 1 sweep results\training_modes\scheduled\train\best.pt --output results\training_modes\scheduled\sweep --split val --size 200 --engine qgru-v2
+[ablate] start sweep:rollout: -m bitlaya --threads 1 sweep results\training_modes\rollout\train\best.pt --output results\training_modes\rollout\sweep --split val --size 200 --engine qgru-v2
+[ablate] done sweep:scheduled: ok
+[ablate] done sweep:rollout: ok
+{
+  "scheduled": {
+    "bpp_range": [
+      0.265625,
+      8.265625
+    ],
+    "grid_points_compared": 199,
+    "mean_psnr_gain_db": 1.6387745454799587,
+    "min_psnr_gain_db": -7.550588520282375,
+    "max_psnr_gain_db": 7.0540440028693805,
+    "note": "operational envelope; lossless (infinite PSNR) grid points excluded"
+  },
+  "rollout": {
+    "bpp_range": [
+      0.265625,
+      8.265625
+    ],
+    "grid_points_compared": 199,
+    "mean_psnr_gain_db": -0.10368423671718556,
+    "min_psnr_gain_db": -8.0951320719019,
+    "max_psnr_gain_db": 5.476569505433659,
+    "note": "operational envelope; lossless (infinite PSNR) grid points excluded"
+  }
+}

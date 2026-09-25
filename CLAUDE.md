@@ -57,14 +57,19 @@ Step 3 (budget chosen: 64,000 steps = 10x laptop, batch 32, chunk 256, val every
 same for every variant; configs updated). Laptop partial results moved to
 `results/laptop_cpu_partial/` (kept, README explains).
 - 3a `results/baseline_reference_v1_test100_gpupc`: **done** (100 test images, 1,400 decodes
-  verified, 0 mismatches). `results/baseline_qgru_v2_test1000_gpupc`: running.
+  verified, 0 mismatches). `results/baseline_qgru_v2_test1000_gpupc`: **done** (1,000 test
+  images, 14,000 decodes verified, 0 mismatches).
 - 3b data scaling: **done, winner n01024** (`results/data_scaling/DECISION.md`). More data is not
   monotonically better at this budget (n05000 last -> training variance ~ data effect).
 - 3c position: **done, winner bit_plane_rowcol** (`results/position_ablation/DECISION.md`).
 - **Decision metric from 3c on: rate at quality** (`summarize.py rate`: bpp needed for pooled
   PSNR >= 20/25/30/35 dB, paired image-bootstrap CI). The envelope mean over 0.27-8.27 bpp is
   dominated by 5-16 dB output and contradicted itself between raw and range-coded payloads.
-- 3d training modes: running (train_size 1024 + bit_plane_rowcol base).
+- 3d training modes: **done, winner teacher_forcing** (`results/training_modes/DECISION.md`).
+  Rollout only wins at 20 dB; at 0.60-0.85 thresholds everything is < 15 dB. Confound: best.pt
+  is chosen by teacher-forced val BCE (scheduled's pick is at 4% replacement). Rollout/scheduled
+  with the row/col model cost ~0.5-0.6 s/step on CUDA (~9 h per 64k-step run).
+- 3e objectives: running (bce vs weighted_sqrt on the teacher_forcing base).
 - Key finding so far: with range-coded payloads the lossless point (~5.74-5.96 bpp on val)
   nearly dominates lossy omission (20 dB costs only ~0.1 bpp less than 35 dB).
 - Known gap: CLI ties the init seed to the split seed, so seed replicates are NOT YET MEASURED.

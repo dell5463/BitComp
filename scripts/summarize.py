@@ -175,6 +175,49 @@ def profile(directory):
         print(f"| `{f['function']}` | {f['calls']} | {f['self_seconds']:.3f} | {f['self_fraction']:.1%} |")
 
 
+def overhead(directory):
+    report = load(Path(directory) / "overhead.json")
+    d = report["dataset"]
+    print(f"**Framing overhead, {d['size']} {d['split']} images (image sha256 {d['image_sha256'][:12]}), "
+          f"checkpoint `{report['checkpoint']}`; v1 measured on {len(report['thresholds'][0]['v1_json_overhead_bytes_measured'])} "
+          "images per threshold (framing size only)**\n")
+    print("| t | v1 JSON B/image | v2 single B/image | reduction | container+CRC B/image | container no-CRC B/image | "
+          "v2 single total B | container+CRC total B | container no-CRC total B | payload B |")
+    print("|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|")
+    for e in report["thresholds"]:
+        print(f"| {e['threshold']:g} | {e['v1_json_overhead_bytes_mean']:.1f} | {e['v2_single_file_overhead_bytes']} | "
+              f"{e['single_file_overhead_reduction_percent']:.1f}% | "
+              f"{e['container_with_crc_overhead_bytes_per_image']:.2f} | "
+              f"{e['container_without_crc_overhead_bytes_per_image']:.2f} | {e['v2_single_total_bytes']} | "
+              f"{e['container_with_crc_total_bytes']} | {e['container_without_crc_total_bytes']} | "
+              f"{e['v2_single_payload_bytes']} |")
+
+
+def diagnose(directory):
+    report = load(Path(directory) / "diagnostics.json")
+    d = report["dataset"]
+    print(f"**Teacher-forced diagnostics (not codec rates), {d['size']} {d['split']} images, "
+          f"checkpoint `{report['checkpoint']}`, engine model id {report['engine_model_id']}**\n")
+    print("| predictor | BCE nats/bit | cross-entropy bits/bit | bit accuracy | ECE |")
+    print("|---|---:|---:|---:|---:|")
+    for label, key in (("float32 (training model)", "float32"), ("exact engine qgru-v1", "qgru_v2_exact_engine")):
+        r = report[key]
+        print(f"| {label} | {r['bce_nats']:.6f} | {r['cross_entropy_bits']:.6f} | {r['bit_accuracy']:.4f} | "
+              f"{r['ece']:.4f} |")
+    print("\nHigh-confidence buckets (float32 / exact engine):\n")
+    print("| confidence | count | accuracy | errors | exact count | exact accuracy | exact errors |")
+    print("|---|---:|---:|---:|---:|---:|---:|")
+    for f, e in zip(report["float32"]["high_confidence"], report["qgru_v2_exact_engine"]["high_confidence"]):
+        print(f"| [{f['range'][0]:g}, {f['range'][1]:g}) | {f['count']} | {fmt(f['accuracy'], 5)} | {f['errors']} | "
+              f"{e['count']} | {fmt(e['accuracy'], 5)} | {e['errors']} |")
+    if "plane_bce_nats_msb_first" in report["float32"]:
+        print("\nPer bit plane (float32, MSB first): BCE nats / accuracy\n")
+        print("| plane | " + " | ".join(str(k) for k in range(8)) + " |")
+        print("|---|" + "---:|" * 8)
+        print("| BCE | " + " | ".join(f"{v:.4f}" for v in report["float32"]["plane_bce_nats_msb_first"]) + " |")
+        print("| accuracy | " + " | ".join(f"{v:.4f}" for v in report["float32"]["plane_accuracy_msb_first"]) + " |")
+
+
 def _interpolate(points, x):
     """Linear interpolation of y at x over points sorted by x; None outside the measured range."""
     points = sorted(points)
@@ -438,5 +481,6 @@ def throughput(directory):
 
 if __name__ == "__main__":
     command = {"sweep": sweep, "compare": compare, "lossless": lossless, "errors": errors, "profile": profile,
-               "throughput": throughput, "matched": matched, "paired": paired, "rate": rate}[sys.argv[1]]
+               "throughput": throughput, "matched": matched, "paired": paired, "rate": rate,
+               "overhead": overhead, "diagnose": diagnose}[sys.argv[1]]
     command(sys.argv[2], *(sys.argv[3:] if sys.argv[1] in ("paired", "rate") else map(float, sys.argv[3:])))
