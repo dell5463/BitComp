@@ -72,9 +72,9 @@ class ModelConfig:
         return document
 
 
-def position_features(start: int, length: int, width: int) -> tuple[torch.Tensor, ...]:
+def position_features(start: int, length: int, width: int, device=None) -> tuple[torch.Tensor, ...]:
     """(plane, row, col) index tensors for target bits start..start+length-1."""
-    positions = torch.arange(start, start + length)
+    positions = torch.arange(start, start + length, device=device)
     pixel = positions // 8
     return positions % 8, pixel // width, pixel % width
 
@@ -99,10 +99,10 @@ class BitPredictor(nn.Module):
         if config.plane_dim or config.spatial:
             if config.spatial and width > config.max_width:
                 raise ValueError("image width exceeds the model's column embedding")
-            plane, row, col = (t.to(previous_bits.device) for t in
-                               position_features(start, previous_bits.shape[1], width))
-            if config.spatial and int(row[-1]) >= config.max_height:
+            # Last row from Python ints: no host/device copy or sync per call (rollout calls this per bit).
+            if config.spatial and (start + previous_bits.shape[1] - 1) // 8 // width >= config.max_height:
                 raise ValueError("image height exceeds the model's row embedding")
+            plane, row, col = position_features(start, previous_bits.shape[1], width, previous_bits.device)
             batch = previous_bits.shape[0]
             for dim, module, index in ((config.plane_dim, "plane_embedding", plane),
                                        (config.row_dim, "row_embedding", row),
