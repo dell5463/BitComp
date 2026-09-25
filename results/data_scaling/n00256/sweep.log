@@ -1,0 +1,36 @@
+qgru-v2: independently decoded 128/2800 rows
+qgru-v2: independently decoded 256/2800 rows
+qgru-v2: independently decoded 384/2800 rows
+qgru-v2: independently decoded 512/2800 rows
+qgru-v2: independently decoded 640/2800 rows
+qgru-v2: independently decoded 768/2800 rows
+qgru-v2: independently decoded 896/2800 rows
+qgru-v2: independently decoded 1024/2800 rows
+qgru-v2: independently decoded 1152/2800 rows
+qgru-v2: independently decoded 1280/2800 rows
+qgru-v2: independently decoded 1408/2800 rows
+qgru-v2: independently decoded 1536/2800 rows
+qgru-v2: independently decoded 1664/2800 rows
+qgru-v2: independently decoded 1792/2800 rows
+qgru-v2: independently decoded 1920/2800 rows
+qgru-v2: independently decoded 2048/2800 rows
+qgru-v2: independently decoded 2176/2800 rows
+qgru-v2: independently decoded 2304/2800 rows
+qgru-v2: independently decoded 2432/2800 rows
+qgru-v2: independently decoded 2560/2800 rows
+qgru-v2: independently decoded 2688/2800 rows
+qgru-v2: independently decoded 2800/2800 rows
+{"threshold": 0.5, "file_bpp": 0.2656, "psnr_db": 11.833283591312307, "omitted": 1.0}
+{"threshold": 0.55, "file_bpp": 0.2828, "psnr_db": 10.689708580030379, "omitted": 0.9982366943359375}
+{"threshold": 0.6, "file_bpp": 0.285, "psnr_db": 10.823269685991397, "omitted": 0.998004150390625}
+{"threshold": 0.65, "file_bpp": 0.3079, "psnr_db": 10.668876014499315, "omitted": 0.995155029296875}
+{"threshold": 0.7, "file_bpp": 0.3198, "psnr_db": 9.992452694185141, "omitted": 0.9936590576171875}
+{"threshold": 0.75, "file_bpp": 0.4252, "psnr_db": 9.911471224067414, "omitted": 0.9804742431640625}
+{"threshold": 0.8, "file_bpp": 1.1573, "psnr_db": 10.17669557585007, "omitted": 0.888951416015625}
+{"threshold": 0.85, "file_bpp": 3.4608, "psnr_db": 10.866609118477736, "omitted": 0.6010546875}
+{"threshold": 0.9, "file_bpp": 4.6986, "psnr_db": 11.998223601701234, "omitted": 0.4463226318359375}
+{"threshold": 0.925, "file_bpp": 5.3967, "psnr_db": 13.315712625647457, "omitted": 0.359031982421875}
+{"threshold": 0.95, "file_bpp": 6.6868, "psnr_db": 21.605387930706662, "omitted": 0.1977996826171875}
+{"threshold": 0.975, "file_bpp": 7.3898, "psnr_db": 27.521433482469703, "omitted": 0.10994140625}
+{"threshold": 0.99, "file_bpp": 7.9631, "psnr_db": 36.778944264277214, "omitted": 0.03826171875}
+{"threshold": 1.0, "file_bpp": 8.2656, "psnr_db": null, "omitted": 0.0}

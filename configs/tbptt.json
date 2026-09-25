@@ -1,16 +1,16 @@
 {
   "name": "tbptt",
   "output": "results/tbptt",
-  "description": "Stage 8b: TBPTT chunk length only (LR schedule fixed). Longer chunks mean fewer optimizer steps per image; max_steps is scaled so every variant trains on the same number of bits (6400 x 32 x 256 = 6400 image-passes). Chunk length and optimizer-step count therefore cannot both be held fixed; bits seen are held fixed.",
+  "description": "Stage 8b: TBPTT chunk length only (LR schedule fixed). Longer chunks mean fewer optimizer steps per image; max_steps is scaled so every variant trains on the same number of bits (64000 x 32 x 256 bits = 64000 image-passes). Chunk length and optimizer-step count therefore cannot both be held fixed; bits seen are held fixed.",
   "data": {"train_size": 45000, "val_size": 256, "validation_size": 5000},
   "model": {"embedding_dim": 32, "hidden_size": 128, "num_layers": 2, "plane_dim": 8, "row_dim": 8, "col_dim": 8},
-  "training": {"epochs": 100000, "max_steps": 6400, "val_every": 800, "batch_size": 32, "chunk_length": 256,
+  "training": {"epochs": 100000, "max_steps": 64000, "val_every": 8000, "batch_size": 32, "chunk_length": 256,
                "learning_rate": 0.001, "mode": "teacher_forcing", "objective": "bce", "lr_schedule": "constant",
-               "device": "auto", "seed": 42},
+               "device": "cuda", "seed": 42},
   "sweep": {"split": "val", "size": 200, "engine": "qgru-v2"},
   "variants": [
     {"name": "chunk256"},
-    {"name": "chunk512", "training": {"chunk_length": 512, "max_steps": 3200, "val_every": 400}},
-    {"name": "chunk1024", "training": {"chunk_length": 1024, "max_steps": 1600, "val_every": 200}}
+    {"name": "chunk512", "training": {"chunk_length": 512, "max_steps": 32000, "val_every": 4000}},
+    {"name": "chunk1024", "training": {"chunk_length": 1024, "max_steps": 16000, "val_every": 2000}}
   ]
 }

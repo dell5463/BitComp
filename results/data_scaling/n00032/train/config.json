@@ -11,7 +11,7 @@
     "learning_rate": 0.001,
     "grad_clip": 1.0,
     "seed": 42,
-    "device": "cpu",
+    "device": "cuda",
     "workers": 0,
     "mode": "teacher_forcing",
     "schedule": [
@@ -39,10 +39,11 @@
     "objective": "bce",
     "weights": "sqrt",
     "lr_schedule": "constant",
-    "max_steps": 6400,
-    "val_every": 800,
+    "max_steps": 64000,
+    "val_every": 8000,
     "accumulate": 1,
-    "width": 32
+    "width": 32,
+    "schedule_unit": "epoch"
   },
   "loss_weights_msb_first": [
     1.0,
@@ -55,15 +56,15 @@
     1.0
   ],
   "parameters": 161505,
-  "device": "cpu",
-  "torch": "2.14.0+cpu",
+  "device": "cuda",
+  "torch": "2.14.0+cu130",
   "numpy": "2.4.6",
   "threads": 1,
   "train_images": 32,
   "validation_images": 256,
   "train_sha256": "3fe9f70d6c778d6225597af6e4b4acae083bad67fecf512939bcaf4240ad87bf",
   "validation_sha256": "170c4d21838bae5b34d73f825a02998723e5d4cf0fce8f561380ed3f9a0dcf78",
-  "planned_optimizer_steps": 6400,
+  "planned_optimizer_steps": 64000,
   "provenance": {
     "dataset": "CIFAR-10 grayscale",
     "data": "data\\cifar10",
@@ -81,7 +82,7 @@
       "dtype": "uint8",
       "grayscale": "Pillow RGB.convert('L')",
       "pillow": "12.3.0",
-      "torchvision": "0.29.0+cpu",
+      "torchvision": "0.29.0+cu130",
       "bit_order": "raster-msb-first",
       "train": {
         "images": 50000,

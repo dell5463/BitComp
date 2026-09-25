@@ -1,7 +1,7 @@
 {
   "name": "data_scaling",
   "output": "results/data_scaling",
-  "description": "Stage 2: training-set size only. Legacy bit-only architecture, teacher forcing, BCE, constant LR, fixed budget of 6400 optimizer steps (batch 32 x 256-bit chunks) so every size gets identical compute.",
+  "description": "Stage 2: training-set size only. Legacy bit-only architecture, teacher forcing, BCE, constant LR, fixed budget of 64000 optimizer steps (batch 32 x 256-bit chunks = 64000 image passes; GPU-PC budget, 10x the laptop's 6400) so every size gets identical compute. All variants on CUDA.",
   "data": {
     "val_size": 256,
     "validation_size": 5000
@@ -13,15 +13,15 @@
   },
   "training": {
     "epochs": 100000,
-    "max_steps": 6400,
-    "val_every": 800,
+    "max_steps": 64000,
+    "val_every": 8000,
     "batch_size": 32,
     "chunk_length": 256,
     "learning_rate": 0.001,
     "mode": "teacher_forcing",
     "objective": "bce",
     "lr_schedule": "constant",
-    "device": "cpu",
+    "device": "cuda",
     "seed": 42
   },
   "sweep": {

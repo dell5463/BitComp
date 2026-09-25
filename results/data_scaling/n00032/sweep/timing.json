@@ -1,0 +1,295 @@
+{
+  "protocol": "qgru-v2: batched rows; per-image time = batch wall time / rows (throughput, not single-image latency; see `bitlaya profile`)",
+  "controlled_repeated_benchmark": false,
+  "environment": {
+    "python": "3.11.4",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "cpu": "Intel(R) Core(TM) i9-10900K CPU @ 3.70GHz",
+    "logical_cpus": 20,
+    "torch": "2.14.0+cu130",
+    "numpy": "2.4.6",
+    "cuda_available": true,
+    "cuda_build": "13.0",
+    "gpu": "NVIDIA GeForce RTX 2080 SUPER",
+    "threads": 1,
+    "blas_thread_env": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "runtime": {
+      "torch": "2.14.0+cu130",
+      "machine": "AMD64",
+      "system": "Windows",
+      "backend": "cpu-float32-threads1-no-mkldnn-v1"
+    }
+  },
+  "thresholds": [
+    {
+      "threshold": 0.5,
+      "encode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.1729287552812542,
+        "median": 0.170077353906251,
+        "std": 0.0038018685000042753
+      },
+      "decode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.15857499709375475,
+        "median": 0.16009656015626206,
+        "std": 0.002028750750009749
+      }
+    },
+    {
+      "threshold": 0.55,
+      "encode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.18071598965625696,
+        "median": 0.17870094609375542,
+        "std": 0.007565306345280655
+      },
+      "decode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.1684513894062411,
+        "median": 0.16823029062499018,
+        "std": 0.014566776103436468
+      }
+    },
+    {
+      "threshold": 0.6,
+      "encode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.20517701234375807,
+        "median": 0.20634960546875902,
+        "std": 0.0013228634546176776
+      },
+      "decode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.21243947634374422,
+        "median": 0.2142550562499963,
+        "std": 0.0020482503740733653
+      }
+    },
+    {
+      "threshold": 0.65,
+      "encode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.23397066884375306,
+        "median": 0.24197276875000284,
+        "std": 0.015162601072211459
+      },
+      "decode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.23520938590624837,
+        "median": 0.23764131796875176,
+        "std": 0.014296927921390956
+      }
+    },
+    {
+      "threshold": 0.7,
+      "encode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.24851796924999633,
+        "median": 0.2565470218749937,
+        "std": 0.008356902928690641
+      },
+      "decode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.2521426221250033,
+        "median": 0.24781353437501252,
+        "std": 0.00450585738893057
+      }
+    },
+    {
+      "threshold": 0.75,
+      "encode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.24808543449999945,
+        "median": 0.24621364609375007,
+        "std": 0.0033125477216292307
+      },
+      "decode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.2515792896875018,
+        "median": 0.251941953124998,
+        "std": 0.0014096666321347193
+      }
+    },
+    {
+      "threshold": 0.8,
+      "encode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.2499333496875039,
+        "median": 0.25065819843750603,
+        "std": 0.000887754789099723
+      },
+      "decode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.25092216156250513,
+        "median": 0.2498735593750041,
+        "std": 0.001284270151271908
+      }
+    },
+    {
+      "threshold": 0.85,
+      "encode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.24206162043749999,
+        "median": 0.24217943203125003,
+        "std": 0.001874631943947646
+      },
+      "decode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.25549067337500103,
+        "median": 0.2604089507812546,
+        "std": 0.006591156479269516
+      }
+    },
+    {
+      "threshold": 0.9,
+      "encode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.25111517306249764,
+        "median": 0.25653640312499704,
+        "std": 0.007332558987841595
+      },
+      "decode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.24461461834374576,
+        "median": 0.24259907812499648,
+        "std": 0.004121763986685097
+      }
+    },
+    {
+      "threshold": 0.925,
+      "encode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.2509756665624991,
+        "median": 0.2472854765624959,
+        "std": 0.004519541276964463
+      },
+      "decode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.258711570156251,
+        "median": 0.2629301460937512,
+        "std": 0.005166679244029324
+      }
+    },
+    {
+      "threshold": 0.95,
+      "encode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.2562706102187428,
+        "median": 0.2580591976562374,
+        "std": 0.003756175839058392
+      },
+      "decode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.26230759796875247,
+        "median": 0.26644564375000357,
+        "std": 0.005931898966925342
+      }
+    },
+    {
+      "threshold": 0.975,
+      "encode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.24560666040625165,
+        "median": 0.24625079453124954,
+        "std": 0.0006704360535519883
+      },
+      "decode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.2605233242812466,
+        "median": 0.26008580390625013,
+        "std": 0.0004553856443518791
+      }
+    },
+    {
+      "threshold": 0.99,
+      "encode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.24848153318749439,
+        "median": 0.2482552992187408,
+        "std": 0.0021543657155260023
+      },
+      "decode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.2230029778124998,
+        "median": 0.2541938437500022,
+        "std": 0.0651486031453808
+      }
+    },
+    {
+      "threshold": 1.0,
+      "encode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.26105565406249687,
+        "median": 0.26812081607142446,
+        "std": 0.007970577707894872
+      },
+      "decode": {
+        "count": 200,
+        "finite_count": 200,
+        "undefined_or_infinite_count": 0,
+        "mean": 0.04089956543750134,
+        "median": 0.00012320982143267299,
+        "std": 0.04600193324257078
+      }
+    }
+  ]
+}

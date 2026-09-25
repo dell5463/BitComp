@@ -6,6 +6,8 @@
     python scripts/summarize.py errors results/errors_x
     python scripts/summarize.py profile results/profile_x
     python scripts/summarize.py throughput results/throughput_gpupc
+    python scripts/summarize.py matched results/training_modes [0.60 0.85]
+    python scripts/summarize.py paired results/data_scaling [reference_variant]
 """
 import json
 from pathlib import Path
@@ -172,6 +174,134 @@ def profile(directory):
         print(f"| `{f['function']}` | {f['calls']} | {f['self_seconds']:.3f} | {f['self_fraction']:.1%} |")
 
 
+def _interpolate(points, x):
+    """Linear interpolation of y at x over points sorted by x; None outside the measured range."""
+    points = sorted(points)
+    for (x0, y0), (x1, y1) in zip(points, points[1:]):
+        if x0 <= x <= x1:
+            return y0 if x1 == x0 else y0 + (y1 - y0) * (x - x0) / (x1 - x0)
+    return None
+
+
+def matched(directory, low=0.60, high=0.85):
+    """PSNR/MSE/SSIM of every variant interpolated at the REFERENCE variant's complete-file bpp,
+    for the reference thresholds in [low, high]. Same images for all variants (checked by ablate)."""
+    result = load(Path(directory) / "comparison.json")
+    rows = [r for r in result["table"] if r["psnr_db"] is not None]
+    variants = list(dict.fromkeys(r["variant"] for r in result["table"]))
+    reference = result["reference_variant"]
+    targets = [r for r in rows if r["variant"] == reference and low - 1e-9 <= r["threshold"] <= high + 1e-9]
+    print(f"Matched complete-file bpp: each variant's pooled PSNR (dB) / MSE / SSIM linearly interpolated between "
+          f"its own threshold points at the reference (`{reference}`) bpp for thresholds {low:g}-{high:g}; "
+          f"{result['sweep_images']['size']} {result['sweep_images']['split']} images "
+          f"({result['sampling_scale']}). n/a = outside the variant's measured bpp range.\n")
+    print("| ref t | bpp | " + " | ".join(f"{v} PSNR" for v in variants) + " | "
+          + " | ".join(f"{v} dPSNR" for v in variants[1:]) + " |")
+    print("|---:|---:|" + "---:|" * (2 * len(variants) - 1))
+    gains = {v: [] for v in variants[1:]}
+    for target in targets:
+        values = {}
+        for v in variants:
+            own = [r for r in rows if r["variant"] == v]
+            values[v] = _interpolate([(r["file_bpp"], r["psnr_db"]) for r in own], target["file_bpp"])
+        cells = [fmt(values[v], 2) for v in variants]
+        deltas = []
+        for v in variants[1:]:
+            d = None if values[v] is None or values[reference] is None else values[v] - values[reference]
+            if d is not None:
+                gains[v].append(d)
+            deltas.append(f"{d:+.2f}" if d is not None else "n/a")
+        print(f"| {target['threshold']:g} | {target['file_bpp']:.3f} | " + " | ".join(cells) + " | "
+              + " | ".join(deltas) + " |")
+    print("\n| variant | mean dPSNR over matched points (dB) | points |")
+    print("|---|---:|---:|")
+    for v, values in gains.items():
+        print(f"| {v} | {fmt(sum(values) / len(values) if values else None, 3)} | {len(values)} |")
+    print("\nMSE and SSIM at the same matched bpp:\n")
+    print("| ref t | bpp | " + " | ".join(f"{v} MSE / SSIM" for v in variants) + " |")
+    print("|---:|---:|" + "---:|" * len(variants))
+    for target in targets:
+        cells = []
+        for v in variants:
+            own = [r for r in rows if r["variant"] == v]
+            mse = _interpolate([(r["file_bpp"], r["mse"]) for r in own], target["file_bpp"])
+            ssim = _interpolate([(r["file_bpp"], r["ssim"]) for r in own if r["ssim"] is not None],
+                                target["file_bpp"])
+            cells.append(f"{fmt(mse, 2)} / {fmt(ssim, 4)}")
+        print(f"| {target['threshold']:g} | {target['file_bpp']:.3f} | " + " | ".join(cells) + " |")
+
+
+def _sweep_arrays(sweep_dir):
+    """measurements.jsonl -> (thresholds, dataset indices, {field: [threshold, image] array})."""
+    import numpy as np
+    rows = _jsonl(Path(sweep_dir) / "measurements.jsonl")
+    thresholds = sorted({r["threshold"] for r in rows})
+    images = sorted({r["image_index"] for r in rows})
+    fields = ("file_bytes", "range_file_bytes", "mse", "original_bytes", "dataset_index")
+    arrays = {f: np.full((len(thresholds), len(images)), np.nan) for f in fields}
+    t_pos, i_pos = {t: k for k, t in enumerate(thresholds)}, {i: k for k, i in enumerate(images)}
+    for r in rows:
+        for f in fields:
+            if f in r:
+                arrays[f][t_pos[r["threshold"]], i_pos[r["image_index"]]] = r[f]
+    if np.isnan(arrays["mse"]).any():
+        raise ValueError(f"{sweep_dir}: incomplete sweep (missing threshold/image rows)")
+    return thresholds, arrays["dataset_index"][0], arrays
+
+
+def _rd_points(thresholds, arrays, sample, ranged):
+    import numpy as np
+    from bitlaya.statistics import psnr
+    key = "range_file_bytes" if ranged else "file_bytes"
+    pixels = arrays["original_bytes"][:, sample].sum(axis=1)
+    bpp = 8 * arrays[key][:, sample].sum(axis=1) / pixels
+    mse = arrays["mse"][:, sample].mean(axis=1)
+    return [{"threshold": t, "file_bpp": float(b), "psnr": psnr(float(m))} for t, b, m in zip(thresholds, bpp, mse)]
+
+
+def paired(directory, reference=None, repeats=1000):
+    """Paired image-bootstrap 95% CI of the operational-envelope mean PSNR gain (ablation.rd_difference)
+    of every variant vs ``reference`` (default: the ablation's reference variant). Both variants are
+    resampled with the SAME image indices, so image difficulty cancels. Usage:
+        python scripts/summarize.py paired results/data_scaling [reference_variant]"""
+    import numpy as np
+    from bitlaya.ablation import rd_difference
+    result = load(Path(directory) / "comparison.json")
+    variants = list(dict.fromkeys(r["variant"] for r in result["table"]))
+    reference = reference or result["reference_variant"]
+    data = {v: _sweep_arrays(Path(directory) / v / "sweep") for v in variants}
+    ref_t, ref_idx, ref_arrays = data[reference]
+    n = len(ref_idx)
+    rng = np.random.default_rng(42)
+    samples = [rng.integers(0, n, n) for _ in range(int(repeats))]
+    print(f"Paired image bootstrap ({int(repeats)} resamples, seed 42) of the operational-envelope mean PSNR gain "
+          f"vs `{reference}` over the overlapping complete-file bpp range; {n} {result['sweep_images']['split']} "
+          f"images ({result['sampling_scale']}). Lossless grid points excluded (as in `ablate`).\n")
+    print("| variant | payload | observed gain dB | bootstrap mean | 95% CI | P(gain > 0) |")
+    print("|---|---|---:|---:|---:|---:|")
+    everything = np.arange(n)
+    for v in variants:
+        if v == reference:
+            continue
+        thresholds, idx, arrays = data[v]
+        if thresholds != ref_t or not np.array_equal(idx, ref_idx):
+            raise ValueError(f"{v}: different thresholds or images than {reference}; not paired")
+        for ranged in (False, True):
+            observed = rd_difference(_rd_points(ref_t, ref_arrays, everything, ranged),
+                                     _rd_points(thresholds, arrays, everything, ranged))
+            gains = []
+            for sample in samples:
+                d = rd_difference(_rd_points(ref_t, ref_arrays, sample, ranged),
+                                  _rd_points(thresholds, arrays, sample, ranged))
+                if d is not None:
+                    gains.append(d["mean_psnr_gain_db"])
+            gains = np.array(gains)
+            low, high = np.percentile(gains, [2.5, 97.5])
+            print(f"| {v} | {'range-coded' if ranged else 'raw'} | "
+                  f"{fmt(observed['mean_psnr_gain_db'] if observed else None, 2)} | {gains.mean():+.2f} | "
+                  f"[{low:+.2f}, {high:+.2f}] | {(gains > 0).mean():.3f} |")
+
+
 def _jsonl(path):
     path = Path(path)
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()] \
@@ -234,5 +364,6 @@ def throughput(directory):
 
 
 if __name__ == "__main__":
-    {"sweep": sweep, "compare": compare, "lossless": lossless, "errors": errors, "profile": profile,
-     "throughput": throughput}[sys.argv[1]](sys.argv[2])
+    command = {"sweep": sweep, "compare": compare, "lossless": lossless, "errors": errors, "profile": profile,
+               "throughput": throughput, "matched": matched, "paired": paired}[sys.argv[1]]
+    command(sys.argv[2], *(sys.argv[3:] if sys.argv[1] == "paired" else map(float, sys.argv[3:])))

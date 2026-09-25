@@ -1,0 +1,6314 @@
+{
+  "format": "bitlaya-research-summary-v2",
+  "config": {
+    "format": "bitlaya-research-evaluation-v2",
+    "evaluation": {
+      "checkpoint": "results\\data_scaling\\n05000\\train\\best.pt",
+      "output": "results\\data_scaling\\n05000\\sweep",
+      "data": "data\\cifar10",
+      "split": "val",
+      "size": 200,
+      "seed": 42,
+      "validation_pool_size": 5000,
+      "thresholds": [
+        0.5,
+        0.55,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.8,
+        0.85,
+        0.9,
+        0.925,
+        0.95,
+        0.975,
+        0.99,
+        1.0
+      ],
+      "bootstrap": 1000,
+      "examples": 4,
+      "warmup": 5,
+      "lossy_qualities": [
+        1,
+        5,
+        10,
+        20,
+        35,
+        50,
+        75,
+        90,
+        95
+      ],
+      "engine": "qgru-v2",
+      "batch_rows": 128
+    },
+    "dataset": {
+      "split": "val",
+      "size": 200,
+      "seed": 42,
+      "validation_pool_size": 5000,
+      "indices": [
+        712,
+        24774,
+        45142,
+        27119,
+        21139,
+        19129,
+        6433,
+        38854,
+        22489,
+        31104,
+        21349,
+        29116,
+        10772,
+        18332,
+        1003,
+        22156,
+        26453,
+        17039,
+        7166,
+        48310,
+        12187,
+        20284,
+        1052,
+        13752,
+        37139,
+        29727,
+        41854,
+        40333,
+        33248,
+        9680,
+        16805,
+        14652,
+        15793,
+        30210,
+        47426,
+        20875,
+        4161,
+        40340,
+        28286,
+        13256,
+        48934,
+        11935,
+        48447,
+        15492,
+        32513,
+        36099,
+        39260,
+        46517,
+        33095,
+        3,
+        21683,
+        13446,
+        49515,
+        27943,
+        29059,
+        32738,
+        445,
+        32216,
+        18250,
+        1684,
+        2899,
+        39428,
+        40758,
+        29154,
+        43958,
+        33814,
+        34153,
+        43609,
+        10762,
+        17898,
+        43653,
+        14233,
+        39520,
+        18138,
+        9212,
+        6456,
+        22948,
+        7591,
+        29996,
+        10378,
+        27337,
+        19965,
+        24405,
+        45135,
+        11274,
+        1941,
+        48940,
+        36794,
+        21994,
+        49944,
+        43442,
+        45096,
+        42430,
+        42255,
+        5771,
+        8320,
+        48807,
+        2675,
+        37658,
+        45710,
+        15813,
+        7135,
+        31775,
+        31772,
+        25160,
+        36108,
+        1260,
+        37885,
+        41535,
+        44889,
+        28184,
+        25319,
+        11010,
+        33880,
+        19307,
+        12236,
+        13805,
+        5814,
+        48485,
+        12248,
+        458,
+        319,
+        21496,
+        20390,
+        33691,
+        33872,
+        46987,
+        26772,
+        7057,
+        30014,
+        48237,
+        4823,
+        26627,
+        12293,
+        32803,
+        41882,
+        10235,
+        30033,
+        20042,
+        29399,
+        6463,
+        25920,
+        10327,
+        3805,
+        37879,
+        22721,
+        43932,
+        47270,
+        11091,
+        9736,
+        23206,
+        25039,
+        21014,
+        32412,
+        34022,
+        21369,
+        41654,
+        11953,
+        13700,
+        38205,
+        40129,
+        17080,
+        1505,
+        36391,
+        24660,
+        24061,
+        10964,
+        20807,
+        33388,
+        34571,
+        21194,
+        32696,
+        46005,
+        19269,
+        5503,
+        32979,
+        32764,
+        36396,
+        16139,
+        32110,
+        37930,
+        5624,
+        37946,
+        6616,
+        11706,
+        10558,
+        18351,
+        15023,
+        9490,
+        6355,
+        8857,
+        31811,
+        10400,
+        275,
+        26152,
+        13037,
+        41203,
+        43709,
+        43572,
+        23390
+      ],
+      "image_sha256": "9add458be42ad003b1f416cb3bed5b79a91d95e589c4e85a4def119ced6ce384",
+      "selection": "numpy-default_rng-permutation-v1"
+    },
+    "model": {
+      "embedding_dim": 32,
+      "hidden_size": 128,
+      "num_layers": 2
+    },
+    "parameters": 161505,
+    "checkpoint_sha256": "0d5ada2bc07ca8e79014e436971cee6c9682f1b3a08e4de989a80231d8a9eaab",
+    "model_sha256": "c30a6bd04ec5926faa2e02ffb74588d15dba1f375e18d86804ca103b702b8fad",
+    "checkpoint_bytes": 652802,
+    "checkpoint_metadata": {
+      "run": {
+        "model": {
+          "embedding_dim": 32,
+          "hidden_size": 128,
+          "num_layers": 2
+        },
+        "training": {
+          "epochs": 100000,
+          "batch_size": 32,
+          "chunk_length": 256,
+          "learning_rate": 0.001,
+          "grad_clip": 1.0,
+          "seed": 42,
+          "device": "cuda",
+          "workers": 0,
+          "mode": "teacher_forcing",
+          "schedule": [
+            [
+              1,
+              0.0
+            ],
+            [
+              3,
+              0.1
+            ],
+            [
+              5,
+              0.25
+            ],
+            [
+              7,
+              0.5
+            ]
+          ],
+          "rollout_thresholds": [
+            0.6,
+            0.95
+          ],
+          "objective": "bce",
+          "weights": "sqrt",
+          "lr_schedule": "constant",
+          "max_steps": 64000,
+          "val_every": 8000,
+          "accumulate": 1,
+          "width": 32,
+          "schedule_unit": "epoch"
+        },
+        "loss_weights_msb_first": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "parameters": 161505,
+        "device": "cuda",
+        "torch": "2.14.0+cu130",
+        "numpy": "2.4.6",
+        "threads": 1,
+        "train_images": 5000,
+        "validation_images": 256,
+        "train_sha256": "8ceeef71274080d9c4da08b6e6e15d5c9e2d32971b443509721a8ac4797f9f9b",
+        "validation_sha256": "170c4d21838bae5b34d73f825a02998723e5d4cf0fce8f561380ed3f9a0dcf78",
+        "planned_optimizer_steps": 64000,
+        "provenance": {
+          "dataset": "CIFAR-10 grayscale",
+          "data": "data\\cifar10",
+          "validation_size": 5000,
+          "split_seed": 42,
+          "train_limit": 5000,
+          "val_limit": 256,
+          "config_file": "results\\data_scaling\\n05000\\experiment.json",
+          "preprocessing": {
+            "dataset": "CIFAR-10",
+            "shape": [
+              32,
+              32
+            ],
+            "dtype": "uint8",
+            "grayscale": "Pillow RGB.convert('L')",
+            "pillow": "12.3.0",
+            "torchvision": "0.29.0+cu130",
+            "bit_order": "raster-msb-first",
+            "train": {
+              "images": 50000,
+              "sha256": "1505ba165d4a4ce4307c2b8b599141bf8893be47942b5906750a6b23f537f4b6"
+            },
+            "test": {
+              "images": 10000,
+              "sha256": "e11116a81011718aef7db29b1f7a9854daa057ced8ccb69f5cabc40f3e8ede38"
+            }
+          }
+        }
+      },
+      "epoch": 5,
+      "step": 24000,
+      "validation": {
+        "bce_nats": 0.5074037960730493,
+        "cross_entropy_bits": 0.7320289403228232,
+        "objective": 0.5074037960730493,
+        "bit_accuracy": 0.7158036231994629,
+        "plane_bce_nats_msb_first": [
+          0.27970296520288684,
+          0.283991632721154,
+          0.39956904545215366,
+          0.504090027356142,
+          0.5822526399533672,
+          0.6338798515316739,
+          0.6714634372110595,
+          0.7042807689358597
+        ],
+        "plane_accuracy_msb_first": [
+          0.88848876953125,
+          0.8833999633789062,
+          0.8208160400390625,
+          0.7461929321289062,
+          0.6759300231933594,
+          0.6156654357910156,
+          0.5670547485351562,
+          0.5288810729980469
+        ],
+        "ece": 0.01046772609785761,
+        "calibration": [
+          {
+            "lower": 0.5,
+            "count": 412373,
+            "accuracy": 0.5181862052074214,
+            "confidence": 0.524497697592624
+          },
+          {
+            "lower": 0.55,
+            "count": 318033,
+            "accuracy": 0.5554423597551198,
+            "confidence": 0.5733218321205882
+          },
+          {
+            "lower": 0.6,
+            "count": 204463,
+            "accuracy": 0.6047744579703908,
+            "confidence": 0.6232808103893756
+          },
+          {
+            "lower": 0.65,
+            "count": 148218,
+            "accuracy": 0.6554062259644577,
+            "confidence": 0.6740721199913787
+          },
+          {
+            "lower": 0.7,
+            "count": 126563,
+            "accuracy": 0.709172506972812,
+            "confidence": 0.7245816550236135
+          },
+          {
+            "lower": 0.75,
+            "count": 119471,
+            "accuracy": 0.7583179181558705,
+            "confidence": 0.774876619633375
+          },
+          {
+            "lower": 0.8,
+            "count": 119991,
+            "accuracy": 0.8155861689626722,
+            "confidence": 0.8253155803143143
+          },
+          {
+            "lower": 0.8500000000000001,
+            "count": 134926,
+            "accuracy": 0.8730341075848984,
+            "confidence": 0.8757063485050849
+          },
+          {
+            "lower": 0.9,
+            "count": 175719,
+            "accuracy": 0.929705950978551,
+            "confidence": 0.9264973807263939
+          },
+          {
+            "lower": 0.95,
+            "count": 337395,
+            "accuracy": 0.9799789564160701,
+            "confidence": 0.9767404387709486
+          }
+        ],
+        "high_confidence": [
+          {
+            "range": [
+              0.9,
+              0.95
+            ],
+            "count": 175719,
+            "accuracy": 0.929705950978551,
+            "errors": 12352
+          },
+          {
+            "range": [
+              0.95,
+              0.99
+            ],
+            "count": 276768,
+            "accuracy": 0.9767169614984391,
+            "errors": 6444
+          },
+          {
+            "range": [
+              0.99,
+              1.0
+            ],
+            "count": 60627,
+            "accuracy": 0.9948702723209131,
+            "errors": 311
+          }
+        ]
+      }
+    },
+    "environment": {
+      "python": "3.11.4",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "cpu": "Intel(R) Core(TM) i9-10900K CPU @ 3.70GHz",
+      "logical_cpus": 20,
+      "torch": "2.14.0+cu130",
+      "numpy": "2.4.6",
+      "cuda_available": true,
+      "cuda_build": "13.0",
+      "gpu": "NVIDIA GeForce RTX 2080 SUPER",
+      "threads": 1,
+      "blas_thread_env": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      },
+      "runtime": {
+        "torch": "2.14.0+cu130",
+        "machine": "AMD64",
+        "system": "Windows",
+        "backend": "cpu-float32-threads1-no-mkldnn-v1"
+      }
+    },
+    "source": {
+      "git_commit": "6b5e59402ce4dd57bde345b7995dbe0e48f3a772",
+      "git_dirty": true,
+      "source_sha256": {
+        "__init__.py": "2bb65c9fbb3ad7d5728940ca45d175138cd2804f857b828b9a3642ed5aa1698e",
+        "__main__.py": "5b863a5479a31927971fcecbaf9c55e70bc19cea2f38b61bfc11d13edcca6951",
+        "ablation.py": "011443222479330b228f89c9147be4eaa7369f7703437926ce5f8df2d80d75b6",
+        "analysis.py": "01a1f5b3feaa106396cc062c879d81ea692fbd1f8b3cdaf0110a20cc18901ea4",
+        "bits.py": "77efe437c9772ea875d47603ecb9eee2bd6e39ca049ec0401bb799b67d94a175",
+        "blaya.py": "c805a8b23a36809c872bd222b2a0997810c4d111b04bf12bccb6606ca04d95a0",
+        "cli.py": "2e8d5bb776fc1c883f72f1abc44f57156dedcca237283a782c2b741349c13bcc",
+        "codec.py": "feb33db5cdec7cf90dd85bc6ca33bec39ce38aceded00f9a84881bdc76b7c617",
+        "data.py": "c8156ed0e3440c9d95dae6558dd8dfffaf494c10e8550249018ad8c2be640e88",
+        "engine.py": "4c9f40c6cc4c8e3dc7a785fca2da5a95fd28f1ee36f9f66691388856b4859c12",
+        "evaluation.py": "32253611588e2859d0ed8c8af546e8794602b8afd92c54c5d92a72fcea55c69b",
+        "lossless.py": "ef835b56a66b9369cd6e81cd7fc38cc52893125145c736e6dcef626fb3bc5bbd",
+        "metrics.py": "a140e2db8174ffed6a0fcad4a6ede6ba9471a9298db6efdbc1e95d0df6aa7ed8",
+        "model.py": "8e5c81449e55c6663cd80e02322c94f703532587a3e0c582b4cb87cce09ef449",
+        "overhead.py": "26174f03530814ad0fede1c3efcd7c102c7976e2d86113208b90d7b5af14d2c8",
+        "profiling.py": "31e13452541cdd6e54b3c94aab0a876e221e2fcdb00c22fdf53515198591a232",
+        "protocol.py": "2aa752d4f77488c08f1a263e69d220b2e8759f84a3de832af0968302b3ac197f",
+        "rangecoder.py": "3f703ebb0e43bd24c20a10840176197bb5853af060ddf3a0b62b137121a15cc6",
+        "research.py": "7adcca161d69c9f6ee9c7b3db3338060ecb41d0d578eddcfd82611da6c206e4e",
+        "research_plots.py": "940ca5fef0be03b5f201b66fe190ec9a894e7b2f9dcf921558bb7c75959c9965",
+        "statistics.py": "bea85fa3a2f1bf86c67e5ab9895c7781bb4e5a1d3f87f57538525cf99a59d692",
+        "training.py": "1b26000599c3d6fbf10fbe588733e9bf72bda636015f0d0bfb1b16b3b94c21bf"
+      }
+    },
+    "codec": "qgru-v2",
+    "codec_model_id": "b6e870de2f3ec009",
+    "codec_fingerprint": "b6e870de2f3ec0093ebc67fbd8c3b884791aa644ca8800b59e2c013ec1234912",
+    "webp_available": true,
+    "timing_protocol": "qgru-v2: batched rows; per-image time = batch wall time / rows (throughput, not single-image latency; see `bitlaya profile`)"
+  },
+  "sampling_scale": "development",
+  "independent_decodes_verified": 2800,
+  "encoder_decoder_mismatches": 0,
+  "thresholds": [
+    {
+      "threshold": 0.5,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 34.0,
+          "median": 34.0,
+          "std": 0.0
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.265625,
+          "median": 0.265625,
+          "std": 0.0
+        },
+        "payload_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0
+        },
+        "payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0
+        },
+        "payload_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0
+        },
+        "header_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 34.0,
+          "median": 34.0,
+          "std": 0.0
+        },
+        "original_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1024.0,
+          "median": 1024.0,
+          "std": 0.0
+        },
+        "omitted_fraction": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0
+        },
+        "predicted_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 8192.0,
+          "median": 8192.0,
+          "std": 0.0
+        },
+        "incorrect_omitted_predictions": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 4144.135,
+          "median": 4149.0,
+          "std": 365.22053169968416
+        },
+        "omitted_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.5058758544921875,
+          "median": 0.5064697265625,
+          "std": 0.0445825844359966
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 5351.326459960937,
+          "median": 5010.76025390625,
+          "std": 2815.45664318028
+        },
+        "mae": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 60.6692724609375,
+          "median": 60.6435546875,
+          "std": 19.124174333159345
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 11.512254626051813,
+          "median": 11.131794800358797,
+          "std": 2.5677472195169235
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.1360310692882219,
+          "median": 0.10612349703634504,
+          "std": 0.10221647536626581
+        },
+        "bit_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.5058758544921875,
+          "median": 0.5064697265625,
+          "std": 0.0445825844359966
+        },
+        "encode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.17299254243749884,
+          "median": 0.16855141874999902,
+          "std": 0.0059214982499997855
+        },
+        "decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.16812114478125012,
+          "median": 0.16513288828124928,
+          "std": 0.003984342000001107
+        },
+        "zlib_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 8.0,
+          "median": 8.0,
+          "std": 0.0
+        },
+        "range_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 4.0,
+          "median": 4.0,
+          "std": 0.0
+        },
+        "range_file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 38.0,
+          "median": 38.0,
+          "std": 0.0
+        },
+        "range_file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.296875,
+          "median": 0.296875,
+          "std": 0.0
+        },
+        "range_decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.16365361965624572,
+          "median": 0.1585932343749903,
+          "std": 0.006747180375007247
+        },
+        "first_incorrect_omission": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1.03,
+          "median": 1.0,
+          "std": 1.3225354437594479
+        },
+        "max_error_run": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 14.09,
+          "median": 14.0,
+          "std": 4.566388069360729
+        },
+        "mean_gap_between_errors": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1.9930522983551058,
+          "median": 1.9742054685327326,
+          "std": 0.19090502075070165
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          0.265625,
+          0.265625
+        ],
+        "file_bytes": [
+          34.0,
+          34.0
+        ],
+        "mse": [
+          4976.112100830078,
+          5733.208342529297
+        ],
+        "ssim": [
+          0.12253446065475683,
+          0.15026370547619414
+        ],
+        "range_file_bpp": [
+          0.296875,
+          0.296875
+        ],
+        "pooled_psnr_db": [
+          10.546826367163366,
+          11.161902053781674
+        ]
+      },
+      "pooled_mse": 5351.326459960937,
+      "pooled_psnr_db": 10.846189147647372,
+      "total_file_bytes": 6800,
+      "file_bpp": 0.265625,
+      "lossless_images": 0,
+      "total_original_bytes": 204800,
+      "total_payload_bits": 0,
+      "total_payload_bytes": 0,
+      "total_header_bytes": 6800,
+      "total_predicted_bits": 1638400,
+      "total_incorrect_omitted_predictions": 828827,
+      "pooled_omitted_error_rate": 0.5058758544921875,
+      "payload_bpp": 0.0,
+      "zlib_payload": {
+        "raw_bytes": 0,
+        "zlib_bytes": 1600,
+        "ratio": null,
+        "images_where_zlib_smaller": 0
+      },
+      "range_payload": {
+        "raw_bytes": 0,
+        "range_bytes": 800,
+        "ratio": null,
+        "file_bpp": 0.296875,
+        "images_where_range_smaller": 0
+      },
+      "model_amortization": [
+        {
+          "images_sharing_model": 1,
+          "mean_bytes_per_image_including_model": 652836.0,
+          "bpp_including_model": 5100.28125
+        },
+        {
+          "images_sharing_model": 10,
+          "mean_bytes_per_image_including_model": 65314.2,
+          "bpp_including_model": 510.2671875
+        },
+        {
+          "images_sharing_model": 100,
+          "mean_bytes_per_image_including_model": 6562.02,
+          "bpp_including_model": 51.26578125
+        },
+        {
+          "images_sharing_model": 1000,
+          "mean_bytes_per_image_including_model": 686.802,
+          "bpp_including_model": 5.365640625
+        },
+        {
+          "images_sharing_model": 10000,
+          "mean_bytes_per_image_including_model": 99.2802,
+          "bpp_including_model": 0.7756265625
+        }
+      ]
+    },
+    {
+      "threshold": 0.55,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 35.18,
+          "median": 35.0,
+          "std": 0.38418745424597095
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.27484375,
+          "median": 0.2734375,
+          "std": 0.003001464486296648
+        },
+        "payload_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 4.47,
+          "median": 1.0,
+          "std": 3.849558416234257
+        },
+        "payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1.18,
+          "median": 1.0,
+          "std": 0.38418745424597095
+        },
+        "payload_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.004365234375,
+          "median": 0.0009765625,
+          "std": 0.0037593343908537665
+        },
+        "header_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 34.0,
+          "median": 34.0,
+          "std": 0.0
+        },
+        "original_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1024.0,
+          "median": 1024.0,
+          "std": 0.0
+        },
+        "omitted_fraction": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.999454345703125,
+          "median": 0.9998779296875,
+          "std": 0.0004699167988567208
+        },
+        "predicted_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 8187.53,
+          "median": 8191.0,
+          "std": 3.849558416234257
+        },
+        "incorrect_omitted_predictions": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 3977.205,
+          "median": 4022.5,
+          "std": 428.8214231763614
+        },
+        "omitted_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.48576602208440534,
+          "median": 0.4911144369287847,
+          "std": 0.052395845941505204
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 12778.199995117187,
+          "median": 11136.908203125,
+          "std": 8439.000631397876
+        },
+        "mae": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 93.9569873046875,
+          "median": 88.7421875,
+          "std": 41.30627688368466
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 8.442387207151164,
+          "median": 7.66327006311557,
+          "std": 3.9923499670150577
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.1256700752094666,
+          "median": 0.09652887977461153,
+          "std": 0.09942740864710016
+        },
+        "bit_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.4854986572265625,
+          "median": 0.49102783203125,
+          "std": 0.05234636513383318
+        },
+        "encode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.1946576594999948,
+          "median": 0.19840332187499143,
+          "std": 0.009415557851717105
+        },
+        "decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.19243262003125494,
+          "median": 0.19632791015625628,
+          "std": 0.014514171865510569
+        },
+        "zlib_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 9.18,
+          "median": 9.0,
+          "std": 0.38418745424597095
+        },
+        "range_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 4.2,
+          "median": 4.0,
+          "std": 0.39999999999999997
+        },
+        "range_file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 38.2,
+          "median": 38.0,
+          "std": 0.39999999999999997
+        },
+        "range_file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.2984375,
+          "median": 0.296875,
+          "std": 0.0031249999999999997
+        },
+        "range_decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.19306033015624904,
+          "median": 0.1971386570312461,
+          "std": 0.01574124754666627
+        },
+        "first_incorrect_omission": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 8.155,
+          "median": 2.0,
+          "std": 35.08989847520224
+        },
+        "max_error_run": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 12.035,
+          "median": 9.0,
+          "std": 7.30299767218914
+        },
+        "mean_gap_between_errors": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 2.0863209361589425,
+          "median": 2.035434683406235,
+          "std": 0.2760584999702123
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          0.2744140625,
+          0.2752734375
+        ],
+        "file_bytes": [
+          35.125,
+          35.235
+        ],
+        "mse": [
+          11669.280063720702,
+          13899.196885742187
+        ],
+        "ssim": [
+          0.11236989560635742,
+          0.13949724278503167
+        ],
+        "range_file_bpp": [
+          0.2980078125,
+          0.2988671875
+        ],
+        "pooled_psnr_db": [
+          6.700906540071271,
+          7.460362977958167
+        ]
+      },
+      "pooled_mse": 12778.199995117187,
+      "pooled_psnr_db": 7.066106797563964,
+      "total_file_bytes": 7036,
+      "file_bpp": 0.27484375,
+      "lossless_images": 0,
+      "total_original_bytes": 204800,
+      "total_payload_bits": 894,
+      "total_payload_bytes": 236,
+      "total_header_bytes": 6800,
+      "total_predicted_bits": 1637506,
+      "total_incorrect_omitted_predictions": 795441,
+      "pooled_omitted_error_rate": 0.4857637162856197,
+      "payload_bpp": 0.00921875,
+      "zlib_payload": {
+        "raw_bytes": 236,
+        "zlib_bytes": 1836,
+        "ratio": 7.779661016949152,
+        "images_where_zlib_smaller": 0
+      },
+      "range_payload": {
+        "raw_bytes": 236,
+        "range_bytes": 840,
+        "ratio": 3.559322033898305,
+        "file_bpp": 0.2984375,
+        "images_where_range_smaller": 0
+      },
+      "model_amortization": [
+        {
+          "images_sharing_model": 1,
+          "mean_bytes_per_image_including_model": 652837.18,
+          "bpp_including_model": 5100.29046875
+        },
+        {
+          "images_sharing_model": 10,
+          "mean_bytes_per_image_including_model": 65315.38,
+          "bpp_including_model": 510.27640625
+        },
+        {
+          "images_sharing_model": 100,
+          "mean_bytes_per_image_including_model": 6563.200000000001,
+          "bpp_including_model": 51.275000000000006
+        },
+        {
+          "images_sharing_model": 1000,
+          "mean_bytes_per_image_including_model": 687.982,
+          "bpp_including_model": 5.374859375
+        },
+        {
+          "images_sharing_model": 10000,
+          "mean_bytes_per_image_including_model": 100.46019999999999,
+          "bpp_including_model": 0.7848453124999999
+        }
+      ]
+    },
+    {
+      "threshold": 0.6,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 35.725,
+          "median": 36.0,
+          "std": 0.6628536791781426
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.2791015625,
+          "median": 0.28125,
+          "std": 0.005178544368579239
+        },
+        "payload_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 9.495,
+          "median": 10.5,
+          "std": 5.746300984111431
+        },
+        "payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1.725,
+          "median": 2.0,
+          "std": 0.6628536791781426
+        },
+        "payload_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.0092724609375,
+          "median": 0.01025390625,
+          "std": 0.0056116220547963195
+        },
+        "header_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 34.0,
+          "median": 34.0,
+          "std": 0.0
+        },
+        "original_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1024.0,
+          "median": 1024.0,
+          "std": 0.0
+        },
+        "omitted_fraction": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.9988409423828125,
+          "median": 0.99871826171875,
+          "std": 0.0007014527568495398
+        },
+        "predicted_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 8182.505,
+          "median": 8181.5,
+          "std": 5.74630098411143
+        },
+        "incorrect_omitted_predictions": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 3973.925,
+          "median": 4000.5,
+          "std": 431.41033758476397
+        },
+        "omitted_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.4856658845339249,
+          "median": 0.48912113027205534,
+          "std": 0.052759640187213054
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 10998.491420898437,
+          "median": 8974.2158203125,
+          "std": 7580.98840664537
+        },
+        "mae": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 86.0499658203125,
+          "median": 81.36474609375,
+          "std": 37.69888808773265
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 9.029895282844782,
+          "median": 8.600935175653472,
+          "std": 3.809403294914735
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.1268570649980374,
+          "median": 0.09652150354488946,
+          "std": 0.09969331191842892
+        },
+        "bit_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.4850982666015625,
+          "median": 0.48834228515625,
+          "std": 0.05266239472470263
+        },
+        "encode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.2177069010937555,
+          "median": 0.21288661171875845,
+          "std": 0.0054380198202682506
+        },
+        "decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.2254240991250026,
+          "median": 0.22776686640625599,
+          "std": 0.0026429979444417846
+        },
+        "zlib_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 9.725,
+          "median": 10.0,
+          "std": 0.6628536791781426
+        },
+        "range_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 4.765,
+          "median": 5.0,
+          "std": 0.6926579242310016
+        },
+        "range_file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 38.765,
+          "median": 39.0,
+          "std": 0.6926579242310017
+        },
+        "range_file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.3028515625,
+          "median": 0.3046875,
+          "std": 0.005411390033054701
+        },
+        "range_decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.22664861203124928,
+          "median": 0.2318703601562504,
+          "std": 0.005890926372075317
+        },
+        "first_incorrect_omission": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 10.81,
+          "median": 3.0,
+          "std": 35.6163431587242
+        },
+        "max_error_run": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 12.61,
+          "median": 12.0,
+          "std": 7.021958416282454
+        },
+        "mean_gap_between_errors": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 2.0871848274678637,
+          "median": 2.047511943471736,
+          "std": 0.27269011799235804
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          0.2784365234375,
+          0.2798046875
+        ],
+        "file_bytes": [
+          35.639875,
+          35.815
+        ],
+        "mse": [
+          10020.618724487304,
+          12016.466593627929
+        ],
+        "ssim": [
+          0.11322109667777039,
+          0.14084284832554725
+        ],
+        "range_file_bpp": [
+          0.302109375,
+          0.30359375
+        ],
+        "pooled_psnr_db": [
+          7.333035774342101,
+          8.12185822936009
+        ]
+      },
+      "pooled_mse": 10998.491420898437,
+      "pooled_psnr_db": 7.717472404832705,
+      "total_file_bytes": 7145,
+      "file_bpp": 0.2791015625,
+      "lossless_images": 0,
+      "total_original_bytes": 204800,
+      "total_payload_bits": 1899,
+      "total_payload_bytes": 345,
+      "total_header_bytes": 6800,
+      "total_predicted_bits": 1636501,
+      "total_incorrect_omitted_predictions": 794785,
+      "pooled_omitted_error_rate": 0.4856611758868464,
+      "payload_bpp": 0.0134765625,
+      "zlib_payload": {
+        "raw_bytes": 345,
+        "zlib_bytes": 1945,
+        "ratio": 5.63768115942029,
+        "images_where_zlib_smaller": 0
+      },
+      "range_payload": {
+        "raw_bytes": 345,
+        "range_bytes": 953,
+        "ratio": 2.7623188405797103,
+        "file_bpp": 0.3028515625,
+        "images_where_range_smaller": 0
+      },
+      "model_amortization": [
+        {
+          "images_sharing_model": 1,
+          "mean_bytes_per_image_including_model": 652837.725,
+          "bpp_including_model": 5100.2947265625
+        },
+        {
+          "images_sharing_model": 10,
+          "mean_bytes_per_image_including_model": 65315.924999999996,
+          "bpp_including_model": 510.28066406249997
+        },
+        {
+          "images_sharing_model": 100,
+          "mean_bytes_per_image_including_model": 6563.745000000001,
+          "bpp_including_model": 51.279257812500006
+        },
+        {
+          "images_sharing_model": 1000,
+          "mean_bytes_per_image_including_model": 688.527,
+          "bpp_including_model": 5.3791171875
+        },
+        {
+          "images_sharing_model": 10000,
+          "mean_bytes_per_image_including_model": 101.0052,
+          "bpp_including_model": 0.789103125
+        }
+      ]
+    },
+    {
+      "threshold": 0.65,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 50.445,
+          "median": 37.0,
+          "std": 33.63579900938879
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.3941015625,
+          "median": 0.2890625,
+          "std": 0.2627796797608499
+        },
+        "payload_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 127.94,
+          "median": 23.0,
+          "std": 269.1037465365356
+        },
+        "payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 16.445,
+          "median": 3.0,
+          "std": 33.63579900938879
+        },
+        "payload_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.12494140625,
+          "median": 0.0224609375,
+          "std": 0.26279662747708554
+        },
+        "header_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 34.0,
+          "median": 34.0,
+          "std": 0.0
+        },
+        "original_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1024.0,
+          "median": 1024.0,
+          "std": 0.0
+        },
+        "omitted_fraction": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.98438232421875,
+          "median": 0.9971923828125,
+          "std": 0.03284957843463569
+        },
+        "predicted_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 8064.06,
+          "median": 8169.0,
+          "std": 269.1037465365356
+        },
+        "incorrect_omitted_predictions": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 3756.23,
+          "median": 3807.5,
+          "std": 433.96023677290987
+        },
+        "omitted_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.4657122644675594,
+          "median": 0.47176505767056487,
+          "std": 0.051233248510826834
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 8117.327915039063,
+          "median": 6212.908203125,
+          "std": 6802.8944136908685
+        },
+        "mae": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 68.2441259765625,
+          "median": 63.8916015625,
+          "std": 34.174052290689616
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 10.842691044528724,
+          "median": 10.19794091093867,
+          "std": 4.402223849423862
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.11513566225357622,
+          "median": 0.08428433350516834,
+          "std": 0.11132002356634851
+        },
+        "bit_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.458524169921875,
+          "median": 0.46478271484375,
+          "std": 0.0529736617154431
+        },
+        "encode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.23003002934374536,
+          "median": 0.23079081484374342,
+          "std": 0.0033987932977066525
+        },
+        "decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.24106037556249477,
+          "median": 0.24533961484374345,
+          "std": 0.009333161909646285
+        },
+        "zlib_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 24.87,
+          "median": 11.0,
+          "std": 34.55579690876771
+        },
+        "range_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 19.62,
+          "median": 6.0,
+          "std": 33.87499963099631
+        },
+        "range_file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 53.62,
+          "median": 40.0,
+          "std": 33.87499963099631
+        },
+        "range_file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.41890625,
+          "median": 0.3125,
+          "std": 0.26464843461715865
+        },
+        "range_decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.24146449203124576,
+          "median": 0.2486216710937441,
+          "std": 0.011199316519349628
+        },
+        "first_incorrect_omission": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 24.975,
+          "median": 14.0,
+          "std": 41.783422250935836
+        },
+        "max_error_run": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 12.32,
+          "median": 10.0,
+          "std": 8.864964748942887
+        },
+        "mean_gap_between_errors": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 2.208263581242313,
+          "median": 2.1457857133788867,
+          "std": 0.30345270986239686
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          0.35972265625,
+          0.4292587890625
+        ],
+        "file_bytes": [
+          46.0445,
+          54.945125
+        ],
+        "mse": [
+          7185.456442871094,
+          9014.573844970702
+        ],
+        "ssim": [
+          0.1012001584332492,
+          0.13060648992942225
+        ],
+        "range_file_bpp": [
+          0.3842890625,
+          0.4544609375
+        ],
+        "pooled_psnr_db": [
+          8.581351601647032,
+          9.566259997652415
+        ]
+      },
+      "pooled_mse": 8117.327915039063,
+      "pooled_psnr_db": 9.036672703873808,
+      "total_file_bytes": 10089,
+      "file_bpp": 0.3941015625,
+      "lossless_images": 0,
+      "total_original_bytes": 204800,
+      "total_payload_bits": 25588,
+      "total_payload_bytes": 3289,
+      "total_header_bytes": 6800,
+      "total_predicted_bits": 1612812,
+      "total_incorrect_omitted_predictions": 751246,
+      "pooled_omitted_error_rate": 0.46579886558383743,
+      "payload_bpp": 0.1284765625,
+      "zlib_payload": {
+        "raw_bytes": 3289,
+        "zlib_bytes": 4974,
+        "ratio": 1.5123137731833385,
+        "images_where_zlib_smaller": 0
+      },
+      "range_payload": {
+        "raw_bytes": 3289,
+        "range_bytes": 3924,
+        "ratio": 1.193067801763454,
+        "file_bpp": 0.41890625,
+        "images_where_range_smaller": 3
+      },
+      "model_amortization": [
+        {
+          "images_sharing_model": 1,
+          "mean_bytes_per_image_including_model": 652852.445,
+          "bpp_including_model": 5100.4097265625
+        },
+        {
+          "images_sharing_model": 10,
+          "mean_bytes_per_image_including_model": 65330.645,
+          "bpp_including_model": 510.3956640625
+        },
+        {
+          "images_sharing_model": 100,
+          "mean_bytes_per_image_including_model": 6578.465,
+          "bpp_including_model": 51.3942578125
+        },
+        {
+          "images_sharing_model": 1000,
+          "mean_bytes_per_image_including_model": 703.2470000000001,
+          "bpp_including_model": 5.4941171875000006
+        },
+        {
+          "images_sharing_model": 10000,
+          "mean_bytes_per_image_including_model": 115.7252,
+          "bpp_including_model": 0.904103125
+        }
+      ]
+    },
+    {
+      "threshold": 0.7,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 64.035,
+          "median": 39.0,
+          "std": 52.76991353981926
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.5002734375,
+          "median": 0.3046875,
+          "std": 0.41226494952983794
+        },
+        "payload_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 236.595,
+          "median": 37.5,
+          "std": 422.11359960915735
+        },
+        "payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 30.035,
+          "median": 5.0,
+          "std": 52.76991353981926
+        },
+        "payload_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.2310498046875,
+          "median": 0.03662109375,
+          "std": 0.4122203121183177
+        },
+        "header_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 34.0,
+          "median": 34.0,
+          "std": 0.0
+        },
+        "original_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1024.0,
+          "median": 1024.0,
+          "std": 0.0
+        },
+        "omitted_fraction": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.9711187744140625,
+          "median": 0.99542236328125,
+          "std": 0.051527539014789715
+        },
+        "predicted_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 7955.405,
+          "median": 8154.5,
+          "std": 422.11359960915735
+        },
+        "incorrect_omitted_predictions": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 3720.53,
+          "median": 3790.0,
+          "std": 472.19806130478764
+        },
+        "omitted_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.4673862478417625,
+          "median": 0.47206875363935485,
+          "std": 0.05227594146775033
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 8297.015805664063,
+          "median": 6219.35546875,
+          "std": 6594.974576258911
+        },
+        "mae": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 69.8021826171875,
+          "median": 63.19384765625,
+          "std": 32.91420213266558
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 10.507042272327174,
+          "median": 10.193385515183097,
+          "std": 4.078912315812093
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.11001343171059698,
+          "median": 0.08261265057348928,
+          "std": 0.11002203899353535
+        },
+        "bit_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.454166259765625,
+          "median": 0.462646484375,
+          "std": 0.057641364905369585
+        },
+        "encode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.2516479174062431,
+          "median": 0.26727169765624126,
+          "std": 0.016261746064775824
+        },
+        "decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.24299976503125095,
+          "median": 0.23910795390625594,
+          "std": 0.004050725447623068
+        },
+        "zlib_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 38.815,
+          "median": 13.0,
+          "std": 53.7921069953576
+        },
+        "range_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 33.79,
+          "median": 8.0,
+          "std": 54.00829473330925
+        },
+        "range_file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 67.79,
+          "median": 42.0,
+          "std": 54.00829473330925
+        },
+        "range_file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.529609375,
+          "median": 0.328125,
+          "std": 0.4219398026039785
+        },
+        "range_decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.2396313335000002,
+          "median": 0.2396021468750007,
+          "std": 3.0378402450325113e-05
+        },
+        "first_incorrect_omission": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 33.32,
+          "median": 20.0,
+          "std": 45.132888230203044
+        },
+        "max_error_run": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 12.035,
+          "median": 10.0,
+          "std": 7.818809052534792
+        },
+        "mean_gap_between_errors": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 2.2347931215695827,
+          "median": 2.1550836453698983,
+          "std": 0.341443722565034
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          0.4480029296875,
+          0.559736328125
+        ],
+        "file_bytes": [
+          57.344375,
+          71.64625
+        ],
+        "mse": [
+          7410.288879516602,
+          9133.621574707031
+        ],
+        "ssim": [
+          0.09602226688646363,
+          0.12491312005923431
+        ],
+        "range_file_bpp": [
+          0.47596777343749996,
+          0.59082421875
+        ],
+        "pooled_psnr_db": [
+          8.524373469646914,
+          9.43245222209156
+        ]
+      },
+      "pooled_mse": 8297.015805664063,
+      "pooled_psnr_db": 8.941584434527048,
+      "total_file_bytes": 12807,
+      "file_bpp": 0.5002734375,
+      "lossless_images": 0,
+      "total_original_bytes": 204800,
+      "total_payload_bits": 47319,
+      "total_payload_bytes": 6007,
+      "total_header_bytes": 6800,
+      "total_predicted_bits": 1591081,
+      "total_incorrect_omitted_predictions": 744106,
+      "pooled_omitted_error_rate": 0.4676732359948991,
+      "payload_bpp": 0.2346484375,
+      "zlib_payload": {
+        "raw_bytes": 6007,
+        "zlib_bytes": 7763,
+        "ratio": 1.2923256201098718,
+        "images_where_zlib_smaller": 0
+      },
+      "range_payload": {
+        "raw_bytes": 6007,
+        "range_bytes": 6758,
+        "ratio": 1.1250208090561011,
+        "file_bpp": 0.529609375,
+        "images_where_range_smaller": 3
+      },
+      "model_amortization": [
+        {
+          "images_sharing_model": 1,
+          "mean_bytes_per_image_including_model": 652866.035,
+          "bpp_including_model": 5100.5158984375
+        },
+        {
+          "images_sharing_model": 10,
+          "mean_bytes_per_image_including_model": 65344.235,
+          "bpp_including_model": 510.5018359375
+        },
+        {
+          "images_sharing_model": 100,
+          "mean_bytes_per_image_including_model": 6592.055,
+          "bpp_including_model": 51.5004296875
+        },
+        {
+          "images_sharing_model": 1000,
+          "mean_bytes_per_image_including_model": 716.837,
+          "bpp_including_model": 5.6002890625
+        },
+        {
+          "images_sharing_model": 10000,
+          "mean_bytes_per_image_including_model": 129.3152,
+          "bpp_including_model": 1.010275
+        }
+      ]
+    },
+    {
+      "threshold": 0.75,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 115.28,
+          "median": 58.5,
+          "std": 105.62557266116951
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.900625,
+          "median": 0.45703125,
+          "std": 0.8251997864153868
+        },
+        "payload_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 646.965,
+          "median": 192.0,
+          "std": 844.8878823696077
+        },
+        "payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 81.28,
+          "median": 24.5,
+          "std": 105.62557266116951
+        },
+        "payload_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.6318017578125,
+          "median": 0.1875,
+          "std": 0.82508582262657
+        },
+        "header_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 34.0,
+          "median": 34.0,
+          "std": 0.0
+        },
+        "original_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1024.0,
+          "median": 1024.0,
+          "std": 0.0
+        },
+        "omitted_fraction": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.9210247802734375,
+          "median": 0.9765625,
+          "std": 0.10313572782832126
+        },
+        "predicted_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 7545.035,
+          "median": 8000.0,
+          "std": 844.8878823696077
+        },
+        "incorrect_omitted_predictions": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 3493.595,
+          "median": 3633.0,
+          "std": 578.2766042085742
+        },
+        "omitted_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.46254577836618643,
+          "median": 0.46644216034479336,
+          "std": 0.0549335123802605
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 8356.007392578125,
+          "median": 6220.849609375,
+          "std": 6504.945559038186
+        },
+        "mae": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 69.7947265625,
+          "median": 63.02587890625,
+          "std": 33.000807409812786
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 10.528026136509805,
+          "median": 10.19236159235917,
+          "std": 4.195765127258169
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.10690418013731245,
+          "median": 0.07969265589829824,
+          "std": 0.1118215051146328
+        },
+        "bit_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.4264642333984375,
+          "median": 0.4434814453125,
+          "std": 0.07059040578717947
+        },
+        "encode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.2509676470937552,
+          "median": 0.251767829687509,
+          "std": 0.007596058396096359
+        },
+        "decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.24251458571875673,
+          "median": 0.24268789843750938,
+          "std": 0.0013347466818074247
+        },
+        "zlib_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 90.57,
+          "median": 33.5,
+          "std": 106.69088574006686
+        },
+        "range_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 88.23,
+          "median": 29.0,
+          "std": 111.00399587402248
+        },
+        "range_file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 122.23,
+          "median": 63.0,
+          "std": 111.00399587402248
+        },
+        "range_file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.954921875,
+          "median": 0.4921875,
+          "std": 0.8672187177658006
+        },
+        "range_decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.24280674299999988,
+          "median": 0.23892376874999854,
+          "std": 0.00672265517214402
+        },
+        "first_incorrect_omission": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 41.265,
+          "median": 23.5,
+          "std": 50.402924270323844
+        },
+        "max_error_run": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 10.975,
+          "median": 9.0,
+          "std": 7.914819960049628
+        },
+        "mean_gap_between_errors": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 2.41588283634665,
+          "median": 2.247587548010571,
+          "std": 0.5219181414473127
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          0.79291015625,
+          1.0191425781249999
+        ],
+        "file_bytes": [
+          101.4925,
+          130.45024999999998
+        ],
+        "mse": [
+          7441.396280517578,
+          9206.573662963867
+        ],
+        "ssim": [
+          0.09182716547986555,
+          0.12242981462167532
+        ],
+        "range_file_bpp": [
+          0.84226171875,
+          1.080248046875
+        ],
+        "pooled_psnr_db": [
+          8.489823285135628,
+          9.414259280062796
+        ]
+      },
+      "pooled_mse": 8356.007392578125,
+      "pooled_psnr_db": 8.910815453381858,
+      "total_file_bytes": 23056,
+      "file_bpp": 0.900625,
+      "lossless_images": 0,
+      "total_original_bytes": 204800,
+      "total_payload_bits": 129393,
+      "total_payload_bytes": 16256,
+      "total_header_bytes": 6800,
+      "total_predicted_bits": 1509007,
+      "total_incorrect_omitted_predictions": 698719,
+      "pooled_omitted_error_rate": 0.4630323119773467,
+      "payload_bpp": 0.635,
+      "zlib_payload": {
+        "raw_bytes": 16256,
+        "zlib_bytes": 18114,
+        "ratio": 1.1142962598425197,
+        "images_where_zlib_smaller": 2
+      },
+      "range_payload": {
+        "raw_bytes": 16256,
+        "range_bytes": 17646,
+        "ratio": 1.0855068897637796,
+        "file_bpp": 0.954921875,
+        "images_where_range_smaller": 6
+      },
+      "model_amortization": [
+        {
+          "images_sharing_model": 1,
+          "mean_bytes_per_image_including_model": 652917.28,
+          "bpp_including_model": 5100.91625
+        },
+        {
+          "images_sharing_model": 10,
+          "mean_bytes_per_image_including_model": 65395.479999999996,
+          "bpp_including_model": 510.90218749999997
+        },
+        {
+          "images_sharing_model": 100,
+          "mean_bytes_per_image_including_model": 6643.3,
+          "bpp_including_model": 51.90078125
+        },
+        {
+          "images_sharing_model": 1000,
+          "mean_bytes_per_image_including_model": 768.082,
+          "bpp_including_model": 6.000640625
+        },
+        {
+          "images_sharing_model": 10000,
+          "mean_bytes_per_image_including_model": 180.5602,
+          "bpp_including_model": 1.4106265625
+        }
+      ]
+    },
+    {
+      "threshold": 0.8,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 188.84,
+          "median": 105.0,
+          "std": 177.32900044831922
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1.4753125,
+          "median": 0.8203125,
+          "std": 1.385382816002494
+        },
+        "payload_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1235.535,
+          "median": 566.5,
+          "std": 1418.2327837047767
+        },
+        "payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 154.84,
+          "median": 71.0,
+          "std": 177.32900044831922
+        },
+        "payload_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1.2065771484375,
+          "median": 0.55322265625,
+          "std": 1.384992952836696
+        },
+        "header_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 34.0,
+          "median": 34.0,
+          "std": 0.0
+        },
+        "original_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1024.0,
+          "median": 1024.0,
+          "std": 0.0
+        },
+        "omitted_fraction": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.8491778564453125,
+          "median": 0.93084716796875,
+          "std": 0.173124119104587
+        },
+        "predicted_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 6956.465,
+          "median": 7625.5,
+          "std": 1418.2327837047767
+        },
+        "incorrect_omitted_predictions": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 3134.05,
+          "median": 3427.0,
+          "std": 848.6517999156073
+        },
+        "omitted_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.4448819729968099,
+          "median": 0.4506378829378969,
+          "std": 0.058397439646744376
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 7678.594755859375,
+          "median": 5630.62841796875,
+          "std": 6517.87477545429
+        },
+        "mae": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 64.697568359375,
+          "median": 58.20947265625,
+          "std": 32.712232841591685
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 10.922993898547915,
+          "median": 10.625238524534401,
+          "std": 4.064799242778664
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.10960735708075653,
+          "median": 0.08237605501064435,
+          "std": 0.10825971476604075
+        },
+        "bit_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.382574462890625,
+          "median": 0.4183349609375,
+          "std": 0.10359519041938565
+        },
+        "encode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.24961343015625062,
+          "median": 0.25556784921874964,
+          "std": 0.007292644208911998
+        },
+        "decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.25224553046874976,
+          "median": 0.2579053945312495,
+          "std": 0.0069318894833201505
+        },
+        "zlib_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 164.15,
+          "median": 77.0,
+          "std": 178.1780219331217
+        },
+        "range_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 165.47,
+          "median": 76.0,
+          "std": 185.0632029875199
+        },
+        "range_file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 199.47,
+          "median": 110.0,
+          "std": 185.0632029875199
+        },
+        "range_file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1.558359375,
+          "median": 0.859375,
+          "std": 1.4458062733399992
+        },
+        "range_decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.25845478328124616,
+          "median": 0.26091554609374157,
+          "std": 0.003013806634314922
+        },
+        "first_incorrect_omission": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 56.58,
+          "median": 33.0,
+          "std": 62.837994875711935
+        },
+        "max_error_run": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 10.67,
+          "median": 8.0,
+          "std": 8.074100569103658
+        },
+        "mean_gap_between_errors": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 2.9027941854491064,
+          "median": 2.3790100243153116,
+          "std": 1.2152850822651922
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          1.2978671875,
+          1.6784970703125
+        ],
+        "file_bytes": [
+          166.127,
+          214.847625
+        ],
+        "mse": [
+          6836.657075073242,
+          8541.525297485352
+        ],
+        "ssim": [
+          0.09526717282772963,
+          0.12432060347847358
+        ],
+        "range_file_bpp": [
+          1.370099609375,
+          1.7717060546875
+        ],
+        "pooled_psnr_db": [
+          8.815449293907001,
+          9.782365645189167
+        ]
+      },
+      "pooled_mse": 7678.594755859375,
+      "pooled_psnr_db": 9.27798612921886,
+      "total_file_bytes": 37768,
+      "file_bpp": 1.4753125,
+      "lossless_images": 0,
+      "total_original_bytes": 204800,
+      "total_payload_bits": 247107,
+      "total_payload_bytes": 30968,
+      "total_header_bytes": 6800,
+      "total_predicted_bits": 1391293,
+      "total_incorrect_omitted_predictions": 626810,
+      "pooled_omitted_error_rate": 0.450523362081172,
+      "payload_bpp": 1.2096875,
+      "zlib_payload": {
+        "raw_bytes": 30968,
+        "zlib_bytes": 32830,
+        "ratio": 1.0601265822784811,
+        "images_where_zlib_smaller": 2
+      },
+      "range_payload": {
+        "raw_bytes": 30968,
+        "range_bytes": 33094,
+        "ratio": 1.0686515112374064,
+        "file_bpp": 1.558359375,
+        "images_where_range_smaller": 17
+      },
+      "model_amortization": [
+        {
+          "images_sharing_model": 1,
+          "mean_bytes_per_image_including_model": 652990.84,
+          "bpp_including_model": 5101.4909375
+        },
+        {
+          "images_sharing_model": 10,
+          "mean_bytes_per_image_including_model": 65469.03999999999,
+          "bpp_including_model": 511.47687499999995
+        },
+        {
+          "images_sharing_model": 100,
+          "mean_bytes_per_image_including_model": 6716.860000000001,
+          "bpp_including_model": 52.475468750000005
+        },
+        {
+          "images_sharing_model": 1000,
+          "mean_bytes_per_image_including_model": 841.642,
+          "bpp_including_model": 6.575328125
+        },
+        {
+          "images_sharing_model": 10000,
+          "mean_bytes_per_image_including_model": 254.1202,
+          "bpp_including_model": 1.9853140625
+        }
+      ]
+    },
+    {
+      "threshold": 0.85,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 382.255,
+          "median": 403.5,
+          "std": 281.0982923729705
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 2.9863671875,
+          "median": 3.15234375,
+          "std": 2.196080409163832
+        },
+        "payload_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 2782.175,
+          "median": 2951.5,
+          "std": 2248.871664718776
+        },
+        "payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 348.255,
+          "median": 369.5,
+          "std": 281.0982923729705
+        },
+        "payload_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 2.7169677734375,
+          "median": 2.88232421875,
+          "std": 2.19616373507693
+        },
+        "header_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 34.0,
+          "median": 34.0,
+          "std": 0.0
+        },
+        "original_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1024.0,
+          "median": 1024.0,
+          "std": 0.0
+        },
+        "omitted_fraction": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.6603790283203125,
+          "median": 0.63970947265625,
+          "std": 0.27452046688461623
+        },
+        "predicted_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 5409.825,
+          "median": 5240.5,
+          "std": 2248.871664718776
+        },
+        "incorrect_omitted_predictions": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 2160.885,
+          "median": 2119.0,
+          "std": 1294.8668432603408
+        },
+        "omitted_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.36725754005618044,
+          "median": 0.38138310973263656,
+          "std": 0.10314749881576588
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 7893.152290039063,
+          "median": 5107.533203125,
+          "std": 7023.558574465102
+        },
+        "mae": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 60.0202490234375,
+          "median": 53.0966796875,
+          "std": 38.69526991110079
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 11.187173356212288,
+          "median": 11.048741047977634,
+          "std": 4.527364620192093
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.2006365723355725,
+          "median": 0.16810974975602572,
+          "std": 0.1587891455888023
+        },
+        "bit_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.2637799072265625,
+          "median": 0.2586669921875,
+          "std": 0.15806480020267832
+        },
+        "encode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.2523049634687493,
+          "median": 0.25225022578125333,
+          "std": 0.0006754741551067983
+        },
+        "decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.24735246953124773,
+          "median": 0.24176095390625107,
+          "std": 0.007456486114691901
+        },
+        "zlib_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 357.215,
+          "median": 363.0,
+          "std": 283.0823356816882
+        },
+        "range_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 350.475,
+          "median": 350.0,
+          "std": 283.24198024833817
+        },
+        "range_file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 384.475,
+          "median": 384.0,
+          "std": 283.24198024833817
+        },
+        "range_file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 3.0037109375,
+          "median": 3.0,
+          "std": 2.212827970690142
+        },
+        "range_decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.2580977358437565,
+          "median": 0.2507960359375119,
+          "std": 0.009971448791582758
+        },
+        "first_incorrect_omission": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 91.51,
+          "median": 55.0,
+          "std": 120.48892023750567
+        },
+        "max_error_run": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 8.395,
+          "median": 8.0,
+          "std": 9.422259548537177
+        },
+        "mean_gap_between_errors": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 6.127481174933751,
+          "median": 3.7972484698997837,
+          "std": 4.455683774179023
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          2.660603515625,
+          3.2873281249999997
+        ],
+        "file_bytes": [
+          340.55725,
+          420.77799999999996
+        ],
+        "mse": [
+          6935.339018066406,
+          8844.552115234375
+        ],
+        "ssim": [
+          0.1782958870630382,
+          0.22209017224728203
+        ],
+        "range_file_bpp": [
+          2.6804716796875003,
+          3.3048203125
+        ],
+        "pooled_psnr_db": [
+          8.664045155732381,
+          9.72012665454734
+        ]
+      },
+      "pooled_mse": 7893.152290039063,
+      "pooled_psnr_db": 9.158298787282524,
+      "total_file_bytes": 76451,
+      "file_bpp": 2.9863671875,
+      "lossless_images": 0,
+      "total_original_bytes": 204800,
+      "total_payload_bits": 556435,
+      "total_payload_bytes": 69651,
+      "total_header_bytes": 6800,
+      "total_predicted_bits": 1081965,
+      "total_incorrect_omitted_predictions": 432177,
+      "pooled_omitted_error_rate": 0.39943713521232205,
+      "payload_bpp": 2.7207421875,
+      "zlib_payload": {
+        "raw_bytes": 69651,
+        "zlib_bytes": 71443,
+        "ratio": 1.0257282738223428,
+        "images_where_zlib_smaller": 7
+      },
+      "range_payload": {
+        "raw_bytes": 69651,
+        "range_bytes": 70095,
+        "ratio": 1.0063746392729465,
+        "file_bpp": 3.0037109375,
+        "images_where_range_smaller": 58
+      },
+      "model_amortization": [
+        {
+          "images_sharing_model": 1,
+          "mean_bytes_per_image_including_model": 653184.255,
+          "bpp_including_model": 5103.0019921875
+        },
+        {
+          "images_sharing_model": 10,
+          "mean_bytes_per_image_including_model": 65662.455,
+          "bpp_including_model": 512.9879296875
+        },
+        {
+          "images_sharing_model": 100,
+          "mean_bytes_per_image_including_model": 6910.275000000001,
+          "bpp_including_model": 53.986523437500004
+        },
+        {
+          "images_sharing_model": 1000,
+          "mean_bytes_per_image_including_model": 1035.057,
+          "bpp_including_model": 8.0863828125
+        },
+        {
+          "images_sharing_model": 10000,
+          "mean_bytes_per_image_including_model": 447.5352,
+          "bpp_including_model": 3.49636875
+        }
+      ]
+    },
+    {
+      "threshold": 0.9,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 630.96,
+          "median": 757.5,
+          "std": 291.24861956754404
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 4.929375,
+          "median": 5.91796875,
+          "std": 2.275379840371438
+        },
+        "payload_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 4772.17,
+          "median": 5781.5,
+          "std": 2330.007819965418
+        },
+        "payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 596.96,
+          "median": 723.5,
+          "std": 291.24861956754404
+        },
+        "payload_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 4.660322265625,
+          "median": 5.64599609375,
+          "std": 2.2753982616849786
+        },
+        "header_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 34.0,
+          "median": 34.0,
+          "std": 0.0
+        },
+        "original_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1024.0,
+          "median": 1024.0,
+          "std": 0.0
+        },
+        "omitted_fraction": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.417459716796875,
+          "median": 0.29425048828125,
+          "std": 0.2844247827106223
+        },
+        "predicted_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 3419.83,
+          "median": 2410.5,
+          "std": 2330.007819965418
+        },
+        "incorrect_omitted_predictions": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1041.63,
+          "median": 397.5,
+          "std": 1212.0310446106569
+        },
+        "omitted_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.23834194068869008,
+          "median": 0.20202217145129853,
+          "std": 0.11979053271546494
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 3986.91552734375,
+          "median": 1420.71826171875,
+          "std": 5990.5848546511925
+        },
+        "mae": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 31.194072265625,
+          "median": 15.32275390625,
+          "std": 35.000296949177304
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 15.439677995187612,
+          "median": 16.605756103339594,
+          "std": 5.013287274557273
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.49078917499334024,
+          "median": 0.5595044572759669,
+          "std": 0.25695498076207235
+        },
+        "bit_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.127152099609375,
+          "median": 0.04852294921875,
+          "std": 0.14795300837532432
+        },
+        "encode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.25070427584375127,
+          "median": 0.25054202187500607,
+          "std": 0.0017341094001769514
+        },
+        "decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.24717592346874484,
+          "median": 0.24332119062499658,
+          "std": 0.007461841923976146
+        },
+        "zlib_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 606.88,
+          "median": 734.5,
+          "std": 292.46510150785514
+        },
+        "range_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 566.885,
+          "median": 675.0,
+          "std": 281.9026104437488
+        },
+        "range_file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 600.885,
+          "median": 709.0,
+          "std": 281.9026104437488
+        },
+        "range_file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 4.6944140625,
+          "median": 5.5390625,
+          "std": 2.2023641440917876
+        },
+        "range_decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.2570516466562475,
+          "median": 0.24899075468749743,
+          "std": 0.010872363309183994
+        },
+        "first_incorrect_omission": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 173.22,
+          "median": 111.5,
+          "std": 250.61480722415425
+        },
+        "max_error_run": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 5.88,
+          "median": 4.0,
+          "std": 7.743100154330951
+        },
+        "mean_gap_between_errors": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 19.791478020881282,
+          "median": 19.76702892802369,
+          "std": 13.760499913987616
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          4.6208671875,
+          5.2437626953125
+        ],
+        "file_bytes": [
+          591.471,
+          671.201625
+        ],
+        "mse": [
+          3209.2611381835936,
+          4718.035314819335
+        ],
+        "ssim": [
+          0.45773103312307395,
+          0.5244817378858877
+        ],
+        "range_file_bpp": [
+          4.4023837890625,
+          4.99558203125
+        ],
+        "pooled_psnr_db": [
+          11.39319173582054,
+          13.066753037107386
+        ]
+      },
+      "pooled_mse": 3986.91552734375,
+      "pooled_psnr_db": 12.124433267096846,
+      "total_file_bytes": 126192,
+      "file_bpp": 4.929375,
+      "lossless_images": 0,
+      "total_original_bytes": 204800,
+      "total_payload_bits": 954434,
+      "total_payload_bytes": 119392,
+      "total_header_bytes": 6800,
+      "total_predicted_bits": 683966,
+      "total_incorrect_omitted_predictions": 208326,
+      "pooled_omitted_error_rate": 0.3045853156443449,
+      "payload_bpp": 4.66375,
+      "zlib_payload": {
+        "raw_bytes": 119392,
+        "zlib_bytes": 121376,
+        "ratio": 1.0166175288126507,
+        "images_where_zlib_smaller": 4
+      },
+      "range_payload": {
+        "raw_bytes": 119392,
+        "range_bytes": 113377,
+        "ratio": 0.9496197400160815,
+        "file_bpp": 4.6944140625,
+        "images_where_range_smaller": 171
+      },
+      "model_amortization": [
+        {
+          "images_sharing_model": 1,
+          "mean_bytes_per_image_including_model": 653432.96,
+          "bpp_including_model": 5104.945
+        },
+        {
+          "images_sharing_model": 10,
+          "mean_bytes_per_image_including_model": 65911.16,
+          "bpp_including_model": 514.9309375
+        },
+        {
+          "images_sharing_model": 100,
+          "mean_bytes_per_image_including_model": 7158.9800000000005,
+          "bpp_including_model": 55.929531250000004
+        },
+        {
+          "images_sharing_model": 1000,
+          "mean_bytes_per_image_including_model": 1283.7620000000002,
+          "bpp_including_model": 10.029390625000001
+        },
+        {
+          "images_sharing_model": 10000,
+          "mean_bytes_per_image_including_model": 696.2402000000001,
+          "bpp_including_model": 5.439376562500001
+        }
+      ]
+    },
+    {
+      "threshold": 0.925,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 743.235,
+          "median": 835.0,
+          "std": 263.86886852184745
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 5.8065234375,
+          "median": 6.5234375,
+          "std": 2.061475535326933
+        },
+        "payload_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 5670.525,
+          "median": 6403.5,
+          "std": 2110.9074942723096
+        },
+        "payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 709.235,
+          "median": 801.0,
+          "std": 263.86886852184745
+        },
+        "payload_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 5.5376220703125,
+          "median": 6.25341796875,
+          "std": 2.0614330998753023
+        },
+        "header_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 34.0,
+          "median": 34.0,
+          "std": 0.0
+        },
+        "original_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1024.0,
+          "median": 1024.0,
+          "std": 0.0
+        },
+        "omitted_fraction": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.3077972412109375,
+          "median": 0.21832275390625,
+          "std": 0.2576791374844128
+        },
+        "predicted_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 2521.475,
+          "median": 1788.5,
+          "std": 2110.9074942723096
+        },
+        "incorrect_omitted_predictions": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 600.38,
+          "median": 185.5,
+          "std": 1012.9364370976098
+        },
+        "omitted_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.1622056736954268,
+          "median": 0.12247014689441157,
+          "std": 0.11332668089924218
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 2441.204833984375,
+          "median": 727.076171875,
+          "std": 4760.110092865331
+        },
+        "mae": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 18.920888671875,
+          "median": 8.220703125,
+          "std": 28.69102706286584
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 18.33000145767065,
+          "median": 19.515014480112065,
+          "std": 5.093771030267632
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.6631949029170494,
+          "median": 0.7413944625725977,
+          "std": 0.2540031043285717
+        },
+        "bit_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.07328857421875,
+          "median": 0.02264404296875,
+          "std": 0.12364946741914182
+        },
+        "encode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.24759578203125443,
+          "median": 0.24288192109375473,
+          "std": 0.00577327700765591
+        },
+        "decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.23696008140625224,
+          "median": 0.22852795546874916,
+          "std": 0.010327202996884903
+        },
+        "zlib_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 719.765,
+          "median": 812.0,
+          "std": 264.7207014477712
+        },
+        "range_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 649.23,
+          "median": 732.0,
+          "std": 249.53993087279642
+        },
+        "range_file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 683.23,
+          "median": 766.0,
+          "std": 249.53993087279642
+        },
+        "range_file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 5.337734375,
+          "median": 5.984375,
+          "std": 1.949530709943722
+        },
+        "range_decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.2635876576562481,
+          "median": 0.2636478164062481,
+          "std": 7.367912053186281e-05
+        },
+        "first_incorrect_omission": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 276.115,
+          "median": 140.0,
+          "std": 451.93494197174
+        },
+        "max_error_run": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 4.405,
+          "median": 3.0,
+          "std": 3.482954923624479
+        },
+        "mean_gap_between_errors": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 44.52260594172778,
+          "median": 42.38821723277682,
+          "std": 32.34955118049321
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          5.528916015625001,
+          6.082638671875
+        ],
+        "file_bytes": [
+          707.7012500000001,
+          778.57775
+        ],
+        "mse": [
+          1813.9845390624998,
+          3063.5751174316406
+        ],
+        "ssim": [
+          0.6290378982161864,
+          0.697836527721047
+        ],
+        "range_file_bpp": [
+          5.0753408203124994,
+          5.5936796875
+        ],
+        "pooled_psnr_db": [
+          13.268518273714403,
+          15.544467797030709
+        ]
+      },
+      "pooled_mse": 2441.204833984375,
+      "pooled_psnr_db": 14.254761396084813,
+      "total_file_bytes": 148647,
+      "file_bpp": 5.8065234375,
+      "lossless_images": 0,
+      "total_original_bytes": 204800,
+      "total_payload_bits": 1134105,
+      "total_payload_bytes": 141847,
+      "total_header_bytes": 6800,
+      "total_predicted_bits": 504295,
+      "total_incorrect_omitted_predictions": 120076,
+      "pooled_omitted_error_rate": 0.23810666375831607,
+      "payload_bpp": 5.5408984375,
+      "zlib_payload": {
+        "raw_bytes": 141847,
+        "zlib_bytes": 143953,
+        "ratio": 1.0148469830169127,
+        "images_where_zlib_smaller": 1
+      },
+      "range_payload": {
+        "raw_bytes": 141847,
+        "range_bytes": 129846,
+        "ratio": 0.9153947563219526,
+        "file_bpp": 5.337734375,
+        "images_where_range_smaller": 185
+      },
+      "model_amortization": [
+        {
+          "images_sharing_model": 1,
+          "mean_bytes_per_image_including_model": 653545.235,
+          "bpp_including_model": 5105.8221484375
+        },
+        {
+          "images_sharing_model": 10,
+          "mean_bytes_per_image_including_model": 66023.435,
+          "bpp_including_model": 515.8080859375
+        },
+        {
+          "images_sharing_model": 100,
+          "mean_bytes_per_image_including_model": 7271.255,
+          "bpp_including_model": 56.8066796875
+        },
+        {
+          "images_sharing_model": 1000,
+          "mean_bytes_per_image_including_model": 1396.037,
+          "bpp_including_model": 10.9065390625
+        },
+        {
+          "images_sharing_model": 10000,
+          "mean_bytes_per_image_including_model": 808.5152,
+          "bpp_including_model": 6.316525
+        }
+      ]
+    },
+    {
+      "threshold": 0.95,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 860.28,
+          "median": 903.0,
+          "std": 162.58087710428924
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 6.7209375,
+          "median": 7.0546875,
+          "std": 1.2701631023772597
+        },
+        "payload_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 6606.955,
+          "median": 6951.0,
+          "std": 1300.278052177687
+        },
+        "payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 826.28,
+          "median": 869.0,
+          "std": 162.58087710428924
+        },
+        "payload_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 6.4521044921875,
+          "median": 6.7880859375,
+          "std": 1.2698027853297724
+        },
+        "header_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 34.0,
+          "median": 34.0,
+          "std": 0.0
+        },
+        "original_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1024.0,
+          "median": 1024.0,
+          "std": 0.0
+        },
+        "omitted_fraction": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.1934869384765625,
+          "median": 0.1514892578125,
+          "std": 0.15872534816622155
+        },
+        "predicted_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1585.045,
+          "median": 1241.0,
+          "std": 1300.278052177687
+        },
+        "incorrect_omitted_predictions": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 234.695,
+          "median": 73.0,
+          "std": 610.6128658773904
+        },
+        "omitted_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.09342363689237311,
+          "median": 0.06967119864227234,
+          "std": 0.09132359469292836
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1042.986328125,
+          "median": 342.9375,
+          "std": 3262.0943331833187
+        },
+        "mae": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 8.256923828125,
+          "median": 3.78076171875,
+          "std": 18.642104212017824
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 22.325533663829034,
+          "median": 22.778654482400515,
+          "std": 4.636668898499763
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.8332654682690793,
+          "median": 0.874006929643629,
+          "std": 0.16955920814907272
+        },
+        "bit_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.0286492919921875,
+          "median": 0.0089111328125,
+          "std": 0.07453770335417363
+        },
+        "encode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.254075254843753,
+          "median": 0.25142191562500216,
+          "std": 0.004977098272500898
+        },
+        "decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.25407766428124945,
+          "median": 0.2544984757812472,
+          "std": 0.003207077132516426
+        },
+        "zlib_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 837.005,
+          "median": 880.0,
+          "std": 163.0833375149037
+        },
+        "range_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 722.52,
+          "median": 762.5,
+          "std": 158.8338742208349
+        },
+        "range_file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 756.52,
+          "median": 796.5,
+          "std": 158.8338742208349
+        },
+        "range_file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 5.9103125,
+          "median": 6.22265625,
+          "std": 1.2408896423502727
+        },
+        "range_decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.2693769516875028,
+          "median": 0.27156098515625615,
+          "std": 0.003369096688021844
+        },
+        "first_incorrect_omission": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 469.81,
+          "median": 257.0,
+          "std": 620.5765657032176
+        },
+        "max_error_run": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 4.08,
+          "median": 3.0,
+          "std": 13.404611146915078
+        },
+        "mean_gap_between_errors": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 118.50876068807862,
+          "median": 102.8873556998557,
+          "std": 101.48369459966564
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          6.5483115234375,
+          6.881344726562499
+        ],
+        "file_bytes": [
+          838.183875,
+          880.8121249999999
+        ],
+        "mse": [
+          654.295196899414,
+          1514.57178137207
+        ],
+        "ssim": [
+          0.8097707429769679,
+          0.8574163204396804
+        ],
+        "range_file_bpp": [
+          5.7410751953125,
+          6.0711572265625
+        ],
+        "pooled_psnr_db": [
+          16.32790499828255,
+          19.973066286602354
+        ]
+      },
+      "pooled_mse": 1042.986328125,
+      "pooled_psnr_db": 17.94801745306946,
+      "total_file_bytes": 172056,
+      "file_bpp": 6.7209375,
+      "lossless_images": 0,
+      "total_original_bytes": 204800,
+      "total_payload_bits": 1321391,
+      "total_payload_bytes": 165256,
+      "total_header_bytes": 6800,
+      "total_predicted_bits": 317009,
+      "total_incorrect_omitted_predictions": 46939,
+      "pooled_omitted_error_rate": 0.1480683513717276,
+      "payload_bpp": 6.4553125,
+      "zlib_payload": {
+        "raw_bytes": 165256,
+        "zlib_bytes": 167401,
+        "ratio": 1.0129798615481436,
+        "images_where_zlib_smaller": 2
+      },
+      "range_payload": {
+        "raw_bytes": 165256,
+        "range_bytes": 144504,
+        "ratio": 0.8744251343370286,
+        "file_bpp": 5.9103125,
+        "images_where_range_smaller": 197
+      },
+      "model_amortization": [
+        {
+          "images_sharing_model": 1,
+          "mean_bytes_per_image_including_model": 653662.28,
+          "bpp_including_model": 5106.7365625
+        },
+        {
+          "images_sharing_model": 10,
+          "mean_bytes_per_image_including_model": 66140.48,
+          "bpp_including_model": 516.7225
+        },
+        {
+          "images_sharing_model": 100,
+          "mean_bytes_per_image_including_model": 7388.3,
+          "bpp_including_model": 57.72109375
+        },
+        {
+          "images_sharing_model": 1000,
+          "mean_bytes_per_image_including_model": 1513.0819999999999,
+          "bpp_including_model": 11.820953124999999
+        },
+        {
+          "images_sharing_model": 10000,
+          "mean_bytes_per_image_including_model": 925.5602,
+          "bpp_including_model": 7.2309390625
+        }
+      ]
+    },
+    {
+      "threshold": 0.975,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 943.53,
+          "median": 971.5,
+          "std": 123.80346966058747
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 7.371328125,
+          "median": 7.58984375,
+          "std": 0.9672146067233396
+        },
+        "payload_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 7272.835,
+          "median": 7497.0,
+          "std": 990.2843469302138
+        },
+        "payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 909.53,
+          "median": 937.5,
+          "std": 123.80346966058747
+        },
+        "payload_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 7.1023779296875,
+          "median": 7.3212890625,
+          "std": 0.9670745575490369
+        },
+        "header_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 34.0,
+          "median": 34.0,
+          "std": 0.0
+        },
+        "original_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1024.0,
+          "median": 1024.0,
+          "std": 0.0
+        },
+        "omitted_fraction": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.1122027587890625,
+          "median": 0.0848388671875,
+          "std": 0.12088431969362962
+        },
+        "predicted_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 919.165,
+          "median": 695.0,
+          "std": 990.2843469302138
+        },
+        "incorrect_omitted_predictions": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 103.325,
+          "median": 13.0,
+          "std": 440.1937180094691
+        },
+        "omitted_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.04679252791373092,
+          "median": 0.022752756804097718,
+          "std": 0.08376587249119104
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 433.443896484375,
+          "median": 63.125,
+          "std": 1839.9311888694658
+        },
+        "mae": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 3.374453125,
+          "median": 0.71875,
+          "std": 12.421763708473543
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 197,
+          "undefined_or_infinite_count": 3,
+          "mean": 29.795962208800752,
+          "median": 30.069003868840234,
+          "std": 6.186936120769588
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.9485033274261206,
+          "median": 0.9767815537667497,
+          "std": 0.1266425496112501
+        },
+        "bit_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.0126129150390625,
+          "median": 0.0015869140625,
+          "std": 0.05373458471795277
+        },
+        "encode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.26329840303125424,
+          "median": 0.2670437601562554,
+          "std": 0.0038982912914866043
+        },
+        "decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.26884305871874803,
+          "median": 0.2607721242187466,
+          "std": 0.008400494966285537
+        },
+        "zlib_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 919.535,
+          "median": 948.5,
+          "std": 124.93361747344068
+        },
+        "range_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 740.875,
+          "median": 768.0,
+          "std": 131.39908437656635
+        },
+        "range_file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 774.875,
+          "median": 802.0,
+          "std": 131.39908437656635
+        },
+        "range_file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 6.0537109375,
+          "median": 6.265625,
+          "std": 1.0265553466919246
+        },
+        "range_decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.2709691081249963,
+          "median": 0.2694878374999945,
+          "std": 0.0015417553480370956
+        },
+        "first_incorrect_omission": {
+          "count": 200,
+          "finite_count": 197,
+          "undefined_or_infinite_count": 3,
+          "mean": 1459.736040609137,
+          "median": 939.0,
+          "std": 1488.4771086295793
+        },
+        "max_error_run": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1.995,
+          "median": 1.0,
+          "std": 2.4667742093673675
+        },
+        "mean_gap_between_errors": {
+          "count": 200,
+          "finite_count": 194,
+          "undefined_or_infinite_count": 6,
+          "mean": 518.0922136303612,
+          "median": 371.0,
+          "std": 541.2941660620478
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          7.230844726562499,
+          7.488560546875
+        ],
+        "file_bytes": [
+          925.5481249999999,
+          958.53575
+        ],
+        "mse": [
+          207.8532607421875,
+          710.710830932617
+        ],
+        "ssim": [
+          0.9285818989195717,
+          0.964933016101301
+        ],
+        "range_file_bpp": [
+          5.91104296875,
+          6.1824921875
+        ],
+        "pooled_psnr_db": [
+          19.613874269107406,
+          24.953235188852823
+        ]
+      },
+      "pooled_mse": 433.443896484375,
+      "pooled_psnr_db": 21.76147469030477,
+      "total_file_bytes": 188706,
+      "file_bpp": 7.371328125,
+      "lossless_images": 3,
+      "total_original_bytes": 204800,
+      "total_payload_bits": 1454567,
+      "total_payload_bytes": 181906,
+      "total_header_bytes": 6800,
+      "total_predicted_bits": 183833,
+      "total_incorrect_omitted_predictions": 20665,
+      "pooled_omitted_error_rate": 0.11241180854362383,
+      "payload_bpp": 7.105703125,
+      "zlib_payload": {
+        "raw_bytes": 181906,
+        "zlib_bytes": 183907,
+        "ratio": 1.0110001869097227,
+        "images_where_zlib_smaller": 6
+      },
+      "range_payload": {
+        "raw_bytes": 181906,
+        "range_bytes": 148175,
+        "ratio": 0.8145690631425022,
+        "file_bpp": 6.0537109375,
+        "images_where_range_smaller": 200
+      },
+      "model_amortization": [
+        {
+          "images_sharing_model": 1,
+          "mean_bytes_per_image_including_model": 653745.53,
+          "bpp_including_model": 5107.386953125
+        },
+        {
+          "images_sharing_model": 10,
+          "mean_bytes_per_image_including_model": 66223.73,
+          "bpp_including_model": 517.372890625
+        },
+        {
+          "images_sharing_model": 100,
+          "mean_bytes_per_image_including_model": 7471.55,
+          "bpp_including_model": 58.371484375
+        },
+        {
+          "images_sharing_model": 1000,
+          "mean_bytes_per_image_including_model": 1596.3319999999999,
+          "bpp_including_model": 12.471343749999999
+        },
+        {
+          "images_sharing_model": 10000,
+          "mean_bytes_per_image_including_model": 1008.8102,
+          "bpp_including_model": 7.8813296875
+        }
+      ]
+    },
+    {
+      "threshold": 0.99,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1023.07,
+          "median": 1036.5,
+          "std": 77.7889137345419
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 7.992734375,
+          "median": 8.09765625,
+          "std": 0.6077258885511085
+        },
+        "payload_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 7909.04,
+          "median": 8016.5,
+          "std": 622.4007217219468
+        },
+        "payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 989.07,
+          "median": 1002.5,
+          "std": 77.7889137345419
+        },
+        "payload_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 7.723671875,
+          "median": 7.82861328125,
+          "std": 0.6078132048065886
+        },
+        "header_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 34.0,
+          "median": 34.0,
+          "std": 0.0
+        },
+        "original_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1024.0,
+          "median": 1024.0,
+          "std": 0.0
+        },
+        "omitted_fraction": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.034541015625,
+          "median": 0.02142333984375,
+          "std": 0.07597665060082356
+        },
+        "predicted_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 282.96,
+          "median": 175.5,
+          "std": 622.4007217219466
+        },
+        "incorrect_omitted_predictions": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 28.06,
+          "median": 1.0,
+          "std": 273.17219184975625
+        },
+        "omitted_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.01621293379846268,
+          "median": 0.0021577006871124522,
+          "std": 0.05314199105447398
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 117.393564453125,
+          "median": 0.15625,
+          "std": 1144.3970533379745
+        },
+        "mae": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.87685546875,
+          "median": 0.01171875,
+          "std": 7.830805731347166
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 106,
+          "undefined_or_infinite_count": 94,
+          "mean": 41.03120190501695,
+          "median": 40.57096272949191,
+          "std": 10.72925803139792
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.9899475501589129,
+          "median": 0.9999998924667144,
+          "std": 0.0794251725717112
+        },
+        "bit_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.00342529296875,
+          "median": 0.0001220703125,
+          "std": 0.0333462148254097
+        },
+        "encode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.2580787635937423,
+          "median": 0.2626034874999874,
+          "std": 0.007797784691932447
+        },
+        "decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.22236555034375385,
+          "median": 0.2505453960937558,
+          "std": 0.067869238189941
+        },
+        "zlib_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 993.435,
+          "median": 1012.5,
+          "std": 84.928533338331
+        },
+        "range_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 755.03,
+          "median": 771.5,
+          "std": 111.6783286945144
+        },
+        "range_file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 789.03,
+          "median": 805.5,
+          "std": 111.6783286945144
+        },
+        "range_file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 6.164296875,
+          "median": 6.29296875,
+          "std": 0.8724869429258938
+        },
+        "range_decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.26636920225000155,
+          "median": 0.2643346359375016,
+          "std": 0.0030475248171571287
+        },
+        "first_incorrect_omission": {
+          "count": 200,
+          "finite_count": 106,
+          "undefined_or_infinite_count": 94,
+          "mean": 3402.8396226415093,
+          "median": 3273.5,
+          "std": 2403.3272539072664
+        },
+        "max_error_run": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.61,
+          "median": 1.0,
+          "std": 0.9043782394551519
+        },
+        "mean_gap_between_errors": {
+          "count": 200,
+          "finite_count": 58,
+          "undefined_or_infinite_count": 142,
+          "mean": 999.873704298736,
+          "median": 395.25,
+          "std": 1542.2298579583417
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          7.8940888671875005,
+          8.059259765625
+        ],
+        "file_bytes": [
+          1010.4433750000001,
+          1031.58525
+        ],
+        "mse": [
+          7.259399414062501,
+          311.2272714843748
+        ],
+        "ssim": [
+          0.9757712985047674,
+          0.9980872071297517
+        ],
+        "range_file_bpp": [
+          6.0435576171875,
+          6.2802490234375
+        ],
+        "pooled_psnr_db": [
+          23.200027155571693,
+          39.521796688107685
+        ]
+      },
+      "pooled_mse": 117.393564453125,
+      "pooled_psnr_db": 27.434360714444207,
+      "total_file_bytes": 204614,
+      "file_bpp": 7.992734375,
+      "lossless_images": 94,
+      "total_original_bytes": 204800,
+      "total_payload_bits": 1581808,
+      "total_payload_bytes": 197814,
+      "total_header_bytes": 6800,
+      "total_predicted_bits": 56592,
+      "total_incorrect_omitted_predictions": 5612,
+      "pooled_omitted_error_rate": 0.09916595985298275,
+      "payload_bpp": 7.727109375,
+      "zlib_payload": {
+        "raw_bytes": 197814,
+        "zlib_bytes": 198687,
+        "ratio": 1.0044132366768783,
+        "images_where_zlib_smaller": 15
+      },
+      "range_payload": {
+        "raw_bytes": 197814,
+        "range_bytes": 151006,
+        "ratio": 0.7633736742596581,
+        "file_bpp": 6.164296875,
+        "images_where_range_smaller": 200
+      },
+      "model_amortization": [
+        {
+          "images_sharing_model": 1,
+          "mean_bytes_per_image_including_model": 653825.07,
+          "bpp_including_model": 5108.008359375
+        },
+        {
+          "images_sharing_model": 10,
+          "mean_bytes_per_image_including_model": 66303.27,
+          "bpp_including_model": 517.994296875
+        },
+        {
+          "images_sharing_model": 100,
+          "mean_bytes_per_image_including_model": 7551.09,
+          "bpp_including_model": 58.992890625
+        },
+        {
+          "images_sharing_model": 1000,
+          "mean_bytes_per_image_including_model": 1675.872,
+          "bpp_including_model": 13.09275
+        },
+        {
+          "images_sharing_model": 10000,
+          "mean_bytes_per_image_including_model": 1088.3502,
+          "bpp_including_model": 8.5027359375
+        }
+      ]
+    },
+    {
+      "threshold": 1.0,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1058.0,
+          "median": 1058.0,
+          "std": 0.0
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 8.265625,
+          "median": 8.265625,
+          "std": 0.0
+        },
+        "payload_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 8192.0,
+          "median": 8192.0,
+          "std": 0.0
+        },
+        "payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1024.0,
+          "median": 1024.0,
+          "std": 0.0
+        },
+        "payload_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 8.0,
+          "median": 8.0,
+          "std": 0.0
+        },
+        "header_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 34.0,
+          "median": 34.0,
+          "std": 0.0
+        },
+        "original_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1024.0,
+          "median": 1024.0,
+          "std": 0.0
+        },
+        "omitted_fraction": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0
+        },
+        "predicted_bits": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0
+        },
+        "incorrect_omitted_predictions": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0
+        },
+        "omitted_error_rate": {
+          "count": 200,
+          "finite_count": 0,
+          "undefined_or_infinite_count": 200,
+          "mean": null,
+          "median": null,
+          "std": null
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0
+        },
+        "mae": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 0,
+          "undefined_or_infinite_count": 200,
+          "mean": null,
+          "median": null,
+          "std": null
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0
+        },
+        "bit_error_rate": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0
+        },
+        "encode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.2468826061562521,
+          "median": 0.2501925803571469,
+          "std": 0.003734154509977631
+        },
+        "decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.038791844531252194,
+          "median": 0.00011790089286023431,
+          "std": 0.043630092650535315
+        },
+        "zlib_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 959.925,
+          "median": 988.0,
+          "std": 88.79768789219683
+        },
+        "range_payload_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 760.89,
+          "median": 772.5,
+          "std": 97.01880178604557
+        },
+        "range_file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 794.89,
+          "median": 806.5,
+          "std": 97.01880178604557
+        },
+        "range_file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 6.210078125,
+          "median": 6.30078125,
+          "std": 0.757959388953481
+        },
+        "range_decode_seconds": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.2614385836250006,
+          "median": 0.2563490892857122,
+          "std": 0.005741723979426025
+        },
+        "first_incorrect_omission": {
+          "count": 200,
+          "finite_count": 0,
+          "undefined_or_infinite_count": 200,
+          "mean": null,
+          "median": null,
+          "std": null
+        },
+        "max_error_run": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0
+        },
+        "mean_gap_between_errors": {
+          "count": 200,
+          "finite_count": 0,
+          "undefined_or_infinite_count": 200,
+          "mean": null,
+          "median": null,
+          "std": null
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          8.265625,
+          8.265625
+        ],
+        "file_bytes": [
+          1058.0,
+          1058.0
+        ],
+        "mse": [
+          0.0,
+          0.0
+        ],
+        "ssim": [
+          1.0,
+          1.0
+        ],
+        "range_file_bpp": [
+          6.1060361328125,
+          6.3095791015625
+        ],
+        "pooled_psnr_db": [
+          null,
+          null
+        ]
+      },
+      "pooled_mse": 0.0,
+      "pooled_psnr_db": null,
+      "total_file_bytes": 211600,
+      "file_bpp": 8.265625,
+      "lossless_images": 200,
+      "total_original_bytes": 204800,
+      "total_payload_bits": 1638400,
+      "total_payload_bytes": 204800,
+      "total_header_bytes": 6800,
+      "total_predicted_bits": 0,
+      "total_incorrect_omitted_predictions": 0,
+      "pooled_omitted_error_rate": null,
+      "payload_bpp": 8.0,
+      "zlib_payload": {
+        "raw_bytes": 204800,
+        "zlib_bytes": 191985,
+        "ratio": 0.9374267578125,
+        "images_where_zlib_smaller": 156
+      },
+      "range_payload": {
+        "raw_bytes": 204800,
+        "range_bytes": 152178,
+        "ratio": 0.743056640625,
+        "file_bpp": 6.210078125,
+        "images_where_range_smaller": 200
+      },
+      "model_amortization": [
+        {
+          "images_sharing_model": 1,
+          "mean_bytes_per_image_including_model": 653860.0,
+          "bpp_including_model": 5108.28125
+        },
+        {
+          "images_sharing_model": 10,
+          "mean_bytes_per_image_including_model": 66338.2,
+          "bpp_including_model": 518.2671875
+        },
+        {
+          "images_sharing_model": 100,
+          "mean_bytes_per_image_including_model": 7586.02,
+          "bpp_including_model": 59.26578125
+        },
+        {
+          "images_sharing_model": 1000,
+          "mean_bytes_per_image_including_model": 1710.8020000000001,
+          "bpp_including_model": 13.365640625000001
+        },
+        {
+          "images_sharing_model": 10000,
+          "mean_bytes_per_image_including_model": 1123.2802,
+          "bpp_including_model": 8.7756265625
+        }
+      ]
+    }
+  ],
+  "baselines": [
+    {
+      "codec": "raw",
+      "quality": null,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1024.0,
+          "median": 1024.0,
+          "std": 0.0
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 8.0,
+          "median": 8.0,
+          "std": 0.0
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 0,
+          "undefined_or_infinite_count": 200,
+          "mean": null,
+          "median": null,
+          "std": null
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          8.0,
+          8.0
+        ],
+        "file_bytes": [
+          1024.0,
+          1024.0
+        ],
+        "mse": [
+          0.0,
+          0.0
+        ],
+        "ssim": [
+          1.0,
+          1.0
+        ],
+        "pooled_psnr_db": [
+          null,
+          null
+        ]
+      },
+      "pooled_mse": 0.0,
+      "pooled_psnr_db": null,
+      "total_file_bytes": 204800,
+      "file_bpp": 8.0,
+      "lossless_images": 200
+    },
+    {
+      "codec": "zlib",
+      "quality": null,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 959.925,
+          "median": 988.0,
+          "std": 88.79768789219683
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 7.4994140625,
+          "median": 7.71875,
+          "std": 0.6937319366577878
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 0,
+          "undefined_or_infinite_count": 200,
+          "mean": null,
+          "median": null,
+          "std": null
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          7.3973291015625,
+          7.5896894531250005
+        ],
+        "file_bytes": [
+          946.858125,
+          971.4802500000001
+        ],
+        "mse": [
+          0.0,
+          0.0
+        ],
+        "ssim": [
+          1.0,
+          1.0
+        ],
+        "pooled_psnr_db": [
+          null,
+          null
+        ]
+      },
+      "pooled_mse": 0.0,
+      "pooled_psnr_db": null,
+      "total_file_bytes": 191985,
+      "file_bpp": 7.4994140625,
+      "lossless_images": 200
+    },
+    {
+      "codec": "png",
+      "quality": null,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 841.27,
+          "median": 845.5,
+          "std": 87.27231577081015
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 6.572421875,
+          "median": 6.60546875,
+          "std": 0.6818149669594543
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 0,
+          "undefined_or_infinite_count": 200,
+          "mean": null,
+          "median": null,
+          "std": null
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          6.478708984374999,
+          6.659931640625
+        ],
+        "file_bytes": [
+          829.2747499999999,
+          852.47125
+        ],
+        "mse": [
+          0.0,
+          0.0
+        ],
+        "ssim": [
+          1.0,
+          1.0
+        ],
+        "pooled_psnr_db": [
+          null,
+          null
+        ]
+      },
+      "pooled_mse": 0.0,
+      "pooled_psnr_db": null,
+      "total_file_bytes": 168254,
+      "file_bpp": 6.572421875,
+      "lossless_images": 200
+    },
+    {
+      "codec": "jpeg",
+      "quality": 1,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 354.545,
+          "median": 354.0,
+          "std": 6.390459686125873
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 2.7698828125,
+          "median": 2.765625,
+          "std": 0.049925466297858385
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 690.7173291015625,
+          "median": 670.56884765625,
+          "std": 217.13835616080593
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 19.967711574163317,
+          "median": 19.86639357144163,
+          "std": 1.4561850567224595
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.5338576939866347,
+          "median": 0.5386845305444323,
+          "std": 0.09813504752653007
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          2.762890625,
+          2.7765244140625
+        ],
+        "file_bytes": [
+          353.65,
+          355.395125
+        ],
+        "mse": [
+          660.5207794189453,
+          720.186186279297
+        ],
+        "ssim": [
+          0.5192220297454367,
+          0.5474913549669266
+        ],
+        "pooled_psnr_db": [
+          19.55635573852375,
+          19.93193876169395
+        ]
+      },
+      "pooled_mse": 690.7173291015625,
+      "pooled_psnr_db": 19.737800089029147,
+      "total_file_bytes": 70909,
+      "file_bpp": 2.7698828125,
+      "lossless_images": 0
+    },
+    {
+      "codec": "jpeg",
+      "quality": 5,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 370.64,
+          "median": 371.0,
+          "std": 10.259161759130224
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 2.895625,
+          "median": 2.8984375,
+          "std": 0.08014970124320488
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 384.7621728515625,
+          "median": 369.2607421875,
+          "std": 127.88548094857553
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 22.53659445482579,
+          "median": 22.45747789596438,
+          "std": 1.5463179473413087
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.697892281266848,
+          "median": 0.6986667295347037,
+          "std": 0.07141930564505883
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          2.8845683593750002,
+          2.906681640625
+        ],
+        "file_bytes": [
+          369.22475000000003,
+          372.05525
+        ],
+        "mse": [
+          367.8391203613281,
+          402.38288989257813
+        ],
+        "ssim": [
+          0.6870453071938106,
+          0.708541359899407
+        ],
+        "pooled_psnr_db": [
+          22.08440855478147,
+          22.474224454993564
+        ]
+      },
+      "pooled_mse": 384.7621728515625,
+      "pooled_psnr_db": 22.278879922249924,
+      "total_file_bytes": 74128,
+      "file_bpp": 2.895625,
+      "lossless_images": 0
+    },
+    {
+      "codec": "jpeg",
+      "quality": 10,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 397.69,
+          "median": 399.5,
+          "std": 16.236499006867213
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 3.106953125,
+          "median": 3.12109375,
+          "std": 0.1268476484911501
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 212.8819873046875,
+          "median": 200.41650390625,
+          "std": 77.55772553761699
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 25.144743908490483,
+          "median": 25.11156088369455,
+          "std": 1.6413676142719087
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.8119212930175767,
+          "median": 0.8147349850625191,
+          "std": 0.05397779456879514
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          3.0899609375,
+          3.1246914062499997
+        ],
+        "file_bytes": [
+          395.515,
+          399.96049999999997
+        ],
+        "mse": [
+          202.5195283203125,
+          223.2333416748047
+        ],
+        "ssim": [
+          0.8039388759127581,
+          0.8197656058945955
+        ],
+        "pooled_psnr_db": [
+          24.64321300423284,
+          25.066134536488804
+        ]
+      },
+      "pooled_mse": 212.8819873046875,
+      "pooled_psnr_db": 24.849414450619363,
+      "total_file_bytes": 79538,
+      "file_bpp": 3.106953125,
+      "lossless_images": 0
+    },
+    {
+      "codec": "jpeg",
+      "quality": 20,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 436.325,
+          "median": 437.0,
+          "std": 23.00889773544139
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 3.4087890625,
+          "median": 3.4140625,
+          "std": 0.17975701355813586
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 122.613544921875,
+          "median": 114.2900390625,
+          "std": 48.72058413482566
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 27.592528541424,
+          "median": 27.550722234881626,
+          "std": 1.779649820333404
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.8859012109808413,
+          "median": 0.8937325856066215,
+          "std": 0.03770577968400412
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          3.3841767578125,
+          3.43340234375
+        ],
+        "file_bytes": [
+          433.174625,
+          439.4755
+        ],
+        "mse": [
+          116.22162280273437,
+          129.34902282714842
+        ],
+        "ssim": [
+          0.8804466538385647,
+          0.891111350928229
+        ],
+        "pooled_psnr_db": [
+          27.013172086996178,
+          27.477934256681642
+        ]
+      },
+      "pooled_mse": 122.613544921875,
+      "pooled_psnr_db": 27.245419122197568,
+      "total_file_bytes": 87265,
+      "file_bpp": 3.4087890625,
+      "lossless_images": 0
+    },
+    {
+      "codec": "jpeg",
+      "quality": 35,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 478.575,
+          "median": 480.0,
+          "std": 29.88384806212212
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 3.7388671875,
+          "median": 3.75,
+          "std": 0.23346756298532906
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 79.1867333984375,
+          "median": 72.97314453125,
+          "std": 32.08676840151023
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 29.508099844631797,
+          "median": 29.4991759750297,
+          "std": 1.825134626253408
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.9241257959763344,
+          "median": 0.9272076682677488,
+          "std": 0.02684882137353269
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          3.7074150390625,
+          3.7704365234375
+        ],
+        "file_bytes": [
+          474.549125,
+          482.615875
+        ],
+        "mse": [
+          74.86468933105469,
+          83.48958776855468
+        ],
+        "ssim": [
+          0.9204734432551354,
+          0.9277469495395891
+        ],
+        "pooled_psnr_db": [
+          28.91448044146268,
+          29.388033341512575
+        ]
+      },
+      "pooled_mse": 79.1867333984375,
+      "pooled_psnr_db": 29.144279329963837,
+      "total_file_bytes": 95715,
+      "file_bpp": 3.7388671875,
+      "lossless_images": 0
+    },
+    {
+      "codec": "jpeg",
+      "quality": 50,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 511.825,
+          "median": 511.5,
+          "std": 36.28917710557791
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 3.9986328125,
+          "median": 3.99609375,
+          "std": 0.28350919613732745
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 58.682470703125,
+          "median": 55.158203125,
+          "std": 23.526442689014818
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 30.8039111949437,
+          "median": 30.714710597374836,
+          "std": 1.811753232656822
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.9421086038295485,
+          "median": 0.945440129408623,
+          "std": 0.022126701851009543
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          3.9597617187500003,
+          4.037581054687499
+        ],
+        "file_bytes": [
+          506.84950000000003,
+          516.8103749999999
+        ],
+        "mse": [
+          55.469941894531246,
+          61.84243188476563
+        ],
+        "ssim": [
+          0.9390442171177807,
+          0.9451805713832796
+        ],
+        "pooled_psnr_db": [
+          30.21793801474977,
+          30.69022649917823
+        ]
+      },
+      "pooled_mse": 58.682470703125,
+      "pooled_psnr_db": 30.445719702477085,
+      "total_file_bytes": 102365,
+      "file_bpp": 3.9986328125,
+      "lossless_images": 0
+    },
+    {
+      "codec": "jpeg",
+      "quality": 75,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 593.855,
+          "median": 593.5,
+          "std": 50.709012759074696
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 4.6394921875,
+          "median": 4.63671875,
+          "std": 0.39616416218027106
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 30.0341259765625,
+          "median": 28.47998046875,
+          "std": 10.85901536006137
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 33.65319519211621,
+          "median": 33.58540675332971,
+          "std": 1.660650011561076
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.9682586548624126,
+          "median": 0.9707445048909505,
+          "std": 0.013428241882013598
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          4.5838564453125,
+          4.6935234375
+        ],
+        "file_bytes": [
+          586.733625,
+          600.771
+        ],
+        "mse": [
+          28.53963977050781,
+          31.407078857421872
+        ],
+        "ssim": [
+          0.9664206401146719,
+          0.9700956385667991
+        ],
+        "pooled_psnr_db": [
+          33.160528159083746,
+          33.576318737524915
+        ]
+      },
+      "pooled_mse": 30.0341259765625,
+      "pooled_psnr_db": 33.35465362809242,
+      "total_file_bytes": 118771,
+      "file_bpp": 4.6394921875,
+      "lossless_images": 0
+    },
+    {
+      "codec": "jpeg",
+      "quality": 90,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 752.48,
+          "median": 756.0,
+          "std": 74.48267986585874
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 5.87875,
+          "median": 5.90625,
+          "std": 0.5818959364520214
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 9.02939453125,
+          "median": 8.953125,
+          "std": 2.3953941097404
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 38.74520706818723,
+          "median": 38.61106852202083,
+          "std": 1.2682217646388332
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.9891363959751058,
+          "median": 0.990562074176933,
+          "std": 0.005430509109780336
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          5.79783984375,
+          5.9569609375
+        ],
+        "file_bytes": [
+          742.1235,
+          762.491
+        ],
+        "mse": [
+          8.711093627929689,
+          9.347000854492189
+        ],
+        "ssim": [
+          0.9883875341532588,
+          0.9898672176933877
+        ],
+        "pooled_psnr_db": [
+          38.424080784754814,
+          38.7300767925177
+        ]
+      },
+      "pooled_mse": 9.02939453125,
+      "pooled_psnr_db": 38.57421731324399,
+      "total_file_bytes": 150496,
+      "file_bpp": 5.87875,
+      "lossless_images": 0
+    },
+    {
+      "codec": "jpeg",
+      "quality": 95,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 905.415,
+          "median": 908.0,
+          "std": 92.53962813303282
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 7.0735546875,
+          "median": 7.09375,
+          "std": 0.7229658447893189
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 3.05634765625,
+          "median": 3.10693359375,
+          "std": 0.5462576558779059
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 43.361601140176106,
+          "median": 43.207490388933266,
+          "std": 0.8942757018085408
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.9959225703681922,
+          "median": 0.9964251212089543,
+          "std": 0.002293341885137392
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          6.975046874999999,
+          7.1701279296875
+        ],
+        "file_bytes": [
+          892.8059999999999,
+          917.776375
+        ],
+        "mse": [
+          2.98290673828125,
+          3.129155029296875
+        ],
+        "ssim": [
+          0.9955900846166302,
+          0.9962277069166999
+        ],
+        "pooled_psnr_db": [
+          43.176532807193844,
+          43.384406856764784
+        ]
+      },
+      "pooled_mse": 3.05634765625,
+      "pooled_psnr_db": 43.27877607625433,
+      "total_file_bytes": 181083,
+      "file_bpp": 7.0735546875,
+      "lossless_images": 0
+    },
+    {
+      "codec": "webp",
+      "quality": 1,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 111.93,
+          "median": 112.0,
+          "std": 18.335078401795833
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.874453125,
+          "median": 0.875,
+          "std": 0.14324280001402995
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 218.99490234375,
+          "median": 215.20263671875,
+          "std": 69.6596692244518
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 24.967921962946548,
+          "median": 24.802333998904157,
+          "std": 1.5201323333125907
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.7978336675692429,
+          "median": 0.8073694320605067,
+          "std": 0.07306185705121873
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          0.855072265625,
+          0.8942207031249999
+        ],
+        "file_bytes": [
+          109.44925,
+          114.46024999999999
+        ],
+        "mse": [
+          209.7528984375,
+          228.14972192382814
+        ],
+        "ssim": [
+          0.7871607564673565,
+          0.8079637174826965
+        ],
+        "pooled_psnr_db": [
+          24.54860417090901,
+          24.913723900955862
+        ]
+      },
+      "pooled_mse": 218.99490234375,
+      "pooled_psnr_db": 24.72646355204717,
+      "total_file_bytes": 22386,
+      "file_bpp": 0.874453125,
+      "lossless_images": 0
+    },
+    {
+      "codec": "webp",
+      "quality": 5,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 132.94,
+          "median": 132.0,
+          "std": 25.002327891618414
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1.03859375,
+          "median": 1.03125,
+          "std": 0.19533068665326886
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 151.2117626953125,
+          "median": 147.50732421875,
+          "std": 44.55291862518634
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 26.53894104152424,
+          "median": 26.44266780283299,
+          "std": 1.3794661777466644
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.8586802526572103,
+          "median": 0.8679643089767786,
+          "std": 0.05434630886617957
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          1.011951171875,
+          1.06517578125
+        ],
+        "file_bytes": [
+          129.52975,
+          136.3425
+        ],
+        "mse": [
+          145.16511364746094,
+          157.01513562011718
+        ],
+        "ssim": [
+          0.8508876959449229,
+          0.8663567436163965
+        ],
+        "pooled_psnr_db": [
+          26.17138842220037,
+          26.512181024295106
+        ]
+      },
+      "pooled_mse": 151.2117626953125,
+      "pooled_psnr_db": 26.334947848153654,
+      "total_file_bytes": 26588,
+      "file_bpp": 1.03859375,
+      "lossless_images": 0
+    },
+    {
+      "codec": "webp",
+      "quality": 10,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 151.0,
+          "median": 150.0,
+          "std": 30.6502854799103
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1.1796875,
+          "median": 1.171875,
+          "std": 0.2394553553117992
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 117.0156689453125,
+          "median": 113.21728515625,
+          "std": 32.43747260756576
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 27.63288720862545,
+          "median": 27.59172663583984,
+          "std": 1.320413716787235
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.8903798299576645,
+          "median": 0.8996478428659822,
+          "std": 0.045227265755279425
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          1.147265625,
+          1.2125078125
+        ],
+        "file_bytes": [
+          146.85,
+          155.201
+        ],
+        "mse": [
+          112.38489721679687,
+          121.26583068847656
+        ],
+        "ssim": [
+          0.8836207930376987,
+          0.8968378011539401
+        ],
+        "pooled_psnr_db": [
+          27.293419147740693,
+          27.623724081411343
+        ]
+      },
+      "pooled_mse": 117.0156689453125,
+      "pooled_psnr_db": 27.44836341165683,
+      "total_file_bytes": 30200,
+      "file_bpp": 1.1796875,
+      "lossless_images": 0
+    },
+    {
+      "codec": "webp",
+      "quality": 20,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 178.33,
+          "median": 178.0,
+          "std": 38.02724155128794
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1.393203125,
+          "median": 1.390625,
+          "std": 0.29708782461943706
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 79.8127099609375,
+          "median": 77.69775390625,
+          "std": 21.066993416516112
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 29.273339711138792,
+          "median": 29.22672102545031,
+          "std": 1.2288952557805963
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.923413281201627,
+          "median": 0.9304999672997544,
+          "std": 0.032371175577774004
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          1.352734375,
+          1.43151171875
+        ],
+        "file_bytes": [
+          173.15,
+          183.2335
+        ],
+        "mse": [
+          76.99588989257812,
+          82.58881115722656
+        ],
+        "ssim": [
+          0.9186308559947038,
+          0.9279951818451793
+        ],
+        "pooled_psnr_db": [
+          28.961591462571867,
+          29.266128180930238
+        ]
+      },
+      "pooled_mse": 79.8127099609375,
+      "pooled_psnr_db": 29.110083037732576,
+      "total_file_bytes": 35666,
+      "file_bpp": 1.393203125,
+      "lossless_images": 0
+    },
+    {
+      "codec": "webp",
+      "quality": 35,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 213.84,
+          "median": 212.0,
+          "std": 47.55348988244712
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1.670625,
+          "median": 1.65625,
+          "std": 0.3715116397066181
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 50.9570068359375,
+          "median": 51.22705078125,
+          "std": 11.890979949199902
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 31.19561436866819,
+          "median": 31.035810238534154,
+          "std": 1.1487151742644872
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.949454568801616,
+          "median": 0.9539956678335513,
+          "std": 0.022536438370961677
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          1.6217109375,
+          1.719541015625
+        ],
+        "file_bytes": [
+          207.579,
+          220.10125
+        ],
+        "mse": [
+          49.35474340820313,
+          52.48875439453125
+        ],
+        "ssim": [
+          0.9462408946115508,
+          0.9526456260114264
+        ],
+        "pooled_psnr_db": [
+          30.930140941771253,
+          31.197514624841105
+        ]
+      },
+      "pooled_mse": 50.9570068359375,
+      "pooled_psnr_db": 31.05876450818734,
+      "total_file_bytes": 42768,
+      "file_bpp": 1.670625,
+      "lossless_images": 0
+    },
+    {
+      "codec": "webp",
+      "quality": 50,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 248.76,
+          "median": 248.0,
+          "std": 55.55953923495046
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1.9434375,
+          "median": 1.9375,
+          "std": 0.4340589002730505
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 33.6576708984375,
+          "median": 34.177734375,
+          "std": 7.074785905838832
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 32.97120191241079,
+          "median": 32.79337403422055,
+          "std": 1.032580908037757
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.9652927239458988,
+          "median": 0.9678393257321254,
+          "std": 0.01591521415652777
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          1.8853593750000002,
+          2.000962890625
+        ],
+        "file_bytes": [
+          241.32600000000002,
+          256.12325
+        ],
+        "mse": [
+          32.67727758789062,
+          34.595728027343746
+        ],
+        "ssim": [
+          0.9631261999740722,
+          0.9675372221281308
+        ],
+        "pooled_psnr_db": [
+          32.74057886603893,
+          32.98834493478962
+        ]
+      },
+      "pooled_mse": 33.6576708984375,
+      "pooled_psnr_db": 32.85996301246938,
+      "total_file_bytes": 49752,
+      "file_bpp": 1.9434375,
+      "lossless_images": 0
+    },
+    {
+      "codec": "webp",
+      "quality": 75,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 305.48,
+          "median": 304.0,
+          "std": 67.7129943216219
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 2.3865625,
+          "median": 2.375,
+          "std": 0.5290077681376711
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 19.09208984375,
+          "median": 19.31591796875,
+          "std": 3.456421789552822
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 35.40532547719747,
+          "median": 35.27166973493304,
+          "std": 0.8941392165628776
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.9795610792522038,
+          "median": 0.9822333819710085,
+          "std": 0.010052184250477342
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          2.31491015625,
+          2.455080078125
+        ],
+        "file_bytes": [
+          296.3085,
+          314.25025
+        ],
+        "mse": [
+          18.610582397460938,
+          19.538950073242187
+        ],
+        "ssim": [
+          0.978146503823062,
+          0.9810393131341589
+        ],
+        "pooled_psnr_db": [
+          35.22179137700513,
+          35.43320396762081
+        ]
+      },
+      "pooled_mse": 19.09208984375,
+      "pooled_psnr_db": 35.32226891461518,
+      "total_file_bytes": 61096,
+      "file_bpp": 2.3865625,
+      "lossless_images": 0
+    },
+    {
+      "codec": "webp",
+      "quality": 90,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 479.3,
+          "median": 482.0,
+          "std": 98.89848330485154
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 3.74453125,
+          "median": 3.765625,
+          "std": 0.7726444008191526
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 4.3380078125,
+          "median": 4.42578125,
+          "std": 0.543777864641076
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 41.79724039025063,
+          "median": 41.67090796923908,
+          "std": 0.6101658197086185
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.9947886504142143,
+          "median": 0.9957577879077519,
+          "std": 0.003022583153444637
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          3.637568359375,
+          3.844615234375
+        ],
+        "file_bytes": [
+          465.60875,
+          492.11075
+        ],
+        "mse": [
+          4.263388305664063,
+          4.40838232421875
+        ],
+        "ssim": [
+          0.9943606167409309,
+          0.9951991701947076
+        ],
+        "pooled_psnr_db": [
+          41.6880110848648,
+          41.83325471259199
+        ]
+      },
+      "pooled_mse": 4.3380078125,
+      "pooled_psnr_db": 41.75790031049906,
+      "total_file_bytes": 95860,
+      "file_bpp": 3.74453125,
+      "lossless_images": 0
+    },
+    {
+      "codec": "webp",
+      "quality": 95,
+      "images": 200,
+      "statistics": {
+        "file_bytes": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 593.61,
+          "median": 600.0,
+          "std": 107.29132257550002
+        },
+        "file_bpp": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 4.637578125,
+          "median": 4.6875,
+          "std": 0.8382134576210939
+        },
+        "mse": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 1.949755859375,
+          "median": 1.97802734375,
+          "std": 0.1860319202371933
+        },
+        "psnr_db": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 45.25337860675561,
+          "median": 45.16848083220248,
+          "std": 0.4571545251466662
+        },
+        "ssim": {
+          "count": 200,
+          "finite_count": 200,
+          "undefined_or_infinite_count": 0,
+          "mean": 0.9974950808433549,
+          "median": 0.9979328059450085,
+          "std": 0.0015419045816735873
+        }
+      },
+      "bootstrap_95_ci": {
+        "file_bpp": [
+          4.520603515625,
+          4.748294921875
+        ],
+        "file_bytes": [
+          578.63725,
+          607.78175
+        ],
+        "mse": [
+          1.9235428466796876,
+          1.973257080078125
+        ],
+        "ssim": [
+          0.9972805058391425,
+          0.9977019012300781
+        ],
+        "pooled_psnr_db": [
+          45.17896691132129,
+          45.28978496261308
+        ]
+      },
+      "pooled_mse": 1.949755859375,
+      "pooled_psnr_db": 45.23100126717817,
+      "total_file_bytes": 118722,
+      "file_bpp": 4.637578125,
+      "lossless_images": 0
+    }
+  ],
+  "matched_psnr": [
+    {
+      "threshold": 0.5,
+      "bitlaya_psnr_db": 10.846189147647372,
+      "bitlaya_file_bytes": 34.0,
+      "jpeg_bytes_at_matched_psnr": null,
+      "webp_bytes_at_matched_psnr": null
+    },
+    {
+      "threshold": 0.55,
+      "bitlaya_psnr_db": 7.066106797563964,
+      "bitlaya_file_bytes": 35.18,
+      "jpeg_bytes_at_matched_psnr": null,
+      "webp_bytes_at_matched_psnr": null
+    },
+    {
+      "threshold": 0.6,
+      "bitlaya_psnr_db": 7.717472404832705,
+      "bitlaya_file_bytes": 35.725,
+      "jpeg_bytes_at_matched_psnr": null,
+      "webp_bytes_at_matched_psnr": null
+    },
+    {
+      "threshold": 0.65,
+      "bitlaya_psnr_db": 9.036672703873808,
+      "bitlaya_file_bytes": 50.445,
+      "jpeg_bytes_at_matched_psnr": null,
+      "webp_bytes_at_matched_psnr": null
+    },
+    {
+      "threshold": 0.7,
+      "bitlaya_psnr_db": 8.941584434527048,
+      "bitlaya_file_bytes": 64.035,
+      "jpeg_bytes_at_matched_psnr": null,
+      "webp_bytes_at_matched_psnr": null
+    },
+    {
+      "threshold": 0.75,
+      "bitlaya_psnr_db": 8.910815453381858,
+      "bitlaya_file_bytes": 115.28,
+      "jpeg_bytes_at_matched_psnr": null,
+      "webp_bytes_at_matched_psnr": null
+    },
+    {
+      "threshold": 0.8,
+      "bitlaya_psnr_db": 9.27798612921886,
+      "bitlaya_file_bytes": 188.84,
+      "jpeg_bytes_at_matched_psnr": null,
+      "webp_bytes_at_matched_psnr": null
+    },
+    {
+      "threshold": 0.85,
+      "bitlaya_psnr_db": 9.158298787282524,
+      "bitlaya_file_bytes": 382.255,
+      "jpeg_bytes_at_matched_psnr": null,
+      "webp_bytes_at_matched_psnr": null
+    },
+    {
+      "threshold": 0.9,
+      "bitlaya_psnr_db": 12.124433267096846,
+      "bitlaya_file_bytes": 630.96,
+      "jpeg_bytes_at_matched_psnr": null,
+      "webp_bytes_at_matched_psnr": null
+    },
+    {
+      "threshold": 0.925,
+      "bitlaya_psnr_db": 14.254761396084813,
+      "bitlaya_file_bytes": 743.235,
+      "jpeg_bytes_at_matched_psnr": null,
+      "webp_bytes_at_matched_psnr": null
+    },
+    {
+      "threshold": 0.95,
+      "bitlaya_psnr_db": 17.94801745306946,
+      "bitlaya_file_bytes": 860.28,
+      "jpeg_bytes_at_matched_psnr": null,
+      "webp_bytes_at_matched_psnr": null
+    },
+    {
+      "threshold": 0.975,
+      "bitlaya_psnr_db": 21.76147469030477,
+      "bitlaya_file_bytes": 943.53,
+      "jpeg_bytes_at_matched_psnr": 367.304608585742,
+      "webp_bytes_at_matched_psnr": null
+    },
+    {
+      "threshold": 0.99,
+      "bitlaya_psnr_db": 27.434360714444207,
+      "bitlaya_file_bytes": 1023.07,
+      "jpeg_bytes_at_matched_psnr": 440.3562089428399,
+      "webp_bytes_at_matched_psnr": 150.7582917984189
+    },
+    {
+      "threshold": 1.0,
+      "bitlaya_psnr_db": null,
+      "bitlaya_file_bytes": 1058.0,
+      "jpeg_bytes_at_matched_psnr": null,
+      "webp_bytes_at_matched_psnr": null
+    }
+  ],
+  "notes": [
+    "Checkpoint cost excluded from file rates; model_amortization charges it once per N images.",
+    "PSNR null denotes +infinity for zero MSE; undefined metrics also use null with counts.",
+    "Per-image PSNR descriptive stats use only finite values; primary PSNR is from pooled MSE.",
+    "Bootstrap resamples images jointly across metrics, not bits; it excludes training-seed variance.",
+    "SSIM uses an 11x11 Gaussian sigma=1.5 window, population covariance, valid centers, range=255.",
+    "Header bytes include framing and checksums; payload padding is included in payload bytes.",
+    "Matched-PSNR baseline bytes are interpolated in log-bytes, never extrapolated (null outside).",
+    "Use validation for model/threshold selection and test for held-out reporting."
+  ]
+}

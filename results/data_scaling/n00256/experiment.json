@@ -11,15 +11,15 @@
   },
   "training": {
     "epochs": 100000,
-    "max_steps": 6400,
-    "val_every": 800,
+    "max_steps": 64000,
+    "val_every": 8000,
     "batch_size": 32,
     "chunk_length": 256,
     "learning_rate": 0.001,
     "mode": "teacher_forcing",
     "objective": "bce",
     "lr_schedule": "constant",
-    "device": "cpu",
+    "device": "cuda",
     "seed": 42
   }
 }

@@ -1,6 +1,66 @@
-﻿[ablate] start train:n00032: -m bitlaya --threads 1 train --config results\data_scaling\n00032\experiment.json --output results\data_scaling\n00032\train
+[ablate] start train:n00032: -m bitlaya --threads 1 train --config results\data_scaling\n00032\experiment.json --output results\data_scaling\n00032\train
 [ablate] start train:n00256: -m bitlaya --threads 1 train --config results\data_scaling\n00256\experiment.json --output results\data_scaling\n00256\train
-[ablate] done train:n00032: ok
 [ablate] start train:n01024: -m bitlaya --threads 1 train --config results\data_scaling\n01024\experiment.json --output results\data_scaling\n01024\train
-[ablate] done train:n00256: ok
 [ablate] start train:n05000: -m bitlaya --threads 1 train --config results\data_scaling\n05000\experiment.json --output results\data_scaling\n05000\train
+[ablate] start train:n45000: -m bitlaya --threads 1 train --config results\data_scaling\n45000\experiment.json --output results\data_scaling\n45000\train
+[ablate] done train:n05000: ok
+[ablate] done train:n00032: ok
+[ablate] done train:n01024: ok
+[ablate] done train:n45000: ok
+[ablate] done train:n00256: ok
+[ablate] start sweep:n00032: -m bitlaya --threads 1 sweep results\data_scaling\n00032\train\best.pt --output results\data_scaling\n00032\sweep --split val --size 200 --engine qgru-v2
+[ablate] start sweep:n00256: -m bitlaya --threads 1 sweep results\data_scaling\n00256\train\best.pt --output results\data_scaling\n00256\sweep --split val --size 200 --engine qgru-v2
+[ablate] start sweep:n01024: -m bitlaya --threads 1 sweep results\data_scaling\n01024\train\best.pt --output results\data_scaling\n01024\sweep --split val --size 200 --engine qgru-v2
+[ablate] start sweep:n05000: -m bitlaya --threads 1 sweep results\data_scaling\n05000\train\best.pt --output results\data_scaling\n05000\sweep --split val --size 200 --engine qgru-v2
+[ablate] start sweep:n45000: -m bitlaya --threads 1 sweep results\data_scaling\n45000\train\best.pt --output results\data_scaling\n45000\sweep --split val --size 200 --engine qgru-v2
+[ablate] done sweep:n00032: ok
+[ablate] done sweep:n00256: ok
+[ablate] done sweep:n05000: ok
+[ablate] done sweep:n45000: ok
+[ablate] done sweep:n01024: ok
+{
+  "n00256": {
+    "bpp_range": [
+      0.265625,
+      8.265625
+    ],
+    "grid_points_compared": 199,
+    "mean_psnr_gain_db": 1.1237310260775877,
+    "min_psnr_gain_db": -6.781598670564499,
+    "max_psnr_gain_db": 10.4364824604606,
+    "note": "operational envelope; lossless (infinite PSNR) grid points excluded"
+  },
+  "n01024": {
+    "bpp_range": [
+      0.265625,
+      8.265625
+    ],
+    "grid_points_compared": 199,
+    "mean_psnr_gain_db": 1.4008792541591768,
+    "min_psnr_gain_db": -9.250018503753587,
+    "max_psnr_gain_db": 7.968062627271511,
+    "note": "operational envelope; lossless (infinite PSNR) grid points excluded"
+  },
+  "n05000": {
+    "bpp_range": [
+      0.265625,
+      8.265625
+    ],
+    "grid_points_compared": 199,
+    "mean_psnr_gain_db": -0.5033140275312669,
+    "min_psnr_gain_db": -12.541557462729433,
+    "max_psnr_gain_db": 4.6765236682956655,
+    "note": "operational envelope; lossless (infinite PSNR) grid points excluded"
+  },
+  "n45000": {
+    "bpp_range": [
+      0.265625,
+      8.265625
+    ],
+    "grid_points_compared": 199,
+    "mean_psnr_gain_db": 0.9539535731616396,
+    "min_psnr_gain_db": -13.385918590519971,
+    "max_psnr_gain_db": 3.832162540505127,
+    "note": "operational envelope; lossless (infinite PSNR) grid points excluded"
+  }
+}
