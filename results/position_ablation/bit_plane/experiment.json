@@ -1,0 +1,26 @@
+{
+  "data": {
+    "train_size": 1024,
+    "val_size": 256,
+    "validation_size": 5000
+  },
+  "model": {
+    "embedding_dim": 32,
+    "hidden_size": 128,
+    "num_layers": 2,
+    "plane_dim": 8
+  },
+  "training": {
+    "epochs": 100000,
+    "max_steps": 64000,
+    "val_every": 8000,
+    "batch_size": 32,
+    "chunk_length": 256,
+    "learning_rate": 0.001,
+    "mode": "teacher_forcing",
+    "objective": "bce",
+    "lr_schedule": "constant",
+    "device": "cuda",
+    "seed": 42
+  }
+}

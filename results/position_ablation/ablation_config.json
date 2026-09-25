@@ -1,0 +1,52 @@
+{
+  "name": "position_ablation",
+  "output": "results/position_ablation",
+  "description": "Stage 2: input features only. Same data, budget, optimizer, objective and mode as the data-scaling winner (n01024: best raw-payload operational RD on 200 val images, see results/data_scaling). bit_only is the baseline and is config-identical to data_scaling/n01024.",
+  "data": {
+    "train_size": 1024,
+    "val_size": 256,
+    "validation_size": 5000
+  },
+  "model": {
+    "embedding_dim": 32,
+    "hidden_size": 128,
+    "num_layers": 2
+  },
+  "training": {
+    "epochs": 100000,
+    "max_steps": 64000,
+    "val_every": 8000,
+    "batch_size": 32,
+    "chunk_length": 256,
+    "learning_rate": 0.001,
+    "mode": "teacher_forcing",
+    "objective": "bce",
+    "lr_schedule": "constant",
+    "device": "cuda",
+    "seed": 42
+  },
+  "sweep": {
+    "split": "val",
+    "size": 200,
+    "engine": "qgru-v2"
+  },
+  "variants": [
+    {
+      "name": "bit_only"
+    },
+    {
+      "name": "bit_plane",
+      "model": {
+        "plane_dim": 8
+      }
+    },
+    {
+      "name": "bit_plane_rowcol",
+      "model": {
+        "plane_dim": 8,
+        "row_dim": 8,
+        "col_dim": 8
+      }
+    }
+  ]
+}

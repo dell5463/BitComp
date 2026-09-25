@@ -51,8 +51,23 @@ teacher forcing batch 32 = 6.8 ms/step CUDA vs 257.5 ms/step CPU (1 thread; 4 th
 helps); rollout/scheduled ~190-260 ms/step on CUDA regardless of batch (sequential per-bit
 launches). One teacher-forcing job saturates the GPU (8 concurrent -> 1.27x aggregate);
 rollout plateaus at ~1.4x aggregate from 2 jobs. RD sweep (CPU, exact engine) of 200 val
-images = 957 s single job; 8 concurrent sweeps -> 3.3x aggregate. **Awaiting the user's
-budget/parallelism decision before Step 3 long runs.** Laptop results not yet moved aside.
+images = 957 s single job; 8 concurrent sweeps -> 3.3x aggregate.
+
+Step 3 (budget chosen: 64,000 steps = 10x laptop, batch 32, chunk 256, val every 8,000, CUDA,
+same for every variant; configs updated). Laptop partial results moved to
+`results/laptop_cpu_partial/` (kept, README explains).
+- 3a `results/baseline_reference_v1_test100_gpupc`: **done** (100 test images, 1,400 decodes
+  verified, 0 mismatches). `results/baseline_qgru_v2_test1000_gpupc`: running.
+- 3b data scaling: **done, winner n01024** (`results/data_scaling/DECISION.md`). More data is not
+  monotonically better at this budget (n05000 last -> training variance ~ data effect).
+- 3c position: **done, winner bit_plane_rowcol** (`results/position_ablation/DECISION.md`).
+- **Decision metric from 3c on: rate at quality** (`summarize.py rate`: bpp needed for pooled
+  PSNR >= 20/25/30/35 dB, paired image-bootstrap CI). The envelope mean over 0.27-8.27 bpp is
+  dominated by 5-16 dB output and contradicted itself between raw and range-coded payloads.
+- 3d training modes: running (train_size 1024 + bit_plane_rowcol base).
+- Key finding so far: with range-coded payloads the lossless point (~5.74-5.96 bpp on val)
+  nearly dominates lossy omission (20 dB costs only ~0.1 bpp less than 35 dB).
+- Known gap: CLI ties the init seed to the split seed, so seed replicates are NOT YET MEASURED.
 
 ## Status at handoff (2026-09-24, from the CPU-only laptop)
 

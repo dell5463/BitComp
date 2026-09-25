@@ -36,6 +36,19 @@ Per-threshold complete-file bpp / pooled PSNR (dB):
 | 0.99 | 7.884 / 34.30 | 7.963 / 36.78 | 7.928 / 38.54 | 7.993 / 27.43 | 7.959 / 38.12 |
 | 1 | 8.266 / inf | 8.266 / inf | 8.266 / inf | 8.266 / inf | 8.266 / inf |
 
+Rate at quality: complete-file bpp needed for pooled PSNR >= target (Pareto front of the threshold points, interpolated linearly in (bpp, MSE); lossless point included). Paired image bootstrap (1000 resamples, seed 42) of the bpp difference vs `n01024`; negative = fewer bits. 200 val images (development).
+
+| payload | target dB | n00032 bpp | n00256 bpp | n01024 bpp | n05000 bpp | n45000 bpp | n00032 - n01024 [95% CI] | n00256 - n01024 [95% CI] | n05000 - n01024 [95% CI] | n45000 - n01024 [95% CI] |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| raw | 20 | 7.388 | 6.586 | 6.894 | 7.140 | 6.977 | +0.493 [+0.330, +0.574] | -0.308 [-0.364, -0.189] | +0.246 [-0.036, +0.449] | +0.082 [+0.003, +0.303] |
+| raw | 25 | 7.740 | 7.199 | 7.210 | 7.819 | 7.623 | +0.530 [+0.358, +0.585] | -0.010 [-0.171, +0.029] | +0.609 [+0.260, +0.810] | +0.414 [+0.011, +0.522] |
+| raw | 30 | 7.852 | 7.673 | 7.721 | 8.114 | 7.865 | +0.130 [+0.076, +0.215] | -0.049 [-0.132, +0.031] | +0.393 [+0.171, +0.512] | +0.143 [+0.026, +0.235] |
+| raw | 35 | 7.941 | 7.924 | 7.886 | 8.218 | 7.941 | +0.055 [-0.001, +0.104] | +0.038 [+0.009, +0.067] | +0.332 [+0.130, +0.378] | +0.056 [+0.027, +0.082] |
+| range-coded | 20 | 6.297 | 5.878 | 5.802 | 6.003 | 5.821 | +0.495 [+0.440, +0.536] | +0.075 [+0.046, +0.101] | +0.200 [+0.132, +0.256] | +0.019 [-0.011, +0.047] |
+| range-coded | 25 | 6.467 | 6.047 | 5.920 | 6.133 | 5.949 | +0.547 [+0.506, +0.587] | +0.127 [+0.106, +0.149] | +0.213 [+0.182, +0.244] | +0.029 [+0.009, +0.055] |
+| range-coded | 30 | 6.521 | 6.092 | 5.949 | 6.185 | 5.991 | +0.572 [+0.537, +0.607] | +0.143 [+0.128, +0.157] | +0.236 [+0.212, +0.258] | +0.042 [+0.029, +0.055] |
+| range-coded | 35 | 6.538 | 6.099 | 5.958 | 6.202 | 6.004 | +0.580 [+0.546, +0.614] | +0.141 [+0.129, +0.154] | +0.244 [+0.222, +0.264] | +0.046 [+0.036, +0.057] |
+
 Paired image bootstrap (1000 resamples, seed 42) of the operational-envelope mean PSNR gain vs `n00032` over the overlapping complete-file bpp range; 200 val images (development). Lossless grid points excluded (as in `ablate`).
 
 | variant | payload | observed gain dB | bootstrap mean | 95% CI | P(gain > 0) |

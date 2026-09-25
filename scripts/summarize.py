@@ -8,6 +8,7 @@
     python scripts/summarize.py throughput results/throughput_gpupc
     python scripts/summarize.py matched results/training_modes [0.60 0.85]
     python scripts/summarize.py paired results/data_scaling [reference_variant]
+    python scripts/summarize.py rate results/position_ablation [reference_variant]
 """
 import json
 from pathlib import Path
@@ -302,6 +303,78 @@ def paired(directory, reference=None, repeats=1000):
                   f"[{low:+.2f}, {high:+.2f}] | {(gains > 0).mean():.3f} |")
 
 
+def _rate_at_quality(points, target_db):
+    """Complete-file bpp needed to reach pooled PSNR >= target: linear interpolation in (bpp, MSE) between
+    consecutive points of the Pareto front (what mixing two thresholds across images achieves, since both
+    pooled MSE and bpp average linearly). Lossless points (MSE 0) are included. None if never reached."""
+    target = 255.0 ** 2 / 10 ** (target_db / 10)
+    front, best = [], float("inf")
+    for p in sorted(points, key=lambda p: (p["file_bpp"], p["mse"])):
+        if p["mse"] < best:
+            front.append(p)
+            best = p["mse"]
+    for a, b in zip(front, front[1:]):
+        if a["mse"] <= target:
+            return a["file_bpp"]
+        if b["mse"] <= target:
+            return a["file_bpp"] + (b["file_bpp"] - a["file_bpp"]) * (a["mse"] - target) / (a["mse"] - b["mse"])
+    return front[0]["file_bpp"] if front and front[0]["mse"] <= target else None
+
+
+def _mse_points(thresholds, arrays, sample, ranged):
+    key = "range_file_bytes" if ranged else "file_bytes"
+    pixels = arrays["original_bytes"][:, sample].sum(axis=1)
+    bpp = 8 * arrays[key][:, sample].sum(axis=1) / pixels
+    mse = arrays["mse"][:, sample].mean(axis=1)
+    return [{"threshold": t, "file_bpp": float(b), "mse": float(m)} for t, b, m in zip(thresholds, bpp, mse)]
+
+
+def rate(directory, reference=None, repeats=1000, targets=(20.0, 25.0, 30.0, 35.0)):
+    """Complete-file bpp needed to reach each target PSNR, every variant vs ``reference``, with a paired
+    image-bootstrap 95% CI of the bpp difference (negative = fewer bits = better). Usage:
+        python scripts/summarize.py rate results/position_ablation [reference_variant]"""
+    import numpy as np
+    result = load(Path(directory) / "comparison.json")
+    variants = list(dict.fromkeys(r["variant"] for r in result["table"]))
+    reference = reference or result["reference_variant"]
+    data = {v: _sweep_arrays(Path(directory) / v / "sweep") for v in variants}
+    ref_t, ref_idx, ref_arrays = data[reference]
+    n = len(ref_idx)
+    rng = np.random.default_rng(42)
+    samples = [rng.integers(0, n, n) for _ in range(int(repeats))]
+    everything = np.arange(n)
+    print(f"Rate at quality: complete-file bpp needed for pooled PSNR >= target (Pareto front of the threshold "
+          f"points, interpolated linearly in (bpp, MSE); lossless point included). Paired image bootstrap "
+          f"({int(repeats)} resamples, seed 42) of the bpp difference vs `{reference}`; negative = fewer bits. "
+          f"{n} {result['sweep_images']['split']} images ({result['sampling_scale']}).\n")
+    print("| payload | target dB | " + " | ".join(f"{v} bpp" for v in variants) + " | "
+          + " | ".join(f"{v} - {reference} [95% CI]" for v in variants if v != reference) + " |")
+    print("|---|---:|" + "---:|" * (2 * len(variants) - 1))
+    for ranged in (False, True):
+        for target in targets:
+            observed = {v: _rate_at_quality(_mse_points(data[v][0], data[v][2], everything, ranged), target)
+                        for v in variants}
+            cells = []
+            for v in variants:
+                if v == reference:
+                    continue
+                if data[v][0] != ref_t or not np.array_equal(data[v][1], ref_idx):
+                    raise ValueError(f"{v}: different thresholds or images than {reference}; not paired")
+                diffs = []
+                for sample in samples:
+                    a = _rate_at_quality(_mse_points(ref_t, ref_arrays, sample, ranged), target)
+                    b = _rate_at_quality(_mse_points(data[v][0], data[v][2], sample, ranged), target)
+                    if a is not None and b is not None:
+                        diffs.append(b - a)
+                if observed[v] is None or observed[reference] is None or not diffs:
+                    cells.append("n/a")
+                    continue
+                low, high = np.percentile(diffs, [2.5, 97.5])
+                cells.append(f"{observed[v] - observed[reference]:+.3f} [{low:+.3f}, {high:+.3f}]")
+            print(f"| {'range-coded' if ranged else 'raw'} | {target:g} | "
+                  + " | ".join(fmt(observed[v], 3) for v in variants) + " | " + " | ".join(cells) + " |")
+
+
 def _jsonl(path):
     path = Path(path)
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()] \
@@ -365,5 +438,5 @@ def throughput(directory):
 
 if __name__ == "__main__":
     command = {"sweep": sweep, "compare": compare, "lossless": lossless, "errors": errors, "profile": profile,
-               "throughput": throughput, "matched": matched, "paired": paired}[sys.argv[1]]
-    command(sys.argv[2], *(sys.argv[3:] if sys.argv[1] == "paired" else map(float, sys.argv[3:])))
+               "throughput": throughput, "matched": matched, "paired": paired, "rate": rate}[sys.argv[1]]
+    command(sys.argv[2], *(sys.argv[3:] if sys.argv[1] in ("paired", "rate") else map(float, sys.argv[3:])))

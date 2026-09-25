@@ -19,6 +19,13 @@ seed) of the same order as the data effect. The image bootstrap does not capture
 variance. Seed replicates are NOT YET MEASURED (the CLI ties the init seed to the split seed,
 so replicates need a separate init-seed option first).
 
+Re-check with rate at acceptable quality (added at the position stage; bpp needed for pooled
+PSNR >= 20/25/30/35 dB, paired bootstrap vs n01024): n45000 needs more bits at every target
+(raw +0.08 / +0.41 / +0.14 / +0.06 bpp; range-coded +0.02 / +0.03 / +0.04 / +0.05, CIs exclude 0
+except range-coded 20 dB). n00256 is cheaper at 20 dB raw (-0.31 bpp) but ties at 25-30 dB raw
+and costs +0.08 to +0.14 bpp with range-coded payloads. n00032 and n05000 are worse everywhere.
+**The decision stands: n01024.**
+
 Absolute RD is poor for every size: at 0.3-6 bpp pooled PSNR is 7-16 dB (useless quality);
 only thresholds 0.975-0.99 reach 25-38 dB, at 7.2-8.0 bpp. Curves are non-monotone in the
 threshold (cascading errors after wrong omitted MSBs).

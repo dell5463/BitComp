@@ -1,0 +1,36 @@
+[ablate] start train:bit_only: -m bitlaya --threads 1 train --config results\position_ablation\bit_only\experiment.json --output results\position_ablation\bit_only\train
+[ablate] start train:bit_plane: -m bitlaya --threads 1 train --config results\position_ablation\bit_plane\experiment.json --output results\position_ablation\bit_plane\train
+[ablate] start train:bit_plane_rowcol: -m bitlaya --threads 1 train --config results\position_ablation\bit_plane_rowcol\experiment.json --output results\position_ablation\bit_plane_rowcol\train
+[ablate] done train:bit_only: ok
+[ablate] done train:bit_plane: ok
+[ablate] done train:bit_plane_rowcol: ok
+[ablate] start sweep:bit_only: -m bitlaya --threads 1 sweep results\position_ablation\bit_only\train\best.pt --output results\position_ablation\bit_only\sweep --split val --size 200 --engine qgru-v2
+[ablate] start sweep:bit_plane: -m bitlaya --threads 1 sweep results\position_ablation\bit_plane\train\best.pt --output results\position_ablation\bit_plane\sweep --split val --size 200 --engine qgru-v2
+[ablate] start sweep:bit_plane_rowcol: -m bitlaya --threads 1 sweep results\position_ablation\bit_plane_rowcol\train\best.pt --output results\position_ablation\bit_plane_rowcol\sweep --split val --size 200 --engine qgru-v2
+[ablate] done sweep:bit_only: ok
+[ablate] done sweep:bit_plane: ok
+[ablate] done sweep:bit_plane_rowcol: ok
+{
+  "bit_plane": {
+    "bpp_range": [
+      0.265625,
+      8.265625
+    ],
+    "grid_points_compared": 199,
+    "mean_psnr_gain_db": -1.2337231935593662,
+    "min_psnr_gain_db": -7.4554177561893376,
+    "max_psnr_gain_db": 8.369845076396391,
+    "note": "operational envelope; lossless (infinite PSNR) grid points excluded"
+  },
+  "bit_plane_rowcol": {
+    "bpp_range": [
+      0.265625,
+      8.265625
+    ],
+    "grid_points_compared": 199,
+    "mean_psnr_gain_db": 0.5345212628884207,
+    "min_psnr_gain_db": -7.4457617933509965,
+    "max_psnr_gain_db": 10.54556515907711,
+    "note": "operational envelope; lossless (infinite PSNR) grid points excluded"
+  }
+}
