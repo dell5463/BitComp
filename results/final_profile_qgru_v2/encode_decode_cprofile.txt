@@ -1,0 +1,38 @@
+         115005 function calls in 1.447 seconds
+
+   Ordered by: internal time
+   List reduced from 115 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    16384    1.333    0.000    1.404    0.000 C:\Users\chakk\Desktop\BitCompo\src\bitlaya\engine.py:254(step)
+    16384    0.038    0.000    0.038    0.000 {method 'take' of 'numpy.ndarray' objects}
+        1    0.019    0.019    0.741    0.741 C:\Users\chakk\Desktop\BitCompo\src\bitlaya\blaya.py:284(decode_bits)
+        1    0.018    0.018    0.704    0.704 C:\Users\chakk\Desktop\BitCompo\src\bitlaya\blaya.py:221(encode_bits)
+    16387    0.014    0.000    0.056    0.000 C:\Users\chakk\Desktop\BitCompo\.venv\Lib\site-packages\numpy\_core\fromnumeric.py:48(_wrapfunc)
+    16384    0.014    0.000    0.069    0.000 C:\Users\chakk\Desktop\BitCompo\.venv\Lib\site-packages\numpy\_core\fromnumeric.py:106(take)
+    16384    0.003    0.000    0.003    0.000 {built-in method builtins.abs}
+    16387    0.003    0.000    0.003    0.000 {built-in method builtins.getattr}
+    16384    0.003    0.000    0.003    0.000 C:\Users\chakk\Desktop\BitCompo\.venv\Lib\site-packages\numpy\_core\fromnumeric.py:102(_take_dispatcher)
+        1    0.001    0.001    0.705    0.705 C:\Users\chakk\Desktop\BitCompo\src\bitlaya\blaya.py:391(compress_many)
+        3    0.000    0.000    0.000    0.000 C:\Users\chakk\Desktop\BitCompo\.venv\Lib\site-packages\numpy\lib\_arraysetops_impl.py:806(_isin)
+        2    0.000    0.000    0.000    0.000 {method 'tolist' of 'numpy.ndarray' objects}
+       10    0.000    0.000    0.000    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+        1    0.000    0.000    0.742    0.742 C:\Users\chakk\Desktop\BitCompo\src\bitlaya\blaya.py:438(decompress_many)
+        2    0.000    0.000    0.000    0.000 C:\Users\chakk\Desktop\BitCompo\src\bitlaya\bits.py:31(bits_to_image)
+        1    0.000    0.000    0.000    0.000 C:\Users\chakk\Desktop\BitCompo\.venv\Lib\site-packages\numpy\_core\shape_base.py:378(stack)
+        3    0.000    0.000    0.000    0.000 C:\Users\chakk\Desktop\BitCompo\.venv\Lib\site-packages\numpy\lib\_arraysetops_impl.py:958(isin)
+        3    0.000    0.000    0.000    0.000 C:\Users\chakk\Desktop\BitCompo\.venv\Lib\site-packages\numpy\_core\numeric.py:97(zeros_like)
+        2    0.000    0.000    0.000    0.000 C:\Users\chakk\Desktop\BitCompo\src\bitlaya\engine.py:230(__init__)
+        6    0.000    0.000    0.000    0.000 C:\Users\chakk\Desktop\BitCompo\.venv\Lib\site-packages\numpy\_core\fromnumeric.py:66(_wrapreduction)
+        1    0.000    0.000    0.000    0.000 C:\Users\chakk\Desktop\BitCompo\src\bitlaya\bits.py:26(image_to_bits)
+        3    0.000    0.000    0.000    0.000 C:\Users\chakk\Desktop\BitCompo\src\bitlaya\bits.py:19(validate_bits)
+       18    0.000    0.000    0.000    0.000 {built-in method numpy.asarray}
+        1    0.000    0.000    0.000    0.000 C:\Users\chakk\Desktop\BitCompo\src\bitlaya\blaya.py:129(parse_stream)
+        3    0.000    0.000    0.000    0.000 C:\Users\chakk\Desktop\BitCompo\.venv\Lib\site-packages\numpy\_core\getlimits.py:412(__init__)
+        9    0.000    0.000    0.000    0.000 C:\Users\chakk\Desktop\BitCompo\.venv\Lib\site-packages\numpy\lib\_arraysetops_impl.py:820(<genexpr>)
+        1    0.000    0.000    0.705    0.705 C:\Users\chakk\Desktop\BitCompo\src\bitlaya\blaya.py:364(compress)
+        1    0.000    0.000    0.000    0.000 C:\Users\chakk\Desktop\BitCompo\src\bitlaya\bits.py:45(unpack_bits)
+       11    0.000    0.000    0.000    0.000 {built-in method numpy.zeros}
+        3    0.000    0.000    0.000    0.000 C:\Users\chakk\Desktop\BitCompo\.venv\Lib\site-packages\numpy\_core\numeric.py:679(flatnonzero)
+
+

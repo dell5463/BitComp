@@ -1,0 +1,177 @@
+[
+  {
+    "function": "~:0(<built-in method torch.gru>)",
+    "calls": 16384,
+    "self_seconds": 1.8198215000000002,
+    "cumulative_seconds": 1.8198215000000002,
+    "self_fraction": 0.3053273438563038
+  },
+  {
+    "function": "~:0(<built-in method torch.embedding>)",
+    "calls": 65536,
+    "self_seconds": 0.8854907000000001,
+    "cumulative_seconds": 0.8854907000000001,
+    "self_fraction": 0.14856650690216547
+  },
+  {
+    "function": "model.py:96(features)",
+    "calls": 16384,
+    "self_seconds": 0.2849331,
+    "cumulative_seconds": 2.5664718,
+    "self_fraction": 0.04780571424161247
+  },
+  {
+    "function": "~:0(<built-in method torch._C._nn.linear>)",
+    "calls": 16384,
+    "self_seconds": 0.2162676,
+    "cumulative_seconds": 0.2162676,
+    "self_fraction": 0.036285103714939926
+  },
+  {
+    "function": "module.py:1959(__getattr__)",
+    "calls": 458862,
+    "self_seconds": 0.20367870000000002,
+    "cumulative_seconds": 0.20367870000000002,
+    "self_fraction": 0.03417295403483525
+  },
+  {
+    "function": "module.py:1787(_call_impl)",
+    "calls": 114688,
+    "self_seconds": 0.192023,
+    "cumulative_seconds": 5.750205800000001,
+    "self_fraction": 0.03221737546749448
+  },
+  {
+    "function": "model.py:75(position_features)",
+    "calls": 16384,
+    "self_seconds": 0.1718696,
+    "cumulative_seconds": 0.5798892,
+    "self_fraction": 0.02883606356867714
+  },
+  {
+    "function": "~:0(<built-in method torch.floor_divide>)",
+    "calls": 32768,
+    "self_seconds": 0.16872420000000002,
+    "cumulative_seconds": 0.16872420000000002,
+    "self_fraction": 0.028308332344836987
+  },
+  {
+    "function": "~:0(<built-in method torch.arange>)",
+    "calls": 16384,
+    "self_seconds": 0.1676851,
+    "cumulative_seconds": 0.1676851,
+    "self_fraction": 0.028133993464347286
+  },
+  {
+    "function": "~:0(<built-in method builtins.getattr>)",
+    "calls": 197086,
+    "self_seconds": 0.1596961,
+    "cumulative_seconds": 0.2411413,
+    "self_fraction": 0.026793609173872638
+  },
+  {
+    "function": "model.py:114(forward)",
+    "calls": 16384,
+    "self_seconds": 0.151067,
+    "cumulative_seconds": 5.7027368,
+    "self_fraction": 0.025345829717002593
+  },
+  {
+    "function": "rnn.py:1378(forward)",
+    "calls": 16384,
+    "self_seconds": 0.14638,
+    "cumulative_seconds": 2.5186976000000003,
+    "self_fraction": 0.02455945079980962
+  },
+  {
+    "function": "module.py:1779(_wrapped_call_impl)",
+    "calls": 114688,
+    "self_seconds": 0.1261805,
+    "cumulative_seconds": 5.7691765,
+    "self_fraction": 0.021170404301444033
+  },
+  {
+    "function": "rnn.py:364(_weights_have_changed)",
+    "calls": 16386,
+    "self_seconds": 0.109252,
+    "cumulative_seconds": 0.374398,
+    "self_fraction": 0.01833016203566608
+  },
+  {
+    "function": "sparse.py:188(forward)",
+    "calls": 65536,
+    "self_seconds": 0.10250930000000001,
+    "cumulative_seconds": 1.0821005000000001,
+    "self_fraction": 0.01719888037896519
+  },
+  {
+    "function": "~:0(<built-in method builtins.hasattr>)",
+    "calls": 131410,
+    "self_seconds": 0.09978210000000001,
+    "cumulative_seconds": 0.1438308,
+    "self_fraction": 0.016741314220875006
+  },
+  {
+    "function": "~:0(<built-in method torch.cat>)",
+    "calls": 16384,
+    "self_seconds": 0.09537330000000001,
+    "cumulative_seconds": 0.09537330000000001,
+    "self_fraction": 0.016001611346942772
+  },
+  {
+    "function": "~:0(<method 'unsqueeze' of 'torch._C.TensorBase' objects>)",
+    "calls": 49152,
+    "self_seconds": 0.09147530000000001,
+    "cumulative_seconds": 0.09147530000000001,
+    "self_fraction": 0.01534760984934981
+  },
+  {
+    "function": "~:0(<built-in method torch._C._get_tracing_state>)",
+    "calls": 114688,
+    "self_seconds": 0.086707,
+    "cumulative_seconds": 0.086707,
+    "self_fraction": 0.014547590521239873
+  },
+  {
+    "function": "~:0(<method 'expand' of 'torch._C.TensorBase' objects>)",
+    "calls": 49152,
+    "self_seconds": 0.0804922,
+    "cumulative_seconds": 0.0804922,
+    "self_fraction": 0.013504879257196583
+  },
+  {
+    "function": "functional.py:2509(embedding)",
+    "calls": 65536,
+    "self_seconds": 0.05867530000000001,
+    "cumulative_seconds": 0.9564098000000001,
+    "self_fraction": 0.009844467437587576
+  },
+  {
+    "function": "_tensor.py:32(wrapped)",
+    "calls": 32768,
+    "self_seconds": 0.048067700000000005,
+    "cumulative_seconds": 0.2403345,
+    "self_fraction": 0.008064737759325105
+  },
+  {
+    "function": "~:0(<method 'squeeze' of 'torch._C.TensorBase' objects>)",
+    "calls": 16384,
+    "self_seconds": 0.0393343,
+    "cumulative_seconds": 0.0393343,
+    "self_fraction": 0.006599458980700584
+  },
+  {
+    "function": "codec.py:138(encode)",
+    "calls": 1,
+    "self_seconds": 0.0384329,
+    "cumulative_seconds": 2.9601717,
+    "self_fraction": 0.006448223231616362
+  },
+  {
+    "function": "codec.py:69(_decision)",
+    "calls": 16384,
+    "self_seconds": 0.0369186,
+    "cumulative_seconds": 0.048935000000000006,
+    "self_fraction": 0.006194155897648938
+  }
+]

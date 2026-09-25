@@ -118,6 +118,6 @@ training modes/objectives/schedules; and the research harness.
 ## Results and limitations
 
 Current status, measurements so far, and incomplete runs are summarized in
-[CLAUDE.md](CLAUDE.md); the milestone report (`docs/MILESTONE1_REPORT.md`) will be
-written once the research-scale runs finish. The original v1 validation record is
+[CLAUDE.md](CLAUDE.md); Milestone 1 results are in
+[docs/MILESTONE1_REPORT.md](docs/MILESTONE1_REPORT.md) (rebuild with `python scripts/build_report.py`). The original v1 validation record is
 in [docs/VALIDATION.md](docs/VALIDATION.md).

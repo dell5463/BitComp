@@ -1,0 +1,38 @@
+         2338148 function calls (2140296 primitive calls) in 5.960 seconds
+
+   Ordered by: internal time
+   List reduced from 251 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    16384    1.820    0.000    1.820    0.000 {built-in method torch.gru}
+    65536    0.885    0.000    0.885    0.000 {built-in method torch.embedding}
+    16384    0.285    0.000    2.566    0.000 C:\Users\chakk\Desktop\BitCompo\src\bitlaya\model.py:96(features)
+    16384    0.216    0.000    0.216    0.000 {built-in method torch._C._nn.linear}
+   458862    0.204    0.000    0.204    0.000 C:\Users\chakk\Desktop\BitCompo\.venv\Lib\site-packages\torch\nn\modules\module.py:1959(__getattr__)
+114688/16384    0.192    0.000    5.750    0.000 C:\Users\chakk\Desktop\BitCompo\.venv\Lib\site-packages\torch\nn\modules\module.py:1787(_call_impl)
+    16384    0.172    0.000    0.580    0.000 C:\Users\chakk\Desktop\BitCompo\src\bitlaya\model.py:75(position_features)
+    32768    0.169    0.000    0.169    0.000 {built-in method torch.floor_divide}
+    16384    0.168    0.000    0.168    0.000 {built-in method torch.arange}
+   197086    0.160    0.000    0.241    0.000 {built-in method builtins.getattr}
+    16384    0.151    0.000    5.703    0.000 C:\Users\chakk\Desktop\BitCompo\src\bitlaya\model.py:114(forward)
+    16384    0.146    0.000    2.519    0.000 C:\Users\chakk\Desktop\BitCompo\.venv\Lib\site-packages\torch\nn\modules\rnn.py:1378(forward)
+114688/16384    0.126    0.000    5.769    0.000 C:\Users\chakk\Desktop\BitCompo\.venv\Lib\site-packages\torch\nn\modules\module.py:1779(_wrapped_call_impl)
+    16386    0.109    0.000    0.374    0.000 C:\Users\chakk\Desktop\BitCompo\.venv\Lib\site-packages\torch\nn\modules\rnn.py:364(_weights_have_changed)
+    65536    0.103    0.000    1.082    0.000 C:\Users\chakk\Desktop\BitCompo\.venv\Lib\site-packages\torch\nn\modules\sparse.py:188(forward)
+   131410    0.100    0.000    0.144    0.000 {built-in method builtins.hasattr}
+    16384    0.095    0.000    0.095    0.000 {built-in method torch.cat}
+    49152    0.091    0.000    0.091    0.000 {method 'unsqueeze' of 'torch._C.TensorBase' objects}
+   114688    0.087    0.000    0.087    0.000 {built-in method torch._C._get_tracing_state}
+    49152    0.080    0.000    0.080    0.000 {method 'expand' of 'torch._C.TensorBase' objects}
+    65536    0.059    0.000    0.956    0.000 C:\Users\chakk\Desktop\BitCompo\.venv\Lib\site-packages\torch\nn\functional.py:2509(embedding)
+    32768    0.048    0.000    0.240    0.000 C:\Users\chakk\Desktop\BitCompo\.venv\Lib\site-packages\torch\_tensor.py:32(wrapped)
+    16384    0.039    0.000    0.039    0.000 {method 'squeeze' of 'torch._C.TensorBase' objects}
+        1    0.038    0.038    2.960    2.960 C:\Users\chakk\Desktop\BitCompo\src\bitlaya\codec.py:138(encode)
+    16384    0.037    0.000    0.049    0.000 C:\Users\chakk\Desktop\BitCompo\src\bitlaya\codec.py:69(_decision)
+        1    0.035    0.035    3.000    3.000 C:\Users\chakk\Desktop\BitCompo\src\bitlaya\codec.py:171(decode)
+    16384    0.035    0.000    0.035    0.000 {method 'fill_' of 'torch._C.TensorBase' objects}
+    16384    0.032    0.000    0.260    0.000 C:\Users\chakk\Desktop\BitCompo\.venv\Lib\site-packages\torch\nn\modules\linear.py:130(forward)
+    16384    0.031    0.000    0.042    0.000 C:\Users\chakk\Desktop\BitCompo\.venv\Lib\site-packages\torch\nn\modules\rnn.py:313(check_input)
+    65536    0.031    0.000    0.031    0.000 {method 'size' of 'torch._C.TensorBase' objects}
+
+

@@ -1,0 +1,8 @@
+{
+  "checkpoint_load_including_validation_seconds": 0.02081940000061877,
+  "per_call_deepcopy_seconds": 0.0012878999987151474,
+  "per_call_cpu_float_eval_seconds": 0.00032479999936185777,
+  "per_call_finite_verification_seconds": 0.0015843000001041219,
+  "per_call_fingerprint_seconds": 0.0018970999954035506,
+  "cold_first_encode_decode_seconds": 6.238259299992933
+}

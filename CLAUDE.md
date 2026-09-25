@@ -72,8 +72,16 @@ same for every variant; configs updated). Laptop partial results moved to
 - 3e objectives: **done, winner bce** (`results/objectives/DECISION.md`); weighted_sqrt costs
   +0.02 to +0.22 bpp at 20-35 dB. **Final Milestone 1 model: `results/objectives/bce/train/best.pt`**
   (bit + plane + row/col, train_size 1024, teacher forcing, BCE, fingerprint 19cbf2c5f8df85f9).
-- Step 4 (final model, test 1000: sweep, diagnose, analyze-errors, benchmark-lossless, overhead):
-  running into `results/final_*`. Profiling and CPU-vs-CUDA timing follow on an idle machine.
+- Step 4: **done** (`results/final_*`: test-1000 sweep, diagnose, analyze-errors,
+  benchmark-lossless, overhead, profiles of both engines, CPU-vs-CUDA training timing).
+- Step 5: **done** — `docs/MILESTONE1_REPORT.md`, built by `python scripts/build_report.py` from
+  `docs/MILESTONE1_REPORT.template.md` (edit the template, not the report).
+- Headline: range-coded lossless 5.752 bpp vs PNG-9 6.590 (1,000 test images); lossy omission has
+  no useful operating point (error cascades). 65,940 streams verified, 0 mismatches.
+- Next (only after the report, per the user's plan): `configs/lr_schedule.json`, `tbptt.json`,
+  `architecture.json` (their train_size/model still need setting to the final model's base:
+  train_size 1024, plane/row/col 8), then alternative representations as separate codecs.
+  The report recommends scoring these by validation lossless bpp and adding an init-seed option.
 - Key finding so far: with range-coded payloads the lossless point (~5.74-5.96 bpp on val)
   nearly dominates lossy omission (20 dB costs only ~0.1 bpp less than 35 dB).
 - Known gap: CLI ties the init seed to the split seed, so seed replicates are NOT YET MEASURED.

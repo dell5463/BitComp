@@ -1,0 +1,20 @@
+lossless: 128/1000 images verified
+lossless: 256/1000 images verified
+lossless: 384/1000 images verified
+lossless: 512/1000 images verified
+lossless: 640/1000 images verified
+lossless: 768/1000 images verified
+lossless: 896/1000 images verified
+lossless: 1000/1000 images verified
+{
+  "mean_bits_per_pixel": {
+    "raw_bytes": 8.0,
+    "zlib9_bytes": 7.5165625,
+    "png9_bytes": 6.58984375,
+    "bitlaya_file_bytes": 5.75165625,
+    "bitlaya_payload_bytes": 5.48603125,
+    "ideal_table": 5.458453115659309,
+    "ideal_engine": 5.45845318956958
+  },
+  "timing": 0.22061927299996023
+}

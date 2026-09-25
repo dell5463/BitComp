@@ -1,0 +1,177 @@
+[
+  {
+    "function": "engine.py:254(step)",
+    "calls": 16384,
+    "self_seconds": 1.3325466000000001,
+    "cumulative_seconds": 1.4043940000000001,
+    "self_fraction": 0.921065669927598
+  },
+  {
+    "function": "~:0(<method 'take' of 'numpy.ndarray' objects>)",
+    "calls": 16384,
+    "self_seconds": 0.038197800000000004,
+    "cumulative_seconds": 0.038197800000000004,
+    "self_fraction": 0.02640259053361466
+  },
+  {
+    "function": "blaya.py:284(decode_bits)",
+    "calls": 1,
+    "self_seconds": 0.018994900000000002,
+    "cumulative_seconds": 0.7413864,
+    "self_fraction": 0.013129409728491094
+  },
+  {
+    "function": "blaya.py:221(encode_bits)",
+    "calls": 1,
+    "self_seconds": 0.017947900000000003,
+    "cumulative_seconds": 0.7035931000000001,
+    "self_fraction": 0.012405715895634372
+  },
+  {
+    "function": "fromnumeric.py:48(_wrapfunc)",
+    "calls": 16387,
+    "self_seconds": 0.014262,
+    "cumulative_seconds": 0.055663000000000004,
+    "self_fraction": 0.009857995648713074
+  },
+  {
+    "function": "fromnumeric.py:106(take)",
+    "calls": 16384,
+    "self_seconds": 0.013599100000000001,
+    "cumulative_seconds": 0.0692528,
+    "self_fraction": 0.009399794462656989
+  },
+  {
+    "function": "~:0(<built-in method builtins.abs>)",
+    "calls": 16384,
+    "self_seconds": 0.0034908,
+    "cumulative_seconds": 0.0034908,
+    "self_fraction": 0.0024128657418684336
+  },
+  {
+    "function": "~:0(<built-in method builtins.getattr>)",
+    "calls": 16387,
+    "self_seconds": 0.0032001,
+    "cumulative_seconds": 0.0032001,
+    "self_fraction": 0.0022119318381325693
+  },
+  {
+    "function": "fromnumeric.py:102(_take_dispatcher)",
+    "calls": 16384,
+    "self_seconds": 0.0025946000000000003,
+    "cumulative_seconds": 0.0025946000000000003,
+    "self_fraction": 0.0017934059395702526
+  },
+  {
+    "function": "blaya.py:391(compress_many)",
+    "calls": 1,
+    "self_seconds": 0.0011466,
+    "cumulative_seconds": 0.7050956,
+    "self_fraction": 0.0007925380599365033
+  },
+  {
+    "function": "_arraysetops_impl.py:806(_isin)",
+    "calls": 3,
+    "self_seconds": 0.00017230000000000001,
+    "cumulative_seconds": 0.0002997,
+    "self_fraction": 0.00011909498319122582
+  },
+  {
+    "function": "~:0(<method 'tolist' of 'numpy.ndarray' objects>)",
+    "calls": 2,
+    "self_seconds": 6.27e-05,
+    "cumulative_seconds": 6.27e-05,
+    "self_fraction": 4.3338685119500057e-05
+  },
+  {
+    "function": "~:0(<method 'reduce' of 'numpy.ufunc' objects>)",
+    "calls": 10,
+    "self_seconds": 3.8900000000000004e-05,
+    "cumulative_seconds": 3.8900000000000004e-05,
+    "self_fraction": 2.6887956158669092e-05
+  },
+  {
+    "function": "blaya.py:438(decompress_many)",
+    "calls": 1,
+    "self_seconds": 3.79e-05,
+    "cumulative_seconds": 0.7416242000000001,
+    "self_fraction": 2.619674905947451e-05
+  },
+  {
+    "function": "bits.py:31(bits_to_image)",
+    "calls": 2,
+    "self_seconds": 2.25e-05,
+    "cumulative_seconds": 0.0003177,
+    "self_fraction": 1.555215973187801e-05
+  },
+  {
+    "function": "shape_base.py:378(stack)",
+    "calls": 1,
+    "self_seconds": 2.12e-05,
+    "cumulative_seconds": 2.6600000000000003e-05,
+    "self_fraction": 1.4653590502925056e-05
+  },
+  {
+    "function": "_arraysetops_impl.py:958(isin)",
+    "calls": 3,
+    "self_seconds": 2.1000000000000002e-05,
+    "cumulative_seconds": 0.00032470000000000003,
+    "self_fraction": 1.4515349083086143e-05
+  },
+  {
+    "function": "numeric.py:97(zeros_like)",
+    "calls": 3,
+    "self_seconds": 1.93e-05,
+    "cumulative_seconds": 2.2700000000000003e-05,
+    "self_fraction": 1.334029701445536e-05
+  },
+  {
+    "function": "engine.py:230(__init__)",
+    "calls": 2,
+    "self_seconds": 1.74e-05,
+    "cumulative_seconds": 2.9500000000000002e-05,
+    "self_fraction": 1.202700352598566e-05
+  },
+  {
+    "function": "fromnumeric.py:66(_wrapreduction)",
+    "calls": 6,
+    "self_seconds": 1.7100000000000002e-05,
+    "cumulative_seconds": 4.57e-05,
+    "self_fraction": 1.1819641396227288e-05
+  },
+  {
+    "function": "bits.py:26(image_to_bits)",
+    "calls": 1,
+    "self_seconds": 1.62e-05,
+    "cumulative_seconds": 2.1400000000000002e-05,
+    "self_fraction": 1.1197555006952166e-05
+  },
+  {
+    "function": "bits.py:19(validate_bits)",
+    "calls": 3,
+    "self_seconds": 1.6100000000000002e-05,
+    "cumulative_seconds": 0.00036310000000000004,
+    "self_fraction": 1.112843429703271e-05
+  },
+  {
+    "function": "~:0(<built-in method numpy.asarray>)",
+    "calls": 18,
+    "self_seconds": 1.48e-05,
+    "cumulative_seconds": 1.48e-05,
+    "self_fraction": 1.0229865068079757e-05
+  },
+  {
+    "function": "blaya.py:129(parse_stream)",
+    "calls": 1,
+    "self_seconds": 1.32e-05,
+    "cumulative_seconds": 4.6e-05,
+    "self_fraction": 9.123933709368432e-06
+  },
+  {
+    "function": "getlimits.py:412(__init__)",
+    "calls": 3,
+    "self_seconds": 1.3000000000000001e-05,
+    "cumulative_seconds": 1.3000000000000001e-05,
+    "self_fraction": 8.985692289529516e-06
+  }
+]

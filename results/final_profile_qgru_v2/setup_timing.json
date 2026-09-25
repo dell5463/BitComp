@@ -1,0 +1,5 @@
+{
+  "checkpoint_load_including_validation_seconds": 0.01064300000143703,
+  "one_time_codec_init_seconds_quantize_tables_exactness_fingerprint": 0.051092200010316446,
+  "cold_first_encode_decode_seconds": 1.2958015000040177
+}

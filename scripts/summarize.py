@@ -375,12 +375,20 @@ def _mse_points(thresholds, arrays, sample, ranged):
 def rate(directory, reference=None, repeats=1000, targets=(20.0, 25.0, 30.0, 35.0)):
     """Complete-file bpp needed to reach each target PSNR, every variant vs ``reference``, with a paired
     image-bootstrap 95% CI of the bpp difference (negative = fewer bits = better). Usage:
-        python scripts/summarize.py rate results/position_ablation [reference_variant]"""
+        python scripts/summarize.py rate results/position_ablation [reference_variant]
+        python scripts/summarize.py rate <reference sweep dir> <candidate sweep dir>   (two sweeps)"""
     import numpy as np
-    result = load(Path(directory) / "comparison.json")
-    variants = list(dict.fromkeys(r["variant"] for r in result["table"]))
-    reference = reference or result["reference_variant"]
-    data = {v: _sweep_arrays(Path(directory) / v / "sweep") for v in variants}
+    if not (Path(directory) / "comparison.json").exists():  # two sweep directories on the same images
+        reference_dir, candidate_dir = Path(directory), Path(reference)
+        summary = load(reference_dir / "summary.json")
+        result = {"sweep_images": summary["config"]["dataset"], "sampling_scale": summary["sampling_scale"]}
+        reference, variants = str(reference_dir), [str(reference_dir), str(candidate_dir)]
+        data = {v: _sweep_arrays(v) for v in variants}
+    else:
+        result = load(Path(directory) / "comparison.json")
+        variants = list(dict.fromkeys(r["variant"] for r in result["table"]))
+        reference = reference or result["reference_variant"]
+        data = {v: _sweep_arrays(Path(directory) / v / "sweep") for v in variants}
     ref_t, ref_idx, ref_arrays = data[reference]
     n = len(ref_idx)
     rng = np.random.default_rng(42)
@@ -416,6 +424,31 @@ def rate(directory, reference=None, repeats=1000, targets=(20.0, 25.0, 30.0, 35.
                 cells.append(f"{observed[v] - observed[reference]:+.3f} [{low:+.3f}, {high:+.3f}]")
             print(f"| {'range-coded' if ranged else 'raw'} | {target:g} | "
                   + " | ".join(fmt(observed[v], 3) for v in variants) + " | " + " | ".join(cells) + " |")
+
+
+def sync(directory):
+    """Encoder/decoder agreement for every sweep summary.json under ``directory`` (recursive), plus the
+    per-row flag in measurements.jsonl. laptop_cpu_partial is skipped (partial runs, no summaries)."""
+    print("| sweep | engine | split | images | streams | independent decodes verified | mismatches | "
+          "rows with encoder_decoder_equal false |")
+    print("|---|---|---|---:|---:|---:|---:|---:|")
+    totals = [0, 0, 0, 0]
+    for path in sorted(Path(directory).rglob("summary.json")):
+        if "laptop_cpu_partial" in path.parts:
+            continue
+        summary = load(path)
+        if "independent_decodes_verified" not in summary:
+            continue
+        rows = _jsonl(path.parent / "measurements.jsonl")
+        unequal = sum(1 for r in rows if r.get("encoder_decoder_equal") is False)
+        d = summary["config"]["dataset"]
+        streams = len(rows)
+        mismatches = summary.get("encoder_decoder_mismatches", 0)
+        totals = [totals[0] + streams, totals[1] + summary["independent_decodes_verified"],
+                  totals[2] + mismatches, totals[3] + unequal]
+        print(f"| {path.parent.as_posix()} | {summary['config']['codec']} | {d['split']} | {d['size']} | {streams} | "
+              f"{summary['independent_decodes_verified']} | {mismatches} | {unequal} |")
+    print(f"| **total** | | | | {totals[0]} | {totals[1]} | {totals[2]} | {totals[3]} |")
 
 
 def _jsonl(path):
@@ -482,5 +515,5 @@ def throughput(directory):
 if __name__ == "__main__":
     command = {"sweep": sweep, "compare": compare, "lossless": lossless, "errors": errors, "profile": profile,
                "throughput": throughput, "matched": matched, "paired": paired, "rate": rate,
-               "overhead": overhead, "diagnose": diagnose}[sys.argv[1]]
+               "overhead": overhead, "diagnose": diagnose, "sync": sync}[sys.argv[1]]
     command(sys.argv[2], *(sys.argv[3:] if sys.argv[1] in ("paired", "rate") else map(float, sys.argv[3:])))

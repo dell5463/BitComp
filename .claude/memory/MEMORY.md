@@ -1,2 +1,3 @@
 - [PowerShell UTF-8 edits](powershell-utf8-edits.md) — PS 5.1 Get/Set-Content corrupts non-ASCII; use Edit/Write tools
 - [BitLaya compute environment](bitlaya-compute.md) — laptop was CPU-only; GPU PC is i9-10900K + RTX 2080 SUPER, use .venv (py3.11, torch 2.14.0+cu130)
+- [BitLaya decision metric](bitlaya-decision-metric.md) — decide ablations by rate at 20-35 dB (summarize.py rate), not envelope mean
