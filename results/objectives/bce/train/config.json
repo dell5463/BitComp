@@ -1,0 +1,100 @@
+{
+  "model": {
+    "embedding_dim": 32,
+    "hidden_size": 128,
+    "num_layers": 2,
+    "plane_dim": 8,
+    "row_dim": 8,
+    "col_dim": 8
+  },
+  "training": {
+    "epochs": 100000,
+    "batch_size": 32,
+    "chunk_length": 256,
+    "learning_rate": 0.001,
+    "grad_clip": 1.0,
+    "seed": 42,
+    "device": "cuda",
+    "workers": 0,
+    "mode": "teacher_forcing",
+    "schedule": [
+      [
+        1,
+        0.0
+      ],
+      [
+        3,
+        0.1
+      ],
+      [
+        5,
+        0.25
+      ],
+      [
+        7,
+        0.5
+      ]
+    ],
+    "rollout_thresholds": [
+      0.6,
+      0.95
+    ],
+    "objective": "bce",
+    "weights": "sqrt",
+    "lr_schedule": "constant",
+    "max_steps": 64000,
+    "val_every": 8000,
+    "accumulate": 1,
+    "width": 32,
+    "schedule_unit": "epoch"
+  },
+  "loss_weights_msb_first": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "parameters": 171297,
+  "device": "cuda",
+  "torch": "2.14.0+cu130",
+  "numpy": "2.4.6",
+  "threads": 1,
+  "train_images": 1024,
+  "validation_images": 256,
+  "train_sha256": "a7b7511426086d48d2a1d064c4bbeeb36d544acf1d989fd3aa201a3a69ec08ed",
+  "validation_sha256": "170c4d21838bae5b34d73f825a02998723e5d4cf0fce8f561380ed3f9a0dcf78",
+  "planned_optimizer_steps": 64000,
+  "provenance": {
+    "dataset": "CIFAR-10 grayscale",
+    "data": "data\\cifar10",
+    "validation_size": 5000,
+    "split_seed": 42,
+    "train_limit": 1024,
+    "val_limit": 256,
+    "config_file": "results\\objectives\\bce\\experiment.json",
+    "preprocessing": {
+      "dataset": "CIFAR-10",
+      "shape": [
+        32,
+        32
+      ],
+      "dtype": "uint8",
+      "grayscale": "Pillow RGB.convert('L')",
+      "pillow": "12.3.0",
+      "torchvision": "0.29.0+cu130",
+      "bit_order": "raster-msb-first",
+      "train": {
+        "images": 50000,
+        "sha256": "1505ba165d4a4ce4307c2b8b599141bf8893be47942b5906750a6b23f537f4b6"
+      },
+      "test": {
+        "images": 10000,
+        "sha256": "e11116a81011718aef7db29b1f7a9854daa057ced8ccb69f5cabc40f3e8ede38"
+      }
+    }
+  }
+}

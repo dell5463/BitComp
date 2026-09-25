@@ -1,0 +1,21 @@
+[ablate] start train:bce: -m bitlaya --threads 1 train --config results\objectives\bce\experiment.json --output results\objectives\bce\train
+[ablate] start train:weighted_sqrt: -m bitlaya --threads 1 train --config results\objectives\weighted_sqrt\experiment.json --output results\objectives\weighted_sqrt\train
+[ablate] done train:bce: ok
+[ablate] done train:weighted_sqrt: ok
+[ablate] start sweep:bce: -m bitlaya --threads 1 sweep results\objectives\bce\train\best.pt --output results\objectives\bce\sweep --split val --size 200 --engine qgru-v2
+[ablate] start sweep:weighted_sqrt: -m bitlaya --threads 1 sweep results\objectives\weighted_sqrt\train\best.pt --output results\objectives\weighted_sqrt\sweep --split val --size 200 --engine qgru-v2
+[ablate] done sweep:bce: ok
+[ablate] done sweep:weighted_sqrt: ok
+{
+  "weighted_sqrt": {
+    "bpp_range": [
+      0.265625,
+      8.265625
+    ],
+    "grid_points_compared": 199,
+    "mean_psnr_gain_db": 0.3949282809727978,
+    "min_psnr_gain_db": -2.360363723496633,
+    "max_psnr_gain_db": 6.963134403114701,
+    "note": "operational envelope; lossless (infinite PSNR) grid points excluded"
+  }
+}

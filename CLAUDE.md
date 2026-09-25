@@ -69,7 +69,11 @@ same for every variant; configs updated). Laptop partial results moved to
   Rollout only wins at 20 dB; at 0.60-0.85 thresholds everything is < 15 dB. Confound: best.pt
   is chosen by teacher-forced val BCE (scheduled's pick is at 4% replacement). Rollout/scheduled
   with the row/col model cost ~0.5-0.6 s/step on CUDA (~9 h per 64k-step run).
-- 3e objectives: running (bce vs weighted_sqrt on the teacher_forcing base).
+- 3e objectives: **done, winner bce** (`results/objectives/DECISION.md`); weighted_sqrt costs
+  +0.02 to +0.22 bpp at 20-35 dB. **Final Milestone 1 model: `results/objectives/bce/train/best.pt`**
+  (bit + plane + row/col, train_size 1024, teacher forcing, BCE, fingerprint 19cbf2c5f8df85f9).
+- Step 4 (final model, test 1000: sweep, diagnose, analyze-errors, benchmark-lossless, overhead):
+  running into `results/final_*`. Profiling and CPU-vs-CUDA timing follow on an idle machine.
 - Key finding so far: with range-coded payloads the lossless point (~5.74-5.96 bpp on val)
   nearly dominates lossy omission (20 dB costs only ~0.1 bpp less than 35 dB).
 - Known gap: CLI ties the init seed to the split seed, so seed replicates are NOT YET MEASURED.
